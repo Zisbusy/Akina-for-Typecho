@@ -1,6 +1,8 @@
 # Akina-for-Typecho
 Akina for Typecho 主题模板
 
+![image](https://github.com/Zisbusy/Akina-for-Typecho/blob/master/Akina-img/Akina.jpg)
+
 ## 模版特点
 
 1. 同时采用`QQ`和`Gravatar`，来适应国内环境，QQ邮箱优先使用`QQ`头像，
