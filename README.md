@@ -27,6 +27,8 @@ Akina for Typecho 主题模板
 
 ### 主页home设置
 
+![image](https://github.com/Zisbusy/Akina-for-Typecho/blob/master/Akina-img/Akina-home.png)
+
 Akina 提供了一个独特的首页页面  
 在博客后台-设置-阅读-站点首页  
 选择直接调用 `hmoe.php`模板文件，并勾选 同时将文章列表页路径更改为`/blog`（当然可以改成其他的，但要同时修改模板里路径`home.php`）  
@@ -76,7 +78,7 @@ Akina 提供了一个独特的首页页面
 
 ### 文章特殊标签样式
 
-![屏幕快照 2019-09-09 下午6.00.36](/Users/zixu/Desktop/屏幕快照 2019-09-09 下午6.00.36.png)
+![image](https://github.com/Zisbusy/Akina-for-Typecho/blob/master/Akina-img/h2-h5.jpg)
 
 ### CDN镜像加速
 
