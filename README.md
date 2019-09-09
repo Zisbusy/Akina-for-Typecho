@@ -6,7 +6,7 @@ Akina for Typecho 主题模板
 ## 模版特点
 
 1. 同时采用`QQ`和`Gravatar`，来适应国内环境，QQ邮箱优先使用`QQ`头像，
-2. 平滑滚动，感谢开源项目[smoothscroll-for-websites](https://github.com/gblazex/smoothscroll-for-websites)
+2. 平滑滚动，感谢开源项目[`smoothscroll-for-websites`](https://github.com/gblazex/smoothscroll-for-websites)
 3. 表情，感谢开源项目[`OwO`](https://github.com/DIYgod/OwO)
 4. 支持`ajax`评论
 5. 响应式设计，多端无障碍浏览
