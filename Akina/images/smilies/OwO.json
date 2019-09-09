@@ -1,0 +1,210 @@
+{
+"阿鲁": {
+    "type": "image",
+    "container": [{
+            "text": "@(高兴)",
+            "icon": "images/smilies/alu/gaoxing.png" 
+        },
+        {
+            "text": "@(不高兴)",
+            "icon": "images/smilies/alu/bugaoxing.png"
+        },
+        {
+            "text": "@(皱眉)",
+            "icon": "images/smilies/alu/zhoumei.png"
+        },
+        {
+            "text": "@(大囧)",
+            "icon": "images/smilies/alu/dajiong.png"
+        },
+        {
+            "text": "@(惊喜)",
+            "icon": "images/smilies/alu/jingxi.png"
+        },
+        {
+            "text": "@(无语)",
+            "icon": "images/smilies/alu/wuyu.png"
+        },
+        {
+            "text": "@(傻笑)",
+            "icon": "images/smilies/alu/shaxiao.png"
+        },
+        {
+            "text": "@(期待)",
+            "icon": "images/smilies/alu/qidai.png"
+        },
+        {
+            "text": "@(喜极而泣)",
+            "icon": "images/smilies/alu/xijierqi.png"
+        },
+        {
+            "text": "@(脸红)",
+            "icon": "images/smilies/alu/lianhong.png"
+        },
+        {
+            "text": "@(来亲亲)",
+            "icon": "images/smilies/alu/laiqinqin.png"
+        },
+        {
+            "text": "@(汗如雨下)",
+            "icon": "images/smilies/alu/hanruyuxia.png"
+        },
+        {
+            "text": "@(酷炸天)",
+            "icon": "images/smilies/alu/kuzhatian.png"
+        },
+        {
+            "text": "@(抠鼻)",
+            "icon": "images/smilies/alu/koubi.png"
+        },
+        {
+            "text": "@(叼烟)",
+            "icon": "images/smilies/alu/diaoyan.png"
+        },
+        {
+            "text": "@(吐血)",
+            "icon": "images/smilies/alu/tuxie.png"
+        },
+        {
+            "text": "@(流口水)",
+            "icon": "images/smilies/alu/liukoushui.png"
+        },
+        {
+            "text": "@(呕吐不止)",
+            "icon": "images/smilies/alu/outubuzhi.png"
+        },
+        {
+            "text": "@(吐舌)",
+            "icon": "images/smilies/alu/tushe.png"
+        },
+        {
+            "text": "@(闭嘴)",
+            "icon": "images/smilies/alu/bizui.png"
+        },
+		        {
+            "text": "@(丢脸)",
+            "icon": "images/smilies/alu/diulian.png"
+        },
+        {
+            "text": "@(含羞)",
+            "icon": "images/smilies/alu/hanxiu.png"
+        },
+        {
+            "text": "@(不出所料)",
+            "icon": "images/smilies/alu/buchusuoliao.png"
+        },
+        {
+            "text": "@(装逼)",
+            "icon": "images/smilies/alu/zhuangbi.png"
+        },
+        {
+            "text": "@(尴尬)",
+            "icon": "images/smilies/alu/ganga.png"
+        },
+        {
+            "text": "@(喷水)",
+            "icon": "images/smilies/alu/penshui.png"
+        },
+        {
+            "text": "@(炒鸡愤怒)",
+            "icon": "images/smilies/alu/chaojifennu.png"
+        },
+        {
+            "text": "@(干得好)",
+            "icon": "images/smilies/alu/gandehao.png"
+        },
+        {
+            "text": "@(鄙视)",
+            "icon": "images/smilies/alu/bishi.png"
+        },
+        {
+            "text": "@(捂眼)",
+            "icon": "images/smilies/alu/wuyan.png"
+        },
+        {
+            "text": "@(无所谓)",
+            "icon": "images/smilies/alu/wusuowei.png"
+        },
+        {
+            "text": "@(喜大普奔)",
+            "icon": "images/smilies/alu/xijidaben.png"
+        },
+        {
+            "text": "@(思考)",
+            "icon": "images/smilies/alu/sikao.png"
+        },
+        {
+            "text": "@(鼓掌)",
+            "icon": "images/smilies/alu/guzhang.png"
+        },
+        {
+            "text": "@(发现此事并不简单)",
+            "icon": "images/smilies/alu/fxcsbbjd.png"
+        },
+        {
+            "text": "@(汗)",
+            "icon": "images/smilies/alu/han.png"
+        },
+        {
+            "text": "@(泪流成河)",
+            "icon": "images/smilies/alu/llch.png"
+        },
+        {
+            "text": "@(阴暗)",
+            "icon": "images/smilies/alu/yinan.png"
+        },
+        {
+            "text": "@(蜡烛)",
+            "icon": "images/smilies/alu/lazhu.png"
+        },
+        {
+            "text": "@(投降)",
+            "icon": "images/smilies/alu/touxiang.png"
+        },
+        {
+            "text": "@(吐血倒地)",
+            "icon": "images/smilies/alu/tuxiedaodi.png"
+        },
+        {
+            "text": "@(便便)",
+            "icon": "images/smilies/alu/bianbian.png"
+        },
+        {
+            "text": "@(长草)",
+            "icon": "images/smilies/alu/zhangcao.png"
+        },
+        {
+            "text": "@(肿包)",
+            "icon": "images/smilies/alu/zhongbao.png"
+        },
+        {
+            "text": "@(陷入深思)",
+            "icon": "images/smilies/alu/xrss.png"
+        },
+        {
+            "text": "@(献花)",
+            "icon": "images/smilies/alu/xianhua.png"
+        },
+        {
+            "text": "@(绿绿)",
+            "icon": "images/smilies/alu/lvlv.png"
+        },
+        {
+            "text": "@(中枪)",
+            "icon": "images/smilies/alu/zhongqiang.png"
+        },
+        {
+            "text": "@(击掌)",
+            "icon": "images/smilies/alu/jizhang.png"
+        },
+        {
+            "text": "@(扇耳光)",
+            "icon": "images/smilies/alu/shanerguang.png"
+        },
+        {
+            "text": "@(中刀)",
+            "icon": "images/smilies/alu/zhongdao.png"
+       }
+    ]
+  }
+}
