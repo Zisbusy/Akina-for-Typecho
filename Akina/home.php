@@ -83,7 +83,7 @@ define("theurl",$theurl);
 <div class="author-box">
 	<div class="we-avatar">
 		<div class="header-tou" >
-			<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theurl; ?>images/avatar.jpg"></a>
+			<a href="<?php $this->options ->siteUrl(); ?>"><img src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=100"></a>
 		</div>	
 	</div>
 	<div class="author-content">
