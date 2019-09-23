@@ -96,7 +96,7 @@ Akina 提供了一个独特的首页页面
 
 ## 演示地址
 
-[https://www.bilibili.com/video/av68759722/](http://docs.typecho.org/doku.php) 三连暗示
+[https://www.bilibili.com/video/av68759722/](https://www.bilibili.com/video/av68759722/)
 
 ## 特别感谢
 
