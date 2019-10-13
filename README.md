@@ -36,11 +36,11 @@ Akina 提供了一个独特的首页页面
 ### 其他页面
 
 在管理-独立页面-新增页面中  
-友链必须为`links.html`结尾。  
-关于必须为`about.html`结尾。  
-留言必须为`message.html`结尾。  
-归档必须为`archives.html`结尾。  
-自定义模板选择名字相同模板（如多没有选择page），由于主题写死了导航栏的独立页面链接，请提前[配置好伪静态](https://www.typechodev.com/theme/478.html)。
+友链建议为`links.html`结尾。  
+关于建议为`about.html`结尾。  
+留言建议为`message.html`结尾。  
+归档建议为`archives.html`结尾。  
+自定义模板选择名字相同模板（如多没有选择page），建议请提前[配置好伪静态](https://www.typechodev.com/theme/478.html)。
 
 ### 友链写法
 
