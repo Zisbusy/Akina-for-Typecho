@@ -23,12 +23,13 @@
 				<?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
 			</ul>
 		</li>
-		<li><a href="<?php $this->options ->siteUrl(); ?>archives.html">归档</a></li>
 		<li><a href="#">更多</a>
 			<ul class="sub-menu">
-				<li><a href="<?php $this->options ->siteUrl(); ?>links.html">邻居</a></li>
-				<li><a href="<?php $this->options ->siteUrl(); ?>message.html">留言</a></li>
-				<li><a href="<?php $this->options ->siteUrl(); ?>about.html">关于</a></li>
+				<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+				<?php while($pages->next()): ?>
+					<?php if ($pages->fields->navbar == "hide") continue; ?>
+					<li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
+				<?php endwhile; ?>
 			</ul>
 		</li>
 	</ul>
