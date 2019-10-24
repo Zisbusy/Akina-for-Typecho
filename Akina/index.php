@@ -4,7 +4,7 @@
  * 
  * @package Akina For Typecho
  * @author 灰白衬衫
- * @version 2.2
+ * @version 2.3
  * @link http://zhebk.cn/
  */
  if (!defined('__TYPECHO_ROOT_DIR__')) exit;
