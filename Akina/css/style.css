@@ -1389,80 +1389,6 @@ position: relative;
     padding: 2px 4px;
     border-radius: 2px;
 }
-/*代码高亮*/
-.hljs {
-    white-space: pre-wrap;
-}
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic;
-}
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
-}
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-.hljs-subst {
-  font-weight: normal;
-}
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-.hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
-}
-.hljs-deletion {
-  background: #fdd;
-}
-.hljs-addition {
-  background: #dfd;
-}
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-strong {
-  font-weight: bold;
-}
 
 .entry-content a {
 color: #E67474;
@@ -4905,8 +4831,7 @@ url('../fonts/iconfont.svg?t=1462465854#iconfont') format('svg'); /* iOS 4.1- */
 ::-webkit-scrollbar  
 {  
 width: 5px;  
-height: 8px;  
-background-color: #B9B9B9;  
+height: 8px;
 }  
 
 /*定义滚动条轨道 内阴影+圆角*/  
@@ -4968,4 +4893,134 @@ p.word{
 	box-shadow: none;
     border: 0;
     text-shadow: none;
+}
+/* PrismJS 1.17.1 */
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/*定义滚动条轨道 内阴影+圆角*/  
+pre[class*="language-"]::-webkit-scrollbar-track  {
+	background-color: #2d2d2d;
+	border-radius: 0px 0 5px 5px;
+}  
+
+/*定义滑块 内阴影+圆角*/  
+pre[class*="language-"]::-webkit-scrollbar-thumb  {
+	border-radius: 5px;
+	background-color: #4a4a4a;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+	border-radius: 5px;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
 }
