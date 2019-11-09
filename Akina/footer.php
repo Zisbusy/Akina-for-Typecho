@@ -60,7 +60,7 @@
 <script type="text/javascript" src="'.theurl.'js/baguetteBox.min.js"></script>
 <script type="text/javascript" src="'.theurl.'js/global.js"></script>
 <script type="text/javascript" src="'.theurl.'js/SmoothScroll.js"></script>
-<script type="text/javascript" src="'.theurl.'js/github.js"></script>
+<script type="text/javascript" src="'.theurl.'js/prism.js"></script>
 ';?>
 <?php $this->footer(); ?>
 </body>
