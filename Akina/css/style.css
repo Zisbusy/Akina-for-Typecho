@@ -4511,7 +4511,7 @@ padding:0 20px
 }
 
 .notice {
-	margin-bottom:10px
+	margin-bottom:0px
 }
 .site-main {
 	padding-top:40px
@@ -4900,7 +4900,7 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	font-size: 15px;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
