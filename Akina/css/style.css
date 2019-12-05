@@ -4876,7 +4876,7 @@ p.word{
 @media (max-width: 860px){
 .protected p:nth-child(2){
     margin: 100px auto 150px;
-}
+}}
 /* 加密输入框样式 */
 .protected p:nth-child(2)>input:nth-child(1){
 	width: 189px;
