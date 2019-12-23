@@ -1401,8 +1401,16 @@ color: #72C5A6;
 
 
 h1.entry-title {
-font-size: 22px;
-font-weight: 300;
+    font-size: 23px;
+    font-weight: 600;
+    color: #737373;
+}
+.entry-header h1:before {
+    content: "#";
+    margin-right: 6px;
+    color: #ff6d6d;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .entry-content p{
@@ -4424,7 +4432,11 @@ display:none
 }
 
 h1.entry-title {
-font-size:18px
+font-size:21px
+}
+
+.entry-header h1:before {
+font-size: 19px;
 }
 
 .entry-content p {
