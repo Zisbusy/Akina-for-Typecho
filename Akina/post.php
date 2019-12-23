@@ -41,8 +41,7 @@
 		<h1 class="entry-title"><?php $this->title() ?></h1>
 		<hr>
 		<div class="breadcrumbs">	
-			<div itemscope itemtype="http://schema.org/WebPage" id="crumbs">当前位置: <a itemprop="breadcrumb" href="<?php $this->options ->siteUrl(); ?>">Home</a> » <?php print_r($this->category());?> » <span class="current"><?php $this->title() ?></span>
-			</div>
+			<div itemscope itemtype="http://schema.org/WebPage" id="crumbs">最后更新时间：<?php echo date('Y年m月d日' , $this->modified);?></div>
 		</div>	
 		</header>
 		<!-- 正文输出 -->
