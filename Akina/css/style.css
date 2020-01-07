@@ -1046,7 +1046,8 @@ margin-left:0 !important
 }
 
 .entry-title a {
-color: #504E4E;
+font-weight: 600;
+color: #737373;
 font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;	
 }
 
@@ -1070,7 +1071,7 @@ font-size: 13px
 
 i.iconfont.hotpost {
 font-size: 13px;
-color: #FF3B00;
+color: #6f6f6f;
 }
 
 
