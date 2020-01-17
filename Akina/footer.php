@@ -51,6 +51,11 @@
 	if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 	  alert('请抛弃万恶的IE系列浏览器吧。');
 	}
+	var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+	if(!isMac){
+		document.write('<script src="' + theurl + 'js/SmoothScroll.js"></' + 'script>');
+	}
+	//判断下拉加载
 	<?php if (!empty($this->options->menu) && in_array('xl', $this->options->menu)): ?>var xl = "1";<?php else: ?> var xl = "0";<?php endif; ?>
 </script>
 <?php echo '
@@ -59,7 +64,6 @@
 <script type="text/javascript" src="'.theurl.'js/jquery.pjax.js"></script>
 <script type="text/javascript" src="'.theurl.'js/baguetteBox.min.js"></script>
 <script type="text/javascript" src="'.theurl.'js/global.js"></script>
-<script type="text/javascript" src="'.theurl.'js/SmoothScroll.js"></script>
 <script type="text/javascript" src="'.theurl.'js/prism.js"></script>
 ';?>
 <?php $this->footer(); ?>
