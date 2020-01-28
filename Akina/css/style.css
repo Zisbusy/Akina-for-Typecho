@@ -1730,25 +1730,24 @@ li.alidonate:after {
     background: #FFFFFF;
 }
 .open-message p {
-	margin:5px 0;
-	width: 650px;
+    margin:5px 0;
     overflow: hidden;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 .open-message a {
-	color: #C5D2E0;
-	padding: 0 5px;
+    color: #C5D2E0;
+    padding: 0 5px;
 }
 .open-message:after {
-	content: "";
+    content: "";
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #2B2B2B;
     position: absolute;
     top: -8px;
-	left:48%
+    left:48%
 }
 
 
