@@ -1733,7 +1733,6 @@ li.alidonate:after {
     margin:5px 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
 }
 .open-message a {
