@@ -1340,22 +1340,25 @@ position: relative;
 .entry-content h3 {
     color: #6d6c6c;
     background: #F9F9F9;
-    padding: 10px 0 10px 20px;
+    padding: 10px 20px;
     border-left: 5px solid #C4E2EA;
     font-weight: normal;
-	font-size: 16px;
-	border-radius: 3px;
+    font-size: 16px;
+    border-radius: 3px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
 }
 
 .entry-content h4 , .entry-content h5 {
-	padding: 20px 35px;
+    padding: 20px 35px;
     background: #FFF6B5;
     color: #737373;
     font-weight: normal;
     border-radius: 3px;
-	position:relative;
-	padding-left:60px;
-	box-shadow: 0 2px 3px rgba(0,0,0,.06);
+    position:relative;
+    padding-left:60px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.06);
 }
 
 .entry-content h5 {
@@ -1375,8 +1378,8 @@ position: relative;
 }
 
 .entry-content h5:before {
-	content: "\e605";
-	color: #7C9AAF;
+    content: "\e605";
+    color: #7C9AAF;
 }
 
 .entry-content code {
