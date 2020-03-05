@@ -44,7 +44,7 @@ if($sticky && $this->is('index') || $this->is('front')){
 <div class="blank"></div>
 	<div class="headertop">
 		<!-- 首页大图 -->
-		<div id="centerbg" style="background-image: url(<?php $this->options->headimg();?>);">
+		<div id="centerbg" style="background-image: url(<?php if($theurl == $this->options->themeUrl){$this->options->headimg();}else{echo theurl.'images/headerbg.jpg';}?>);">
 			<!-- 左右倾斜 -->
 			<div class="slant-left"></div>
 			<div class="slant-right"></div>
