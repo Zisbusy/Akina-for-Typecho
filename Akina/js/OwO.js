@@ -4,7 +4,7 @@ var OwO_demo = new OwO({
     logo: 'OωO表情',
     container: document.getElementsByClassName('OwO')[0],
     target: document.getElementsByClassName('OwO-textarea')[0],
-    api: '/usr/themes/Akina/images/smilies/OwO.json',
+    api: theurl+'images/smilies/OwO.json',
     position: 'down',
     width: '447%',
     maxHeight: '250px'
