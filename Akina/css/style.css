@@ -260,6 +260,9 @@ margin: 0;
 padding: 30px 60px;
 background: #F9F9F9;
 position: relative;
+word-wrap: break-word;
+word-break: break-all;
+overflow: hidden;
 }
 
 blockquote:before {
