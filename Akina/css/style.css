@@ -1356,19 +1356,19 @@ position: relative;
 }
 
 .entry-content h5 {
-	font-size: 16px;
+    font-size: 16px;
     background: #C8E6FB;
 }
 
 .entry-content h4:before , .entry-content h5:before{
-	font-family: 'iconfont';
+    font-family: 'iconfont';
     font-size: 25px;
     content: "\e60b";
     color: #C7BF83;
     margin-right: 10px;
     position: absolute;
     left: 20px;
-    top: 16px;
+    top: 14px;
 }
 
 .entry-content h5:before {
