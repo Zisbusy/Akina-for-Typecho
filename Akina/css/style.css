@@ -1319,7 +1319,9 @@ border-top: none;
 .entry-content {
 position: relative;
 }
-
+.entry-content >p>img{
+    border-radius:5px;
+}
 .entry-content h2 {
     color: #737373;
     font-size: 20px;
