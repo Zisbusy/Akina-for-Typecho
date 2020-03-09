@@ -36,7 +36,7 @@ function themeConfig($form) {
 	$DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
     $form->addInput($DNS);
 	
-	$CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CND域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CND空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
+	$CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CDN空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
     $form->addInput($CDNURL);
 	
 	$ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,'Carpe Diem and Do what I like', _t('备案号'), _t('备案号（默认内容"Carpe Diem and Do what I like"）'));
