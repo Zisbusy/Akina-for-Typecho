@@ -1265,11 +1265,11 @@ color: #9c9c9c;
 }
 
 .site-info a:hover {
-color: #A0DAD0;
+    color: #A0DAD0;
 }
 
 .footertext p {
-margin-bottom:0
+    margin-bottom: 10px;
 }
 
 .site-statistics {
@@ -1280,13 +1280,13 @@ margin-bottom:0
 # single
 --------------------------------------------------------------*/
 .breadcrumbs {
-	font-size: 14px;
+    font-size: 14px;
     color: #D2D2D2;
-	text-decoration:none;
-	margin-bottom: 30px;
+    text-decoration:none;
+    margin-bottom: 30px;
 }
 .breadcrumbs a {
-	font-size: 14px;
+    font-size: 14px;
     color: #D2D2D2;
 }
 .entry-content ul {
@@ -1299,8 +1299,8 @@ margin-bottom:0
 }
 
 .entry-content ol {
-list-style: decimal;
-padding: 5px 10px 5px 50px;
+    list-style: decimal;
+    padding: 5px 10px 5px 50px;
     color: #828282;
     margin-left: 0;
     border: 1px solid #ddd;
@@ -1308,16 +1308,16 @@ padding: 5px 10px 5px 50px;
 }
 
 .entry-content ol li , .entry-content ul li {
-padding: 15px 0;
-border-top: 1px solid #ddd;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
 } 
 
 .entry-content ol li:first-child , .entry-content ul li:first-child {
-border-top: none;
+    border-top: none;
 }
 
 .entry-content {
-position: relative;
+    position: relative;
 }
 .entry-content >p>img{
     border-radius:5px;
