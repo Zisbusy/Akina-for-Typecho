@@ -63,7 +63,7 @@ if($sticky && $this->is('index') || $this->is('front')){
 					<?php
 						//微博
 						if (strlen($this->options->SINA)>0){
-							echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina" title="sina"><img src="'.theurl.'images/sina.png"/></a></li>';
+							echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina"><img src="'.theurl.'images/sina.png"/></a></li>';
 						}
 						//微信
 						if (strlen($this->options->Wechat)>0){
@@ -77,15 +77,15 @@ if($sticky && $this->is('index') || $this->is('front')){
 						}
 						//QQ空间
 						if (strlen($this->options->Qzone)>0){
-							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone" title="Qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
+							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
 						}
 						//Github
 						if (strlen($this->options->Github)>0){
-							echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github" title="Github"><img src="'.theurl.'images/github.png"/></a></li>';
+							echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github"><img src="'.theurl.'images/github.png"/></a></li>';
 						}
 						//Bilibili
 						if (strlen($this->options->Bilibili)>0){
-							echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili" title="Bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
+							echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
 						}
 					?>
 				</div>
