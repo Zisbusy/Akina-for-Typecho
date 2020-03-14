@@ -60,12 +60,34 @@ if($sticky && $this->is('index') || $this->is('front')){
 				</div>
 				<!-- 社交信息 -->
 				<div class="top-social">
-					<li><a href="<?php $this->options->SINA();?>" target="_blank" rel="nofollow" class="social-sina" title="sina"><img src="<?php echo theurl; ?>images/sina.png"/></a></li>
-					<li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=<?php $this->options->QQ();?>&site=qq&menu=yes" target="_blank" rel="nofollow" ><img src="<?php echo theurl; ?>images/qq.png"/></a>
-						<div class="qqInner"><?php $this->options->QQ();?></div>
-					</li>
-					<li><a href="https://user.qzone.qq.com/<?php $this->options->QQ();?>" target="_blank" rel="nofollow" class="social-qzone" title="qzone"><img src="<?php echo theurl; ?>images/qzone.png"/></a></li>
-					<li><a href="<?php $this->options->Github();?>" target="_blank" rel="nofollow" class="social-github" title="github"><img src="<?php echo theurl; ?>images/github.png"/></a></li>
+					<?php
+						//微博
+						if (strlen($this->options->SINA)>0){
+							echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina" title="sina"><img src="'.theurl.'images/sina.png"/></a></li>';
+						}
+						//微信
+						if (strlen($this->options->Wechat)>0){
+							echo '<li class="qq"><img style="cursor: pointer" src="'.theurl.'images/wechat.png"/></a><div class="qqInner">'.$this->options->Wechat.'</div></li>';
+						}
+						//QQ
+						if (strlen($this->options->QQnum)>0){
+							echo '<li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin='.$this->options->QQnum.'&site=qq&menu=yes" target="_blank" rel="nofollow" ><img src="'.theurl.'images/qq.png"/></a>
+									<div class="qqInner">'.$this->options->QQnum.'</div>
+								  </li>';
+						}
+						//QQ空间
+						if (strlen($this->options->Qzone)>0){
+							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone" title="Qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
+						}
+						//Github
+						if (strlen($this->options->Github)>0){
+							echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github" title="Github"><img src="'.theurl.'images/github.png"/></a></li>';
+						}
+						//Bilibili
+						if (strlen($this->options->Bilibili)>0){
+							echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili" title="Bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
+						}
+					?>
 				</div>
 			</div>
 		</div>
