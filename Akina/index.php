@@ -52,7 +52,7 @@ if($sticky && $this->is('index') || $this->is('front')){
 			<div class="focusinfo">
 				<!-- 头像 -->
 				<div class="header-tou" >
-				<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theurl; ?>images/akinadeaava.jpg"></a>
+				<a href="<?php $this->options ->siteUrl(); ?>"><img src="http://q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=160"></a>
 				</div>
 				<!-- 简介 -->
 				<div class="header-info">
