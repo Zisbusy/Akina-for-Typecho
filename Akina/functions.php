@@ -1,48 +1,65 @@
 <?php
-function themeConfig($form) { 	
-	$sub = new Typecho_Widget_Helper_Form_Element_Text('sub', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
+function themeConfig($form) {
+//博客信息
+    $QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'945203919', _t('QQ号码'), _t('作为全局博主头像'));
+    $form->addInput($QQ);
+	
+    $sub = new Typecho_Widget_Helper_Form_Element_Text('sub', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
     $form->addInput($sub);
 	
-	$headerinfo = new Typecho_Widget_Helper_Form_Element_Text('headerinfo', NULL,'Carpe Diem and Do what I like', _t('头部内容'), _t('首页头部介绍'));
+    $headerinfo = new Typecho_Widget_Helper_Form_Element_Text('headerinfo', NULL,'Carpe Diem and Do what I like', _t('头部内容'), _t('首页头部介绍'));
     $form->addInput($headerinfo);
 	
     $NOTICE = new Typecho_Widget_Helper_Form_Element_Text('NOTICE', NULL,'我很荣幸的启用了Akina主题', _t('公告内容'), _t('首页公告内容'));
     $form->addInput($NOTICE);
 	
-	$headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Akina/images/headerbg.jpg', _t('首页头部图'), _t('默认图/usr/themes/Akina/images/headerbg.jpg'));
-    $form->addInput($headimg);
+    $ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,'Carpe Diem and Do what I like', _t('备案号'), _t('备案号（默认内容"Carpe Diem and Do what I like"）'));
+    $form->addInput($ICP);
 	
-	$QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'945203919', _t('QQ号码'), _t('自动获取空间地址，并作为全局博主头像'));
-    $form->addInput($QQ);
-	
-	$Github = new Typecho_Widget_Helper_Form_Element_Text('Github', NULL,'https://github.com/Zisbusy', _t('Github地址'), _t('Github主页地址（请规范填写，需https://，http://或者//）'));
-    $form->addInput($Github);
-	
-	$SINA = new Typecho_Widget_Helper_Form_Element_Text('SINA', NULL,'https://weibo.com/', _t('新浪微博地址'), _t('默认新浪微博首页（请规范填写，需https://，http://或者//）'));
+//个人信息
+    //新浪
+    $SINA = new Typecho_Widget_Helper_Form_Element_Text('SINA', NULL,'https://weibo.com/', _t('新浪微博地址'), _t('默认新浪微博首页（请规范填写，需https://，http://或者//）'));
     $form->addInput($SINA);
+    //微信
+    $Wechat = new Typecho_Widget_Helper_Form_Element_Text('Wechat', NULL,'', _t('微信号'), _t('首页个人信息'));
+    $form->addInput($Wechat);
+    //QQ
+    $QQnum = new Typecho_Widget_Helper_Form_Element_Text('QQnum', NULL,'945203919', _t('QQ信息'), _t('首页个人信息'));
+    $form->addInput($QQnum);
+    //QQ空间
+    $Qzone = new Typecho_Widget_Helper_Form_Element_Text('Qzone', NULL,'', _t('QQ空间信息'), _t('首页个人QQ空间信息:https://user.qzone.qq.com/QQ号码'));
+    $form->addInput($Qzone);
+    //Github
+    $Github = new Typecho_Widget_Helper_Form_Element_Text('Github', NULL,'https://github.com/Zisbusy', _t('Github地址'), _t('Github主页地址（请规范填写，需https://，http://或者//）'));
+    $form->addInput($Github);
+    //哔哩哔哩
+    $Bilibili = new Typecho_Widget_Helper_Form_Element_Text('Bilibili', NULL,'https://www.bilibili.com/', _t('Bilibili地址'), _t('Bilibili主页地址（请规范填写，需https://，http://或者//）'));
+    $form->addInput($Bilibili);
 	
-	$sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,1, _t('文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号,或空格分隔,默认值为“1”, <b style="color: #f92f2f">为空时</b>跟自定义home页面冲突'));
+//文章推荐
+    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,1, _t('文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号,或空格分隔,默认值为“1”, <b style="color: #f92f2f">为空时</b>跟自定义home页面冲突'));
     $form->addInput($sticky);
 	
-	$feature1 = new Typecho_Widget_Helper_Form_Element_Text('feature1', NULL,NULL, _t('聚焦内容1'), _t('请规范填写，需https://，http://或者//'));
+    $feature1 = new Typecho_Widget_Helper_Form_Element_Text('feature1', NULL,NULL, _t('聚焦内容1'), _t('请规范填写，需https://，http://或者//'));
     $form->addInput($feature1);
 	
-	$feature2 = new Typecho_Widget_Helper_Form_Element_Text('feature2', NULL,NULL, _t('聚焦内容2'), _t('请规范填写，需https://，http://或者//'));
+    $feature2 = new Typecho_Widget_Helper_Form_Element_Text('feature2', NULL,NULL, _t('聚焦内容2'), _t('请规范填写，需https://，http://或者//'));
     $form->addInput($feature2);
 	
-	$feature3 = new Typecho_Widget_Helper_Form_Element_Text('feature3', NULL,NULL, _t('聚焦内容3'), _t('请规范填写，需https://，http://或者//'));
+    $feature3 = new Typecho_Widget_Helper_Form_Element_Text('feature3', NULL,NULL, _t('聚焦内容3'), _t('请规范填写，需https://，http://或者//'));
     $form->addInput($feature3);
 	
-	$DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
+//加速设置
+    $DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
     $form->addInput($DNS);
 	
-	$CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CDN空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
+    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CDN空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
     $form->addInput($CDNURL);
 	
-	$ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,'Carpe Diem and Do what I like', _t('备案号'), _t('备案号（默认内容"Carpe Diem and Do what I like"）'));
-    $form->addInput($ICP);
-
-//其他设置
+//外观设置
+    $headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Akina/images/headerbg.jpg', _t('首页头部图'), _t('默认图/usr/themes/Akina/images/headerbg.jpg'));
+    $form->addInput($headimg);
+	
     $menu = new Typecho_Widget_Helper_Form_Element_Checkbox('menu', 
     array(
 	'show' => _t('一直显示菜单'),
