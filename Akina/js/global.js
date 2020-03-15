@@ -338,7 +338,13 @@ clickEvent();
 loadSingle();
 mNav();
 } )( jQuery );
-
+//为默认编辑器代码标签添加高亮
+var preLigut = document.getElementsByTagName("pre");
+for(var i = 0;  i < preLigut.length; i++){
+    if(preLigut[i].className==""){
+        preLigut[i].classList.add("language-js");
+    }
+}
 //除友链外，自动添加blank nofollow noopener noreferrer标签
 $(document).ready(function(){
 	$("a[href*='://']:not(a[href^='"+document.location.protocol+"//"+document.location.host+"'],a[href^='javascript:'])").attr({target:"_blank",rel:"nofollow noopener noreferrer"});
