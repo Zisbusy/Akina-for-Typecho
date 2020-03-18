@@ -1,5 +1,43 @@
 <?php
 function themeConfig($form) {
+echo '<style>
+.typecho-page-title h2 {
+    font-weight: 600;
+    color: #737373;
+}
+.typecho-page-title h2:before {
+    content: "#";
+    margin-right: 6px;
+    color: #ff6d6d;
+    font-size: 20px;
+    font-weight: 600;
+}
+.themeConfig h3 {
+    color: #737373;
+    font-size: 20px;
+}
+.themeConfig h3:before  {
+    content: "[";
+    margin-right: 5px;
+    color: #ff6d6d;
+    font-size: 25px;
+}
+.themeConfig h3:after {
+    content: "]";
+    margin-left: 5px;
+    color: #ff6d6d;
+    font-size: 25px;
+}
+.info{
+    border: 1px solid #ffadad;
+    padding: 20px;
+    margin: -15px 10px 25px 0;
+    background: #ffffff;
+    border-radius: 5px;
+    color: #ff6d6d;
+}
+</style>';
+echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 //博客信息
     $QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'945203919', _t('QQ号码'), _t('作为全局博主头像'));
     $form->addInput($QQ);
@@ -18,7 +56,7 @@ function themeConfig($form) {
 	
 //个人信息
     //新浪
-    $SINA = new Typecho_Widget_Helper_Form_Element_Text('SINA', NULL,'https://weibo.com/', _t('新浪微博地址'), _t('默认新浪微博首页（请规范填写，需https://，http://或者//）'));
+    $SINA = new Typecho_Widget_Helper_Form_Element_Text('SINA', NULL,'https://weibo.com/', _t('<br><span class="themeConfig"><h3>个人信息</h3></span><div class="info">不填写相关信息时可以隐藏该信息和图标</div>新浪微博地址'), _t('默认新浪微博首页（请规范填写，需https://，http://或者//）'));
     $form->addInput($SINA);
     //微信
     $Wechat = new Typecho_Widget_Helper_Form_Element_Text('Wechat', NULL,'', _t('微信号'), _t('首页个人信息'));
@@ -37,27 +75,21 @@ function themeConfig($form) {
     $form->addInput($Bilibili);
 	
 //文章推荐
-    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,1, _t('文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号,或空格分隔,默认值为“1”, <b style="color: #f92f2f">为空时</b>跟自定义home页面冲突'));
+    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('<br><span class="themeConfig"><h3>文章推荐</h3></span>文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号,或空格分隔,默认值为“1”, <b style="color: #f92f2f">为空时</b>跟自定义home页面冲突'));
     $form->addInput($sticky);
 	
-    $feature1 = new Typecho_Widget_Helper_Form_Element_Text('feature1', NULL,NULL, _t('聚焦内容1'), _t('请规范填写，需https://，http://或者//'));
-    $form->addInput($feature1);
-	
-    $feature2 = new Typecho_Widget_Helper_Form_Element_Text('feature2', NULL,NULL, _t('聚焦内容2'), _t('请规范填写，需https://，http://或者//'));
-    $form->addInput($feature2);
-	
-    $feature3 = new Typecho_Widget_Helper_Form_Element_Text('feature3', NULL,NULL, _t('聚焦内容3'), _t('请规范填写，需https://，http://或者//'));
-    $form->addInput($feature3);
+    $featureCids = new Typecho_Widget_Helper_Form_Element_Text('featureCids', NULL,NULL, _t('聚焦内容'), _t('请以半角逗号,或空格分隔'));
+    $form->addInput($featureCids);
 	
 //加速设置
-    $DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
+    $DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('<br><span class="themeConfig"><h3>加速设置</h3></span><div class="info">劣质CDN甚至会拖慢网站的速度，图标异常请自行解决跨域问题。CDN付费用户注意，该操作会让你的钱包遭受不可逆的降维打击。</div>DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
     $form->addInput($DNS);
 	
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CDN空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
     $form->addInput($CDNURL);
 	
 //外观设置
-    $headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Akina/images/headerbg.jpg', _t('首页头部图'), _t('默认图/usr/themes/Akina/images/headerbg.jpg'));
+    $headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'/usr/themes/Akina/images/headerbg.jpg', _t('<br><span class="themeConfig"><h3>外观设置</h3></span>首页头部图'), _t('默认图/usr/themes/Akina/images/headerbg.jpg'));
     $form->addInput($headimg);
 	
     $menu = new Typecho_Widget_Helper_Form_Element_Checkbox('menu', 
