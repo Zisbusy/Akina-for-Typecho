@@ -3302,6 +3302,7 @@ font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans
 .top-feature img {
 height:160px;
 width:257px
+object-fit: cover;
 }
 
 .top-feature li {
