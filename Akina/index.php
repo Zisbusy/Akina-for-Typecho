@@ -3,9 +3,9 @@
  * Akina For Typecho移植于WordPress的Akina模板，原作者为 Fuzzz 
  * 
  * @package Akina For Typecho
- * @author 灰白衬衫
- * @version 2.3
- * @link http://zhebk.cn/
+ * @author 缺乏维生素
+ * @version 3.0
+ * @link https://zhebk.cn/
  */
  if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
