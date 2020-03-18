@@ -141,9 +141,24 @@ if($sticky && $this->is('index') || $this->is('front')){
 <div class="top-feature">
 	<h1 class="fes-title">聚焦</h1>
 		<div class="feature-content">
-			<li class="feature-1"><a href="<?php $this->options->feature1();?>"><div class="feature-title"><span class="foverlay">feature1</span></div><img src="<?php echo theurl; ?>images/feature/feature1.jpg"></a></li>
-			<li class="feature-2"><a href="<?php $this->options->feature2();?>"><div class="feature-title"><span class="foverlay">feature2</span></div><img src="<?php echo theurl; ?>images/feature/feature2.jpg"></a></li>
-			<li class="feature-3"><a href="<?php $this->options->feature3();?>"><div class="feature-title"><span class="foverlay">feature3</span></div><img src="<?php echo theurl; ?>images/feature/feature3.jpg"></a></li>
+		<?php
+			$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
+			$featureNum = 0;
+			for($i=0;$i<3;$i++){
+				$featureNum++;
+				$this->widget('Widget_Archive@lunbo'.$i, 'pageSize=1&type=post', 'cid='.$featureCid[$i])->to($ji);
+				if ($ji->fields->img){
+					$featureImg = $ji->fields->img;
+				} else {
+					if(img_postthumb($this->content) != null){
+						$featureImg = img_postthumb($this->content);
+					} else {
+						$featureImg = theurl.'images/feature/feature'.$featureNum.'.jpg';
+					}
+				}
+				echo '<li class="feature-'.$featureNum.'"><a href="'.$ji->permalink.'"><div class="feature-title"><span class="foverlay">'.$ji->title.'</span></div><img src="'.$featureImg.'"></a></li>';
+			}
+		?>
 		</div>
 </div>
 <!-- 主页内容 -->
