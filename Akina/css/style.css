@@ -4871,20 +4871,25 @@ p.word:before {
     content: "[";
     margin-right: 5px;
     color: #ff6d6d;
-    font-size: 22px;
+    font-size: 25px;
+    position: relative;
+    top: 2px;
 }
 p.word:after {
     content: "]";
     margin-left: 5px;
     color: #ff6d6d;
-    font-size: 22px;
+    font-size: 25px;
+    position: relative;
+    top: 2px;
 }
 /* 加密提示剧中 */
 p.word{
-    	font-size: 21px!important;
-	display:table;
-	margin: 130px auto 50px;
-
+    font-size: 21px!important;
+    display:table;
+    margin: 130px auto 50px;
+    color: #737373;
+    font-weight: 600;
 }
 .protected p:nth-child(2){
     display:table;
@@ -4897,23 +4902,23 @@ p.word{
 /* 加密输入框样式 */
 .protected p:nth-child(2)>input:nth-child(1){
 	width: 189px;
-    	height: 42px;
-    	float: left;
-    	border-radius: 2px 0 0 2px;
-   	padding: 0 0 0 10px;
+	height: 42px;
+	float: left;
+	border-radius: 2px 0 0 2px;
+	padding: 0 0 0 10px;
 	border-color: #A0DAD0;
 	outline: none;
 }
 .protected p:nth-child(2)>input:nth-child(2){
 	width: 94px;
-    	height: 42px;
-	padding: 15px 35px;
-    	color: #fff;
-    	background: #A0DAD0;
+	height: 42px;
+	color: #fff;
+	background: #A0DAD0;
 	border-radius: 0 2px 2px 0;
 	box-shadow: none;
-    	border: 0;
-    	text-shadow: none;
+	border: 0;
+	text-shadow: none;
+	outline: none;
 }
 /* PrismJS */
 code[class*="language-"],
