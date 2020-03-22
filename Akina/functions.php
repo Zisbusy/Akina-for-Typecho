@@ -39,7 +39,7 @@ echo '<style>
 </style>';
 echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 //博客信息
-    $QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'945203919', _t('QQ号码'), _t('作为全局博主头像'));
+    $QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'2445233062', _t('QQ号码'), _t('作为全局博主头像'));
     $form->addInput($QQ);
 	
     $sub = new Typecho_Widget_Helper_Form_Element_Text('sub', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
@@ -62,13 +62,13 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $Wechat = new Typecho_Widget_Helper_Form_Element_Text('Wechat', NULL,'', _t('微信号'), _t('首页个人信息'));
     $form->addInput($Wechat);
     //QQ
-    $QQnum = new Typecho_Widget_Helper_Form_Element_Text('QQnum', NULL,'945203919', _t('QQ信息'), _t('首页个人信息'));
+    $QQnum = new Typecho_Widget_Helper_Form_Element_Text('QQnum', NULL,'', _t('QQ信息'), _t('首页个人信息'));
     $form->addInput($QQnum);
     //QQ空间
     $Qzone = new Typecho_Widget_Helper_Form_Element_Text('Qzone', NULL,'', _t('QQ空间信息'), _t('首页个人QQ空间信息:https://user.qzone.qq.com/QQ号码'));
     $form->addInput($Qzone);
     //Github
-    $Github = new Typecho_Widget_Helper_Form_Element_Text('Github', NULL,'https://github.com/Zisbusy', _t('Github地址'), _t('Github主页地址（请规范填写，需https://，http://或者//）'));
+    $Github = new Typecho_Widget_Helper_Form_Element_Text('Github', NULL,'https://github.com/', _t('Github地址'), _t('Github主页地址（请规范填写，需https://，http://或者//）'));
     $form->addInput($Github);
     //哔哩哔哩
     $Bilibili = new Typecho_Widget_Helper_Form_Element_Text('Bilibili', NULL,'https://www.bilibili.com/', _t('Bilibili地址'), _t('Bilibili主页地址（请规范填写，需https://，http://或者//）'));
