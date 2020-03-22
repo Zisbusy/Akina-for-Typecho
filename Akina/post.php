@@ -21,7 +21,7 @@
 		if (array_key_exists('img',unserialize($this->___fields()))){
 			$this->fields->img(); 
 		} else {
-			if(img_postthumb($this->content) != null){
+			if(img_postthumb($this->content)){
 				echo img_postthumb($this->content);
 			}else {
 				echo theurl.'images/postbg/'.mt_rand(1,3).'.jpg';
