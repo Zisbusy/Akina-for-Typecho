@@ -1226,11 +1226,18 @@ line-height: 39px;
 margin: 20px 0;
 }
 
+.navnumber{
+border-radius: 10px !important;
+padding: 8px 15px 8px 15px !important;
+border: 1px dashed #ddd !important;
+font-style: normal;
+}
+
 .navigator i {
 font-size: 15px;
 color: #D8D8D8;
 padding: 10px;
-border: 1px solid #ddd;
+border: 1px solid #fff;
 border-radius: 50%;
 margin: 0 10px;
 }
