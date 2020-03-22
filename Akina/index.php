@@ -214,8 +214,9 @@ if($sticky && $this->is('index') || $this->is('front')){
 		<!-- 结束文章循环输出 -->
 		<!-- 翻页按钮 -->
 		<nav class="navigator">
-        <?php $this->pageLink('<i class="iconfont">&#xe611;</i>'); ?>
-		<?php $this->pageLink('<i class="iconfont">&#xe60f;</i>','next'); ?>
+			<?php $this->pageLink('<i class="iconfont">&#xe611;</i>'); ?>	
+			<i class="navnumber"><?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?> / <?php echo ceil($this->getTotal() / $this->parameter->pageSize); ?></i>
+			<?php $this->pageLink('<i class="iconfont">&#xe60f;</i>','next'); ?>
 		</nav>
 	</main>
 	<div id="pagination"><?php $this->pageLink('加载更多','next'); ?></div>
