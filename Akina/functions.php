@@ -85,7 +85,7 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('<br><span class="themeConfig"><h3>加速设置</h3></span><div class="info">劣质CDN甚至会拖慢网站的速度，图标异常请自行解决跨域问题。CDN付费用户注意，该操作会让你的钱包遭受不可逆的降维打击。</div>DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
     $form->addInput($DNS);
 	
-    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/</br>在CDN空间创建AkinaCDN文件夹，自行提取主题目录js，css，font，images上传）'));
+    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL,NULL, _t('CDN镜像加速'), _t('填写CDN域名（请规范填写，需https://，http://或者//，末尾不加/）'));
     $form->addInput($CDNURL);
 	
 //外观设置
