@@ -101,7 +101,7 @@ define("theurl",$theurl);
 <div class="we-footer">
 	<div class="we-info">Copyright © 2019 by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved.	<span class="sep"> | </span>Theme: <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow" rel="designer">Akina For Typecho</a>.
 		<div class="we-footertext">
-			<p><a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
+			<p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
 		</div>
 	</div>
 </div>
