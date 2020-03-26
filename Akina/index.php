@@ -4,7 +4,7 @@
  * 
  * @package Akina For Typecho
  * @author 缺乏维生素
- * @version 3.0
+ * @version 3.0.1
  * @link https://zhebk.cn/
  */
  if (!defined('__TYPECHO_ROOT_DIR__')) exit;
