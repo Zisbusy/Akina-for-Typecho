@@ -64,29 +64,29 @@ if($this->options->sticky){
 				<div class="top-social">
 					<?php
 						//微博
-						if (strlen($this->options->SINA)>0){
+						if ($this->options->SINA){
 							echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina"><img src="'.theurl.'images/sina.png"/></a></li>';
 						}
 						//微信
-						if (strlen($this->options->Wechat)>0){
+						if ($this->options->Wechat){
 							echo '<li class="qq"><img style="cursor: pointer" src="'.theurl.'images/wechat.png"/></a><div class="qqInner">'.$this->options->Wechat.'</div></li>';
 						}
 						//QQ
-						if (strlen($this->options->QQnum)>0){
+						if ($this->options->QQnum){
 							echo '<li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin='.$this->options->QQnum.'&site=qq&menu=yes" target="_blank" rel="nofollow" ><img src="'.theurl.'images/qq.png"/></a>
 									<div class="qqInner">'.$this->options->QQnum.'</div>
 								  </li>';
 						}
 						//QQ空间
-						if (strlen($this->options->Qzone)>0){
+						if ($this->options->Qzone){
 							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
 						}
 						//Github
-						if (strlen($this->options->Github)>0){
+						if ($this->options->Github){
 							echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github"><img src="'.theurl.'images/github.png"/></a></li>';
 						}
 						//Bilibili
-						if (strlen($this->options->Bilibili)>0){
+						if ($this->options->Bilibili){
 							echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
 						}
 					?>
