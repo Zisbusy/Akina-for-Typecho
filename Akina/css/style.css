@@ -1336,16 +1336,12 @@ color: #9c9c9c;
     margin-right: 5px;
     color: #ff6d6d;
     font-size: 25px;
-    position: relative;
-    top: 2px;
 }
 .entry-content h2:after {
     content: "]";
     margin-left: 5px;
     color: #ff6d6d;
     font-size: 25px;
-    position: relative;
-    top: 2px;
 }
 
 .entry-content h3 {
