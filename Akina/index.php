@@ -3,7 +3,7 @@
  * Akina For Typecho移植于WordPress的Akina模板，原作者为 Fuzzz 
  * 
  * @package Akina For Typecho
- * @author 缺乏维生素
+ * @author 子虚之人
  * @version 3.1.2
  * @link https://zhebk.cn/
  */
