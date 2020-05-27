@@ -64,6 +64,11 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     //QQ
     $QQnum = new Typecho_Widget_Helper_Form_Element_Text('QQnum', NULL,'', _t('QQ信息'), _t('首页个人信息'));
     $form->addInput($QQnum);
+    //酷安
+    $coolapk = new Typecho_Widget_Helper_Form_Element_Text('coolapk', NULL,'', _t('酷安ID'), _t('填写酷安用户名'));
+    $form->addInput($coolapk);
+    $coolapkLink = new Typecho_Widget_Helper_Form_Element_Text('coolapkLink', NULL,'', _t(' '), _t('填写酷安用户链接，APP-我-点头像-右上角分享-复制链接'));
+    $form->addInput($coolapkLink);
     //QQ空间
     $Qzone = new Typecho_Widget_Helper_Form_Element_Text('Qzone', NULL,'', _t('QQ空间信息'), _t('首页个人QQ空间信息:https://user.qzone.qq.com/QQ号码'));
     $form->addInput($Qzone);
