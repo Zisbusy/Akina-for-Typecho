@@ -39,8 +39,8 @@ echo '<style>
 </style>';
 echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 //博客信息
-    $QQ = new Typecho_Widget_Helper_Form_Element_Text('QQ', NULL,'2445233062', _t('QQ号码'), _t('作为全局博主头像'));
-    $form->addInput($QQ);
+    $profile = new Typecho_Widget_Helper_Form_Element_Text('profile', NULL,'images/akinadeaava.jpg', _t('博主头像地址'), _t('默认值images/akinadeaava.jpg，图片位置/usr/themes/Akina/images/akinadeaava.jpg'));
+    $form->addInput($profile);
 	
     $sub = new Typecho_Widget_Helper_Form_Element_Text('sub', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
     $form->addInput($sub);
@@ -101,6 +101,15 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 	),
     array('page'), _t('其他设置'));
     $form->addInput($menu->multiMode());
+}
+//判断本地、cdn和自定义资源加载逻辑
+function authorProfile($src,$theurl){
+    if($src){
+        if(substr($src,0,1)=="i"){
+            $src = $theurl . $src;
+        }
+    }
+    echo $src;
 }
 //阅读次数统计
 function Postviews($archive) {
