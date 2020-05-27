@@ -106,7 +106,7 @@
 			<div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
 				<div class="pf-gavtar">
 					<div class="pf-tou" >
-						<a><img src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=100"></a>
+						<a><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
 					</div>
 				</div>
 				<div class="meta">
