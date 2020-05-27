@@ -54,7 +54,7 @@ if($this->options->sticky){
 			<div class="focusinfo">
 				<!-- 头像 -->
 				<div class="header-tou" >
-				<a href="<?php $this->options ->siteUrl(); ?>"><img src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=160"></a>
+				<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
 				</div>
 				<!-- 简介 -->
 				<div class="header-info">
@@ -183,7 +183,7 @@ if($this->options->sticky){
 		<?php if (array_key_exists('dt',unserialize($this->___fields()))): ?>
 		<div class="post-status">
 			<div class="postava">
-				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=100" srcset="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=160 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
+				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php authorProfile($this->options->profile,theurl);?>" srcset="<?php authorProfile($this->options->profile,theurl);?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
 			</div>
 			<div class="s-content">
 				<p><?php $this->excerpt(70, '...'); ?></p>
