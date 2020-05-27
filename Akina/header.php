@@ -72,7 +72,7 @@ define("theurl",$theurl);
 			<?php if($this->user->hasLogin()): ?>
 			<!-- 如果用户已经登录 -->
 			<div class="exloginbox">
-				<a href="#" class="user-panel"><img alt="avatar" src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=40" srcset="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=100 2x" class="avatar avatar-110 photo" height="110" width="110"></a>
+				<a href="#" class="user-panel"><img alt="avatar" src="<?php authorProfile($this->options->profile,theurl);?>" srcset="<?php authorProfile($this->options->profile,theurl);?> 2x" class="avatar avatar-110 photo" height="110" width="110"></a>
 				<div class="user_inner">
 				<ul>
 				<li><a href="<?php $this->options->adminUrl(); ?>" class="user-manage">管理后台</a></li>
