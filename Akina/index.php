@@ -77,6 +77,12 @@ if($this->options->sticky){
 									<div class="qqInner">'.$this->options->QQnum.'</div>
 								  </li>';
 						}
+						//酷安
+						if ($this->options->coolapk){
+							echo '<li class="qq"><a href="'.$this->options->coolapkLink.'" target="_blank" rel="nofollow" ><img src="'.theurl.'images/coolapk.png"/></a>
+									<div class="qqInner">'.$this->options->coolapk.'</div>
+								  </li>';
+						}
 						//QQ空间
 						if ($this->options->Qzone){
 							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
