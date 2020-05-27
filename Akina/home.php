@@ -13,6 +13,7 @@ define("THEME_URL", $this->options->themeUrl);
 		$theurl = THEME_URL.'/';
 	}
 define("theurl",$theurl); 
+$this->need('functions.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -83,7 +84,7 @@ define("theurl",$theurl);
 <div class="author-box">
 	<div class="we-avatar">
 		<div class="header-tou" >
-			<a href="<?php $this->options ->siteUrl(); ?>"><img src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=100"></a>
+			<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
 		</div>	
 	</div>
 	<div class="author-content">
@@ -99,7 +100,7 @@ define("theurl",$theurl);
 	</div>	
 </div>	
 <div class="we-footer">
-	<div class="we-info">Copyright © 2019 by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved.	<span class="sep"> | </span>Theme: <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow" rel="designer">Akina For Typecho</a>.
+	<div class="we-info">Copyright © <?php echo date("Y");?> by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved.	<span class="sep"> | </span>Theme: <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow" rel="designer">Akina For Typecho</a>.
 		<div class="we-footertext">
 			<p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
 		</div>
