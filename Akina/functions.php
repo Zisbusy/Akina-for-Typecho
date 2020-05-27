@@ -89,7 +89,7 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $form->addInput($CDNURL);
 	
 //外观设置
-    $headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'images/headerbg.jpg', _t('<br><span class="themeConfig"><h3>外观设置</h3></span>首页头部图'), _t('默认图images/headerbg.jpg'));
+    $headimg = new Typecho_Widget_Helper_Form_Element_Text('headimg', NULL,'images/headerbg.jpg', _t('<br><span class="themeConfig"><h3>外观设置</h3></span>首页头部图'), _t('默认值images/headerbg.jpg，图片位置/usr/themes/Akina/images/headerbg.jpg'));
     $form->addInput($headimg);
 	
     $menu = new Typecho_Widget_Helper_Form_Element_Checkbox('menu', 
