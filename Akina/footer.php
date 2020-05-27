@@ -9,7 +9,7 @@
 </footer>
 <div id="mo-nav">
 	<div class="m-avatar">
-		<img src="//q.qlogo.cn/g?b=qq&nk=<?php $this->options->QQ();?>&s=160">
+		<img src="<?php authorProfile($this->options->profile,theurl);?>">
 	</div>
 	<div class="m-search">
 		<form class="m-search-form" method="post" action="" role="search">
