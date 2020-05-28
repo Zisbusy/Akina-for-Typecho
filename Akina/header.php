@@ -5,7 +5,8 @@ define("THEME_URL", $this->options->themeUrl);
 	}else{
 		$theurl = THEME_URL.'/';
 	}
-define("theurl",$theurl); 
+define("theurl",$theurl);
+define("theprofile", authorProfile($this->options->profile,theurl));
 ?>
 <!DOCTYPE HTML>
 <html>
