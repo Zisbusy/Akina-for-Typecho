@@ -1,29 +1,32 @@
-<?php
-    function threadedComments($comments, $options) {
-        $commentClass = '';
-        if ($comments->authorId) {
-            if ($comments->authorId == $comments->ownerId) {
-                //如果是文章作者的评论添加 .comment-by-author 样式，规定博主头像
-                $commentClass .= 'comment-by-author';
-                $avatar = $avatar2x = theprofile;
-            } else {
-                //如果是评论作者的添加 .comment-by-user 样式
-                $commentClass .= 'comment-by-user';
-                $email = $comments->mail;
-                //判断邮箱类型选取头像地址
-        	    if(preg_match('|^[1-9]\d{4,10}@qq\.com$|i',$email)){
-			$qqnumber = explode("@",$email);
-			$avatar = '//q.qlogo.cn/g?b=qq&nk=' . $commentClass. '&s=100';
-			$avatar2x = '//q.qlogo.cn/g?b=qq&nk=' . $qqnumber[0]. '&s=160';
-        	     }else{
-			$avatar = 'https://gravatar.loli.net/avatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d=mm';
-			$avatar2x = 'https://gravatar.loli.net/avatar/' . md5(strtolower($comments->mail)) . '?s=160&r=X&d=mm';
-        	    }
-            }
-        } 
-    //评论层数大于0为子级，否则是父级
+<?php function threadedComments($comments, $options) {
+    $commentClass = '';
+    if ($comments->authorId) {
+        if ($comments->authorId == $comments->ownerId) {
+			//如果是文章作者的评论添加 .comment-by-author 样式
+            $commentClass .= 'comment-by-author';
+        } else {
+			//如果是评论作者的添加 .comment-by-user 样式
+            $commentClass .= 'comment-by-user';  
+        }
+    }
+	//评论层数大于0为子级，否则是父级
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';
 	$depth = $comments->levels +1;
+	//判断博主头像
+	if($commentClass=='comment-by-author'){
+		$avatar = $avatar2x = theprofile;
+	}else{
+		$email = $comments->mail;
+		//判断邮箱类型选取头像地址
+		if(preg_match('|^[1-9]\d{4,10}@qq\.com$|i',$email)){
+			$qqnumber = explode("@",$email);
+			$avatar = '//q.qlogo.cn/g?b=qq&nk=' . $qqnumber[0]. '&s=100';
+			$avatar2x = '//q.qlogo.cn/g?b=qq&nk=' . $qqnumber[0]. '&s=160';
+		 }else{
+			$avatar = 'https://gravatar.loli.net/avatar/' . md5(strtolower($comments->mail)) . '?s=80&r=X&d=mm';
+			$avatar2x = 'https://gravatar.loli.net/avatar/' . md5(strtolower($comments->mail)) . '?s=160&r=X&d=mm';
+		}
+	}
 ?>
 	<li class="comment <?php $comments->alt('comment-odd', 'comment-even');?> depth-<?php echo $depth ?>" id="li-<?php $comments->theId(); ?>">
 		<div id="<?php $comments->theId(); ?>" class="comment_body contents">
