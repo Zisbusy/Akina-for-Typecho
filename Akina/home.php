@@ -14,6 +14,7 @@ define("THEME_URL", $this->options->themeUrl);
 	}
 define("theurl",$theurl); 
 $this->need('functions.php');
+define("theprofile", authorProfile($this->options->profile,theurl));
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -84,7 +85,7 @@ $this->need('functions.php');
 <div class="author-box">
 	<div class="we-avatar">
 		<div class="header-tou" >
-			<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
+			<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theprofile ?>"></a>
 		</div>	
 	</div>
 	<div class="author-content">
