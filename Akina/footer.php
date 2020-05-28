@@ -9,7 +9,7 @@
 </footer>
 <div id="mo-nav">
 	<div class="m-avatar">
-		<img src="<?php authorProfile($this->options->profile,theurl);?>">
+		<img src="<?php echo theprofile ?>">
 	</div>
 	<div class="m-search">
 		<form class="m-search-form" method="post" action="" role="search">
