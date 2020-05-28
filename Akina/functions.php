@@ -114,7 +114,7 @@ function authorProfile($src,$theurl){
             $src = $theurl . $src;
         }
     }
-    echo $src;
+    return $src;
 }
 //阅读次数统计
 function Postviews($archive) {
