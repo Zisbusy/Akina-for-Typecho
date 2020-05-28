@@ -106,7 +106,7 @@
 			<div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
 				<div class="pf-gavtar">
 					<div class="pf-tou" >
-						<a><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
+						<a><img src="<?php echo theprofile ?>"></a>
 					</div>
 				</div>
 				<div class="meta">
