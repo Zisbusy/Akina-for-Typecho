@@ -46,7 +46,7 @@ if($this->options->sticky){
 <div class="blank"></div>
 	<div class="headertop">
 		<!-- 首页大图 -->
-		<div id="centerbg" style="background-image: url(<?php authorProfile($this->options->headimg,theurl);?>);">
+		<div id="centerbg" style="background-image: url(<?php echo authorProfile($this->options->headimg,theurl);?>);">
 			<!-- 左右倾斜 -->
 			<div class="slant-left"></div>
 			<div class="slant-right"></div>
@@ -54,7 +54,7 @@ if($this->options->sticky){
 			<div class="focusinfo">
 				<!-- 头像 -->
 				<div class="header-tou" >
-				<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php authorProfile($this->options->profile,theurl);?>"></a>
+				<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theprofile ?>"></a>
 				</div>
 				<!-- 简介 -->
 				<div class="header-info">
@@ -189,7 +189,7 @@ if($this->options->sticky){
 		<?php if (array_key_exists('dt',unserialize($this->___fields()))): ?>
 		<div class="post-status">
 			<div class="postava">
-				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php authorProfile($this->options->profile,theurl);?>" srcset="<?php authorProfile($this->options->profile,theurl);?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
+				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php echo theprofile ?>" srcset="<?php echo theprofile ?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
 			</div>
 			<div class="s-content">
 				<p><?php $this->excerpt(70, '...'); ?></p>
