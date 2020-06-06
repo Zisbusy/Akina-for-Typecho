@@ -10,6 +10,7 @@
 			    <img src="http://blog.zixu.site/usr/themes/Akina/images/gongan.png" style="float:left;">
 			    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">'.$this->options->gongan.'</p>
 			    </a>
+			    ';
 			}?>
 		</div>
 	</div>
