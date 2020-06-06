@@ -51,8 +51,11 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $NOTICE = new Typecho_Widget_Helper_Form_Element_Text('NOTICE', NULL,'我很荣幸的启用了Akina主题', _t('公告内容'), _t('首页公告内容'));
     $form->addInput($NOTICE);
 	
-    $ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,'Carpe Diem and Do what I like', _t('备案号'), _t('备案号（默认内容"Carpe Diem and Do what I like"）'));
+    $ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,'Carpe Diem and Do what I like', _t('ICP备案号'), _t('备案号（默认内容"Carpe Diem and Do what I like"）'));
     $form->addInput($ICP);
+	
+    $gongan = new Typecho_Widget_Helper_Form_Element_Text('gongan', NULL,'', _t('公安联网备案'), _t('格式“X公安备案xxxxxxxxxxxxxx号”（没有不填即可）'));
+    $form->addInput($gongan);
 	
 //个人信息
     //新浪
@@ -215,6 +218,20 @@ function get_commentReply_at($coid)
         $author = $arow['author'];
         $href   = '<a href="#" rel="nofollow" class="cute atreply">@' . $author . '</a> : ';
         echo $href;
+    }
+}
+//公安联网备案,获取备案号
+function gonganbeian($str){
+    $str=trim($str);
+    for($i=0;$i<strlen($str);$i++){
+        if(is_numeric($str[$i])){
+            $result.=$str[$i];
+        }
+    }
+    if(empty($result)){
+        return '';
+    }else{
+        return $result;
     }
 }
 //随机文章
