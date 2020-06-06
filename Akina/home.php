@@ -107,7 +107,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 			<?php if ($this->options->gongan){
 			    echo '
 			    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode='.gonganbeian($this->options->gongan).'" style="display:inline-block;" rel="nofollow noopener noreferrer">
-			    <img src="http://blog.zixu.site/usr/themes/Akina/images/gongan.png" style="float:left;">
+			    <img src="'.theurl.'images/gongan.png" style="float:left;">
 			    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">'.$this->options->gongan.'</p>
 			    </a>
 			    ';
