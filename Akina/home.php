@@ -104,6 +104,14 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<div class="we-info">Copyright © <?php echo date("Y");?> by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved.	<span class="sep"> | </span>Theme: <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow" rel="designer">Akina For Typecho</a>.
 		<div class="we-footertext">
 			<p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
+			<?php if ($this->options->gongan){
+			    echo '
+			    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode='.gonganbeian($this->options->gongan).'" style="display:inline-block;" rel="nofollow noopener noreferrer">
+			    <img src="http://blog.zixu.site/usr/themes/Akina/images/gongan.png" style="float:left;">
+			    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">'.$this->options->gongan.'</p>
+			    </a>
+			    ';
+			}?>
 		</div>
 	</div>
 </div>
