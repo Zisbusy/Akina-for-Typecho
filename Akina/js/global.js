@@ -37,7 +37,7 @@ var ajaxcomments = function(){
         $.ajax({
             url: $(this).attr('action'),
             type: $(this).attr('method'),
-            data: $(this).serializeArray(),async: false,
+            data: $(this).serializeArray(),async: true,
             error: function() {
                 $("#submit").val("提交失败");
                 return false;
