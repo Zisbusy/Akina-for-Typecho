@@ -140,7 +140,7 @@ if($this->options->sticky){
 <!-- 不是搜索显示主页 -->
 <!-- 顶部公告内容 -->
 <div class="notice">
-	<i class="iconfont">&#xe607;</i> : 
+	<i class="iconfont">&#xe607;</i>
 		<div class="notice-content">
 		<?php $this->options->NOTICE();?>
 		</div>
