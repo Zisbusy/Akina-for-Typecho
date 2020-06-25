@@ -151,10 +151,10 @@ function Postviews($archive) {
 //获取文章第一张图片
 function img_postthumb($content) {
 	preg_match_all("/\<img.*?src\=\"(.*?)\"[^>]*>/i", $content, $thumbUrl);  //通过正则式获取图片地址
-	$img_src = $thumbUrl[1][0];  //将赋值给img_src
 	$img_counter = count($thumbUrl[0]);  //一个src地址的计数器  
 	switch ($img_counter > 0) {
 		case $allPics = 1:
+			$img_src = $thumbUrl[1][0];  //将赋值给img_src
 			return $img_src;  //当找到一个src地址的时候，输出缩略图
 			break;
 		default:
