@@ -75,8 +75,8 @@
 			<div class="donate">
 			<a>赏</a>
 				<ul class="donate_inner">
-					<li class="wedonate"><img src="<?php echo theurl; ?>images/donate/wedo.jpg"></li>
-					<li class="alidonate"><img src="<?php echo theurl; ?>images/donate/alido.jpg"></li>
+					<li class="wedonate"><img src="<?php echo authorProfile($this->options->wedo,theurl);?>"></li>
+					<li class="alidonate"><img src="<?php echo authorProfile($this->options->alido,theurl);?>"></li>
 				</ul>
 			</div>
 			<!-- 文章标签 -->
