@@ -93,10 +93,10 @@
 				<form action="<?php $this->commentUrl() ?>" method="post" id="commentform">
 					<!-- 如果当前用户已经登录 -->
 					<?php if($this->user->hasLogin()): ?>
-					<p>登录者： <a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a>&nbsp;&nbsp;<a href="<?php $this->options->logoutUrl(); ?>"title="退出">[ 退出 ]</a></p>
+					<p>登录者： <a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a>&nbsp;&nbsp;<a href="<?php $this->options->logoutUrl(); ?>"title="退出">[ 退出 ] →</a></p>
 					<!-- 若当前用户未登录 -->
 					<?php else: ?>
-					<div class="author-updown">Welcome back , <a id="toggle-comment-info">[ 修改 ]</a></div>
+					<div class="author-updown">Welcome back , <a id="toggle-comment-info">[ 修改 ] ↓</a></div>
 					<?php endif; ?>
 					<div id="comment-author-info">
 						<input type="text" name="author" id="author" class="commenttext" placeholder="Name"  value="<?php $this->remember('author'); ?>" size="22" tabindex="1" placeholder="Name" />
