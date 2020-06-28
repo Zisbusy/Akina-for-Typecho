@@ -350,4 +350,27 @@ $(document).ready(function(){
 	$("a[href*='://']:not(a[href^='"+document.location.protocol+"//"+document.location.host+"'],a[href^='javascript:'])").attr({target:"_blank",rel:"nofollow noopener noreferrer"});
 	$(".links a[href*='://']").removeAttr("rel");
 });
+//窗口提示
+function Fytx_Tips() {
+    var _this = this;
+    _this.Fytx_alert = function(obj) {
+        if ($("div").is(".fytx_alert_background")) $('.fytx_alert_background').remove();
+        var _fytx_alert_background = '<div class="fytx_alert_background"><div class="fytx_alert_box">' + '<div class="fytx_alert_title">' + obj.title + '</div>' + '<div class="fytx_alert_message">' + obj.message + '</div>' + '<span class="fytx_alert_btn">知道了</span>' + '</div></div>';
+        $('body').append(_fytx_alert_background);
+    }
+}
+$(document).ready(function() {
+    var Fytx = new Fytx_Tips();
+    $.alert = function(title, msg) {
+        Fytx.Fytx_alert({
+            title: title,
+            message: msg
+        })
+    },
+    $("body").on("click", ".fytx_alert_btn",
+    function() {
+        $(".fytx_alert_background").hide();
+    });
+});
+//版本显示
 console.log("%cAkina for Typecho 3.3.1","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
