@@ -228,9 +228,16 @@ var clickEvent = function(){
     $(".smilies-box").fadeToggle("fast");
   });
 
-//comment-author-info-toggle akina-1.05
-$("#toggle-comment-info").click(function(){
-    $("#comment-author-info").slideToggle("slow");
+//评论者信息 显示/隐藏
+$("#toggle-comment-info").click(function click_comment_info(){
+    var comment_info = $("#toggle-comment-info");
+    var author_info = $("#comment-author-info");
+    if(author_info.css("display") == "none"){
+        comment_info.html("[ 隐藏 ] ↑");
+    }else{
+        comment_info.html("[ 修改 ] ↓");
+    }
+    author_info.slideToggle("slow");
   });
 
 //打赏 8.15
