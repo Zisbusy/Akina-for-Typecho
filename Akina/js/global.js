@@ -62,9 +62,12 @@ var ajaxcomments = function(){
             success: function(data) { //成功取到数据
                 try {
                     if (!$(comment_list, data).length) {
-						$("#comment-author-info").show();
-                        $('.commenttext').css({"border":"2px dashed #ff6c6c"});
-						$("#submit").val("再次提交");
+                        $("#comment-author-info").show();
+                        var msg =$(data)[7].innerHTML.replace(/\s*/g,"");
+                        $(document).ready(function(){
+                            $.alert("提示",msg);
+                        });
+                        setTimeout(function(){ $("#submit").val("再次提交"); }, 500);
                         return false;
                     } else {
                         new_id = $(comment_list, data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function(a, b) {
