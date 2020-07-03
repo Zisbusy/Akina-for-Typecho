@@ -400,4 +400,4 @@ $(document).ready(function() {
     });
 });
 //版本显示
-console.log("%cAkina for Typecho 3.3.1","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
+console.log("%cAkina for Typecho 3.4.3","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
