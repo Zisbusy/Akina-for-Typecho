@@ -2954,7 +2954,7 @@ padding: 0;
 list-style: none; }
 
 .comment .contents {
-margin-bottom: 45px;
+margin-bottom: 40px;
  }
 
 .comment .isauthor {
@@ -3009,7 +3009,7 @@ margin-right: 2%;
 width: 100%;
 max-width: 50px;
 border-radius: 100%;
-height: 50px;
+height: 100%;
  }
 
 .comment .profile img:hover {
@@ -4610,7 +4610,7 @@ position: relative;
 width: auto;
 }
 .wrapper section{
-max-width: 600px;
+max-width: 860px;
 margin: 0 auto;
 }
 .wrapper section h1 {
