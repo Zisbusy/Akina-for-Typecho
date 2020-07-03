@@ -97,7 +97,6 @@
 					<!-- 若当前用户未登录 -->
 					<?php else: ?>
 					<div class="author-updown">Welcome back ,&nbsp;<?php $this->remember('author'); ?>&nbsp;<a id="toggle-comment-info">[ 修改 ] ↓</a></div>
-					<?php endif; ?>
 					<div id="comment-author-info">
 						<input type="text" name="author" id="author" class="commenttext" placeholder="Name"  value="<?php $this->remember('author'); ?>" size="22" tabindex="1" placeholder="Name" />
 						<label for="author"></label>
@@ -107,8 +106,9 @@
 					
 						<input type="text" name="url" id="url" class="commenttext" value="<?php $this->remember('url'); ?>" size="22"placeholder="http://"  tabindex="3" />
 						<label for="url"></label>
-                  </div>
+					</div>
 					<div class="clear"></div>
+					<?php endif; ?>
 					<p><textarea name="text" id="comment" class="OwO-textarea" placeholder="come on baby !" tabindex="4" cols="50" rows="5"></textarea></p>
 					<div class="com-footer">
 						<input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="发表评论" />
