@@ -20,36 +20,38 @@ var ajaxcomments = function(){
 		$('.comment-respond textarea').css({"border":"2px  solid #DDE6EA"});
 		$('.commenttext').css({"border":"2px  solid #DDE6EA"});
 		$("#submit").val("提交中...");
-		/*格式整理*/
-		var authorValue = $('#author').val().replace(/(^\s*)|(\s*$)/g, "");
-		var mailValue = $('#mail').val().replace(/(^\s*)|(\s*$)/g, "");
-		var urlValue = $('#url').val().replace(/(^\s*)|(\s*$)/g, "");
-		var textValue = $(comment_form).find(textarea).val().replace(/(^\s*)|(\s*$)/g, "");
-		/* 预检 */
-		var errorNum = 0;
-		if(authorValue == ""){
-		    errorNum++;
-			$('#author').css({"border":"2px dashed #ff6c6c"});
-		}
-		if(mailValue == ""){
-		    errorNum++;
-			$('#mail').css({"border":"2px dashed #ff6c6c"});
-		}
-		if(urlValue != ""){
-		    if(urlValue.indexOf('https://') == -1 && urlValue.indexOf('http://') == -1){
-		        errorNum++;
-    			$('#url').css({"border":"2px dashed #ff6c6c"});
-		}
-		}
-		if(textValue == ""){
-		    errorNum++;
-			$('.comment-respond textarea').css({"border":"2px dashed #ff6c6c"});
-		}
-		if(errorNum != 0){
-		    $("#comment-author-info").show();
-		    $("#toggle-comment-info").html("[ 隐藏 ] ↑");
-		    setTimeout(function(){ $("#submit").val("再次提交"); }, 500);
-		    return false;
+		if($('#comment-author-info').length>0){
+			/*格式整理*/
+			var authorValue = $('#author').val().replace(/(^\s*)|(\s*$)/g, "");
+			var mailValue = $('#mail').val().replace(/(^\s*)|(\s*$)/g, "");
+			var urlValue = $('#url').val().replace(/(^\s*)|(\s*$)/g, "");
+			var textValue = $(comment_form).find(textarea).val().replace(/(^\s*)|(\s*$)/g, "");
+			/* 预检 */
+			var errorNum = 0;
+			if(authorValue == ""){
+				errorNum++;
+				$('#author').css({"border":"2px dashed #ff6c6c"});
+			}
+			if(mailValue == ""){
+				errorNum++;
+				$('#mail').css({"border":"2px dashed #ff6c6c"});
+			}
+			if(urlValue != ""){
+				if(urlValue.indexOf('https://') == -1 && urlValue.indexOf('http://') == -1){
+					errorNum++;
+					$('#url').css({"border":"2px dashed #ff6c6c"});
+			}
+			}
+			if(textValue == ""){
+				errorNum++;
+				$('.comment-respond textarea').css({"border":"2px dashed #ff6c6c"});
+			}
+			if(errorNum != 0){
+				$("#comment-author-info").show();
+				$("#toggle-comment-info").html("[ 隐藏 ] ↑");
+				setTimeout(function(){ $("#submit").val("再次提交"); }, 500);
+				return false;
+			}
 		}
         $.ajax({
             url: $(this).attr('action'),
