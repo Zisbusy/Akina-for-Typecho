@@ -2997,11 +2997,13 @@ line-height: 30px; } }
 line-height: 26px; } }
 
 .comment .body > *:last-child {
-margin-bottom: 0; }
+margin-bottom: 0;
+margin-left: 60px;
+}
 
 .comment .profile {
 float: left;
-width: 6%;
+width: 5%;
 margin-right: 2%;
 }
 
@@ -3111,6 +3113,9 @@ width:41px  }
 width: 89%; }
 
 @media (max-width: 880px) {
+ .comment .body > *:last-child {
+    margin-left: 0px;
+}
 .comment .isauthor i {
 	display:none
 }	
