@@ -2909,7 +2909,7 @@ overflow: hidden;
 transition: height 0s ease-out; }
 
 .comments ol.comment-list {
-margin: 0 auto 70px;
+margin: 0 auto 40px;
 font-family: microsoft yahei;}
 
 .comnav {
@@ -2939,9 +2939,6 @@ div.children ol{
     padding: 0 !important;
 }
 
-
-
-
 @media (max-width: 1080px) {
 .comments {
 padding: 0 0 6.39%;
@@ -2954,7 +2951,7 @@ padding: 0;
 list-style: none; }
 
 .comment .contents {
-margin-bottom: 40px;
+margin-bottom: 20px;
  }
 
 .comment .isauthor {
