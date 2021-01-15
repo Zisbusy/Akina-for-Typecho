@@ -18,8 +18,8 @@
 <div class="pattern-center">
     <div class="pattern-attachment-img" style="background-image: url(
 	<?php 
-		if (array_key_exists('img',unserialize($this->___fields()))){
-			$this->fields->img(); 
+		if (array_key_exists('thumbnail',unserialize($this->___fields()))){
+			$this->fields->thumbnail(); 
 		} else {
 			if(img_postthumb($this->content)){
 				echo img_postthumb($this->content);
