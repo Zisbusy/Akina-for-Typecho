@@ -18,8 +18,8 @@
 <div class="pattern-center">
     <div class="pattern-attachment-img" style="background-image: url(
 	<?php 
-		if (array_key_exists('img',unserialize($this->___fields()))){
-			$this->fields->img(); 
+		if (array_key_exists('thumbnail',unserialize($this->___fields()))){
+			$this->fields->thumbnail(); 
 		} else {
 			if(img_postthumb($this->content)){
 				echo img_postthumb($this->content);
@@ -64,7 +64,7 @@
 			<!-- 分享按钮 -->
 			<div class="post-share">
 				<ul class="sharehidden">
-					<li><a href="http://qr.liantu.com/api.php?text=<?php $this->permalink(); ?>" onclick="window.open(this.href, 'renren-share', 'width=490,height=700');return false;" class="s-weixin"><img src="<?php echo theurl; ?>images/wechat.png"/></a></li>
+					<li><a href="https://api.pwmqr.com/qrcode/create/?url=<?php $this->permalink(); ?>" onclick="window.open(this.href, 'renren-share', 'width=490,height=700');return false;" class="s-weixin"><img src="<?php echo theurl; ?>images/wechat.png"/></a></li>
 					<li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'weibo-share', 'width=730,height=500');return false;" class="s-qq"><img src="<?php echo theurl; ?>images/qzone.png"/></a></li>
 					<li><a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'weibo-share', 'width=550,height=235');return false;" class="s-sina"><img src="<?php echo theurl; ?>images/sina.png"/></a></li>
 					<li><a href="http://shuo.douban.com/!service/share?<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'renren-share', 'width=490,height=600');return false;" class="s-douban"><img src="<?php echo theurl; ?>images/douban.png"/></a></li>

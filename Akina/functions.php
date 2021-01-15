@@ -161,46 +161,87 @@ function img_postthumb($content) {
 			return "";  //没找到(默认情况下)，不输出任何内容
    };
 }
-//数据库查询相邻文章链接与标题
-function queryNextPrev($mode, $widget){
-    $where = $mode ? 'table.contents.created < ?' : 'table.contents.created > ?';
-    $sorted = $mode ? Typecho_Db::SORT_DESC : Typecho_Db::SORT_ASC;
+// 缩略图设置
+function themeFields($layout){
+    $thumbnail = new Typecho_Widget_Helper_Form_Element_Text('thumbnail', null, null, _t('文章/页面缩略图Url'), _t('需要带上http(s)://'));
+    $icon = new Typecho_Widget_Helper_Form_Element_Text('icon', null, null, _t('文章/页面首页图标Url'), _t('需要带上http(s)://'));
+    $layout->addItem($thumbnail);
+    $layout->addItem($icon);
+}
+/**
+     * 从数据库查询上/下篇文章内容信息
+     * 返回内容包括文章缩略、标题、链接
+     *
+     * @param bool $mode 查询上或下篇
+     * @param mixed $archive
+     *
+     * @return array|bool
+     */
+// 相关代码感谢 https://github.com/Siphils/Typecho-Theme-Aria/blob/master/lib/Contents.php
+function getNextPrev($mode, $archive){
     $options = Helper::options();
     $db = Typecho_Db::get();
+    //数据准备
+    $where = null;
+    $sorted = null;
+    $name = 'thumbnail';
+    $thumbnail = 'str_value';
+    //$mode为true查询上文，false查询下文
+    if ($mode) {
+        $where = 'table.contents.created < ?';
+        $sorted = Typecho_Db::SORT_DESC;
+    } else {
+        $where = 'table.contents.created > ?';
+        $sorted = Typecho_Db::SORT_ASC;
+    }
+
     $query = $db->select()->from('table.contents')
-        ->where($where, $widget->created)
+        ->where($where, $archive->created)
         ->where('table.contents.status = ?', 'publish')
-        ->where('table.contents.type = ?', $widget->type)
+        ->where('table.contents.type = ?', $archive->type)
         ->where('table.contents.password IS NULL')
         ->order('table.contents.created', $sorted)
         ->limit(1);
     $content = $db->fetchRow($query);
+    $result = null;
     if ($content) {
-        $content = $widget->filter($content);
+        $content = $archive->filter($content);
         $title = $content['title'];
         $link = $content['permalink'];
-      
-        $result = array('title' => $title, 'link' => $link);
-        return $result;
+
+        $query = $db->select()->from('table.fields')
+            ->where('table.fields.cid = ?', $content['cid'])
+            ->where('table.fields.name = ?', $name)
+            ->limit(1);
+
+        $content = $db->fetchRow($query);
+        if ($content) {
+            $img = $content[$thumbnail] ? $content[$thumbnail] : '/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg';
+        } else {
+            $img = '/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg';
+        }
+
+        $result = array('img' => $img, 'title' => $title, 'link' => $link);
     } else {
-        return false;
+        $result = false;
     }
+    return $result;
 }
-//输出相邻文章链接与标题
+//输出相邻文章链接，标题，缩略图
 function theNextPrev($widget){
     $html = '';
-    $prevResult = queryNextPrev(true, $widget);
-    $nextResult = queryNextPrev(false, $widget);
+    $prevResult = getNextPrev(true, $widget);
+    $nextResult = getNextPrev(false, $widget);
     if (!$prevResult && !$nextResult) {
         //第一篇文章，什么也不需要输出
         $html .= '';
     } else if (!$nextResult) {
-        $html .= '<div class="post-nepre half next" style="width:100%;"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
+        $html .= '<div class="post-nepre half next" style="width:100%;"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(' . $prevResult["img"] . ');"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
     } else if (!$prevResult) {
-        $html .= '<div class="post-nepre half previous"style="width:100%;"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url(/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
+        $html .= '<div class="post-nepre half previous"style="width:100%;"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url( '. $nextResult["img"] . ');"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
     } else {
-        $html .= '<div class="post-nepre half previous"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url(' . theurl . 'images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
-		$html .= '<div class="post-nepre half next"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url(' . theurl . 'images/random/deu' . mt_rand(1,7). '.jpg);"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
+        $html .= '<div class="post-nepre half previous"><a href="' . $nextResult["link"] . '" rel="prev"><div class="background" style="background-image:url('. $nextResult["img"] .');"></div><span class="label">Previous Post</span><div class="info"><h3>' . $nextResult["title"] . '</h3><hr></div></a></div>';
+		$html .= '<div class="post-nepre half next"><a href="' . $prevResult["link"] . '" rel="next"><div class="background" style="background-image:url('. $prevResult["img"] . ');"></div><span class="label">Next Post</span><div class="info"><h3>' . $prevResult["title"] . '</h3><hr></div></a></div>';
     }
     echo $html;
 }

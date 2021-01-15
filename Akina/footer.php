@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<!-- 请尊重作者！至少保留主题名称及其超链接，谢谢！ -->
-	<div id="footer" class="site-info">Copyright © <?php echo date("Y");?> by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved.<span class="sep"> | </span>Theme: <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow">Akina For Typecho</a>.
+	<div id="footer" class="site-info">Copyright © <?php echo date("Y");?> by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved<span class="sep"> | </span>Theme : <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow">Akina For Typecho</a>
 		<div class="footertext">
 			<p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
 			<?php if ($this->options->gongan){
@@ -45,8 +45,8 @@
 <!-- 搜索 -->
 <form class="js-search search-form search-form--modal" method="post" action="" role="search">
 	<div class="search-form__inner">
-		<div>
-			<p class="micro mb-">你想搜索什么...</p>
+		<div class="search-div">
+			<h1 class="micromb-search">你想搜索什么...</h1>
 			<i class="iconfont">&#xe6f0;</i>
 			<input class="submit" type="search" name="s" placeholder="Search...">
 		</div>
