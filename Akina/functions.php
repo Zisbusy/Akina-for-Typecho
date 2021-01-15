@@ -217,6 +217,8 @@ function getNextPrev($mode, $archive){
         $content = $db->fetchRow($query);
         if ($content) {
             $img = $content[$thumbnail] ? $content[$thumbnail] : '/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg';
+        } else {
+            $img = '/usr/themes/Akina/images/random/deu' . mt_rand(1,7). '.jpg';
         }
 
         $result = array('img' => $img, 'title' => $title, 'link' => $link);
