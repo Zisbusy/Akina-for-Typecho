@@ -46,7 +46,7 @@
 <form class="js-search search-form search-form--modal" method="post" action="" role="search">
 	<div class="search-form__inner">
 		<div>
-			<p class="micro mb-">你想搜索什么...</p>
+			<h1 class="micromb-search">你想搜索什么...</h1>
 			<i class="iconfont">&#xe6f0;</i>
 			<input class="submit" type="search" name="s" placeholder="Search...">
 		</div>
