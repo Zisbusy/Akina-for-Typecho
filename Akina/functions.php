@@ -165,8 +165,10 @@ function img_postthumb($content) {
 function themeFields($layout){
     $thumbnail = new Typecho_Widget_Helper_Form_Element_Text('thumbnail', null, null, _t('文章/页面缩略图Url'), _t('需要带上http(s)://'));
     $icon = new Typecho_Widget_Helper_Form_Element_Text('icon', null, null, _t('文章/页面首页图标Url'), _t('需要带上http(s)://'));
+    $dtMode = new Typecho_Widget_Helper_Form_Element_Radio('dtMode', array(true => _t('开启'), false => _t('关闭')), false, _t('文章动态模式'), _t('该文章在列表展示方式为动态模式'));
     $layout->addItem($thumbnail);
     $layout->addItem($icon);
+    $layout->addItem($dtMode);
 }
 /**
      * 从数据库查询上/下篇文章内容信息
