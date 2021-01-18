@@ -200,7 +200,7 @@ if($this->options->sticky){
 		<?php else: ?>
 			<div class="post-entry">
 				<div class="feature">
-					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div><img src="<?php if(array_key_exists('icon',unserialize($this->___fields()))){$this->fields->icon();}else{echo theurl.'images/random/deu'.mt_rand(1,7).'.jpg';}?>"></a>
+					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div><img src="<?php if(array_key_exists('icon',unserialize($this->___fields())) & $this->fields->icon != null){$this->fields->icon();}else{echo theurl.'images/random/deu'.mt_rand(1,7).'.jpg';}?>"></a>
 				</div>
 				<h1 class="entry-title"><a href="<?php $this->permalink() ?>"><?php $this->sticky(); $this->title() ?></a></h1>
 				<div class="p-time">
