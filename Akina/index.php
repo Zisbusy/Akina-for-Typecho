@@ -192,9 +192,11 @@ if($this->options->sticky){
 				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php echo theprofile ?>" srcset="<?php echo theprofile ?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
 			</div>
 			<div class="s-content">
+				<a href="<?php $this->permalink() ?>">
 				<p><?php $this->excerpt(70, '...'); ?></p>
 				<div class="s-time"><i class="iconfont">&#xe604;</i><?php $this->date('Y-n-j'); ?><?php if(Postviews($this)>=1000) echo"<i class='iconfont hotpost' style='margin-left: 5px;'>&#xe618;</i>" ?>
 </div>
+				</a>
 			</div>
 			<footer class="entry-footer">
 		<?php else: ?>
