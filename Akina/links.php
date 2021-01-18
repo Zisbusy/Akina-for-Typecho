@@ -9,9 +9,9 @@
 <!-- 友链部分 -->
 <div class="blank"></div>
 <div class="headertop"></div>
-<?php if (array_key_exists('img',unserialize($this->___fields()))): ?>
+<?php if (array_key_exists('thumbnail',unserialize($this->___fields())) & $this->fields->thumbnail != null): ?>
 	<div class="pattern-center">
-		<div class="pattern-attachment-img" style="background-image: url(<?php $this->fields->img(); ?>)"></div>
+		<div class="pattern-attachment-img" style="background-image: url(<?php $this->fields->thumbnail(); ?>)"></div>
 		<header class="pattern-header"><h1 class="entry-title"><?php $this->title() ?></h1></header>
 	</div>
 <?php endif; ?>
