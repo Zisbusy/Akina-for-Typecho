@@ -271,7 +271,8 @@ function get_commentReply_at($coid)
 }
 //公安联网备案,获取备案号
 function gonganbeian($str){
-    $str=trim($str);
+    $str = trim($str);
+    $result = '';
     for($i=0;$i<strlen($str);$i++){
         if(is_numeric($str[$i])){
             $result.=$str[$i];
