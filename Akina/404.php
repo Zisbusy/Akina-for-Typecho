@@ -1,11 +1,11 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 define("THEME_URL", $this->options->themeUrl);
 	if(!empty(Helper::options()->CDNURL)){
-		$theurl = Helper::options()->CDNURL.'/AkinaCDN/';
+		$theurl = Helper::options()->CDNURL.'/usr/themes/Akina/';
 	}else{
 		$theurl = THEME_URL.'/';
 	}
-define("theurl",$theurl); 
+define("theurl",$theurl);
 ?>
 <!DOCTYPE HTML>
 <html>
