@@ -150,28 +150,26 @@ if($this->options->sticky){
 	<h1 class="fes-title">聚焦</h1>
 		<div class="feature-content">
 		<?php
-			$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
-			$featureNum = 0;
-			if(sizeof($featureCid)==3){
-				for($i=0;$i<3;$i++){
-					$featureNum++;
-					$this->widget('Widget_Archive@lunbo'.$i, 'pageSize=1&type=post', 'cid='.$featureCid[$i])->to($ji);
-					if ($ji->fields->img){
-						$featureImg = $ji->fields->img;
+		    $featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
+		    for($i=0;$i<3;$i++){
+		        $this->widget('Widget_Archive@lunbo'.$i, 'pageSize=1&type=single', 'cid='.$featureCid[$i])->to($ji);
+		        $featureNum = $i + 1;
+		        if($ji->permalink != ""){
+		            if ($ji->fields->thumbnail){
+						$featureImg = $ji->fields->thumbnail;
 					} else {
 						if(img_postthumb($ji->content)){
 							$featureImg = img_postthumb($ji->content);
 						} else {
-							$featureImg = theurl.'images/feature/feature'.$featureNum.'.jpg';
+							$featureImg = theurl.'images/postbg/'.$featureNum.'.jpg';
 						}
 					}
 					echo '<li class="feature-'.$featureNum.'"><a href="'.$ji->permalink.'"><div class="feature-title"><span class="foverlay">'.$ji->title.'</span></div><img src="'.$featureImg.'"></a></li>';
-				}
-			} else {
-				echo '
-				<li class="feature-1"><a href="https://zhebk.cn/Web/Akina.html"><div class="feature-title"><span class="foverlay">Akina</span></div><img src="'.theurl.'/images/feature/feature1.jpg"></a></li>
-				<li class="feature-2"><a href="https://zhebk.cn/Web/userAkina.html"><div class="feature-title"><span class="foverlay">使用说明</span></div><img src="'.theurl.'/images/feature/feature2.jpg"></a></li>
-				<li class="feature-3"><a href="https://zhebk.cn/archives.html"><div class="feature-title"><span class="foverlay">文章归档</span></div><img src="'.theurl.'/images/feature/feature3.jpg"></a></li>';
+		        } else {
+		            $defaultUrl = ['https://zhebk.cn/Web/Akina.html','https://zhebk.cn/Web/userAkina.html','https://zhebk.cn/archives.html'];
+		            $defaultTitle = ['Akina','使用说明','文章归档'];
+		            echo '<li class="feature-'.$featureNum.'"><a href="'.$defaultUrl[$i].'"><div class="feature-title"><span class="foverlay">'.$defaultTitle[$i].'</span></div><img src="'.theurl.'/images/feature/feature'.$featureNum.'.jpg"></a></li>';
+		        }
 			}
 		?>
 		</div>
