@@ -3,7 +3,7 @@
 	<!-- 请尊重作者！至少保留主题名称及其超链接，谢谢！ -->
 	<div id="footer" class="site-info">Copyright © <?php echo date("Y");?> by <a href="<?php $this->options ->siteUrl(); ?>" target="_blank" rel="nofollow"><?php $this->options->title() ?></a> . All rights reserved<span class="sep"> | </span>Theme : <a href="https://zhebk.cn/Web/Akina.html" target="_blank" rel="nofollow">Akina For Typecho</a>
 		<div class="footertext">
-			<p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
+			<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICP();?></a></p>
 			<?php if ($this->options->gongan){
 			    echo '
 			    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode='.gonganbeian($this->options->gongan).'" style="display:inline-block;" rel="nofollow noopener noreferrer">
