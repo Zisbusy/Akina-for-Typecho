@@ -43,141 +43,145 @@ if($this->options->sticky){
 	}
 }
 ?>
-<div class="blank"></div>
-	<div class="headertop">
-		<!-- 首页大图 -->
-		<div id="centerbg" style="background-image: url(<?php echo authorProfile($this->options->headimg,theurl);?>);">
-			<!-- 左右倾斜 -->
-			<div class="slant-left"></div>
-			<div class="slant-right"></div>
-			<!-- 博主信息 -->
-			<div class="focusinfo">
-				<!-- 头像 -->
-				<div class="header-tou" >
-				<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theprofile ?>"></a>
-				</div>
-				<!-- 简介 -->
-				<div class="header-info">
-				<p><?php $this->options->headerinfo() ?></p>
-				</div>
-				<!-- 社交信息 -->
-				<div class="top-social">
-					<?php
-						//微博
-						if ($this->options->SINA){
-							echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina"><img src="'.theurl.'images/sina.png"/></a></li>';
-						}
-						//微信
-						if ($this->options->Wechat){
-							echo '<li class="qq"><img style="cursor: pointer" src="'.theurl.'images/wechat.png"/></a><div class="qqInner">'.$this->options->Wechat.'</div></li>';
-						}
-						//QQ
-						if ($this->options->QQnum){
-							echo '<li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin='.$this->options->QQnum.'&site=qq&menu=yes" target="_blank" rel="nofollow" ><img src="'.theurl.'images/qq.png"/></a>
-									<div class="qqInner">'.$this->options->QQnum.'</div>
-								  </li>';
-						}
-						//酷安
-						if ($this->options->coolapk){
-							echo '<li class="qq"><a href="'.$this->options->coolapkLink.'" target="_blank" rel="nofollow" ><img src="'.theurl.'images/coolapk.png"/></a>
-									<div class="qqInner">'.$this->options->coolapk.'</div>
-								  </li>';
-						}
-						//QQ空间
-						if ($this->options->Qzone){
-							echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
-						}
-						//Github
-						if ($this->options->Github){
-							echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github"><img src="'.theurl.'images/github.png"/></a></li>';
-						}
-						//Bilibili
-						if ($this->options->Bilibili){
-							echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
-						}
-					?>
-				</div>
-			</div>
-		</div>
-		<!-- 首页大图结束 -->
-	</div>
-<div class=""></div>
-<div id="content" class="site-content">
-<!-- 判断是否搜索 -->		
+<!-- 判断是否搜索 -->
 <?php if(!$this->is('index') && !$this->is('front')): ?>
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-		<!-- 判断搜索是否有结果-是 -->	
-		<?php if ($this->have()): ?>
-			<header class="page-header">
-			<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
-			</header>
-		<!-- 判断搜索是否有结果-否 -->	
-		<?php else: ?>
-			<div class="search-box">
-				<form class="s-search">
-					<i class="iconfont">&#xe6f0;</i>
-					<input class="text-input" type="search" name="s" placeholder="搜索...">	
-				</form>
-			</div>
-			<section class="no-results not-found">
-				<header class="page-header">
-					<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下暂无文章'),'search'=>_t('暂无包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下暂无文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
-				</header>
-				<div class="page-content">
-					<div class="sorry">
-						<p>抱歉, 没有找到你想要的文章. 看看其他文章吧.</p>
-						<div class="sorry-inner">
-							<ul class="search-no-reasults">
-								<?php getRandomPosts('5');?>
-							</ul>
+	<div class="blank"></div>
+	<div class="headertop"></div>
+	<div class=""></div>
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+				<!-- 判断搜索是否有结果-是 -->	
+				<?php if ($this->have()): ?>
+					<header class="page-header">
+					<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
+					</header>
+				<!-- 判断搜索是否有结果-否 -->	
+				<?php else: ?>
+					<div class="search-box">
+						<form class="s-search">
+							<i class="iconfont">&#xe6f0;</i>
+							<input class="text-input" type="search" name="s" placeholder="搜索...">	
+						</form>
+					</div>
+					<section class="no-results not-found">
+						<header class="page-header">
+							<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下暂无文章'),'search'=>_t('暂无包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下暂无文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
+						</header>
+						<div class="page-content">
+							<div class="sorry">
+								<p>抱歉, 没有找到你想要的文章. 看看其他文章吧.</p>
+								<div class="sorry-inner">
+									<ul class="search-no-reasults">
+										<?php getRandomPosts('5');?>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</div>	
-				</div>
-			</section>			
-		<?php endif; ?>	
-<?php else: ?>
+					</section>
+				<?php endif; ?>
 <!-- 不是搜索显示主页 -->
-<!-- 顶部公告内容 -->
-<div class="notice">
-	<i class="iconfont">&#xe607;</i>
-		<div class="notice-content">
-		<?php $this->options->NOTICE();?>
+<?php else: ?>
+	<div class="blank"></div>
+		<div class="headertop">
+			<!-- 首页大图 -->
+			<div id="centerbg" style="background-image: url(<?php echo authorProfile($this->options->headimg,theurl);?>);">
+				<!-- 左右倾斜 -->
+				<div class="slant-left"></div>
+				<div class="slant-right"></div>
+				<!-- 博主信息 -->
+				<div class="focusinfo">
+					<!-- 头像 -->
+					<div class="header-tou" >
+					<a href="<?php $this->options ->siteUrl(); ?>"><img src="<?php echo theprofile ?>"></a>
+					</div>
+					<!-- 简介 -->
+					<div class="header-info">
+					<p><?php $this->options->headerinfo() ?></p>
+					</div>
+					<!-- 社交信息 -->
+					<div class="top-social">
+						<?php
+							//微博
+							if ($this->options->SINA){
+								echo '<li><a href="'.$this->options->SINA.'" target="_blank" rel="nofollow" class="social-sina"><img src="'.theurl.'images/sina.png"/></a></li>';
+							}
+							//微信
+							if ($this->options->Wechat){
+								echo '<li class="qq"><img style="cursor: pointer" src="'.theurl.'images/wechat.png"/></a><div class="qqInner">'.$this->options->Wechat.'</div></li>';
+							}
+							//QQ
+							if ($this->options->QQnum){
+								echo '<li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin='.$this->options->QQnum.'&site=qq&menu=yes" target="_blank" rel="nofollow" ><img src="'.theurl.'images/qq.png"/></a>
+										<div class="qqInner">'.$this->options->QQnum.'</div>
+									</li>';
+							}
+							//酷安
+							if ($this->options->coolapk){
+								echo '<li class="qq"><a href="'.$this->options->coolapkLink.'" target="_blank" rel="nofollow" ><img src="'.theurl.'images/coolapk.png"/></a>
+										<div class="qqInner">'.$this->options->coolapk.'</div>
+									</li>';
+							}
+							//QQ空间
+							if ($this->options->Qzone){
+								echo '<li><a href="'.$this->options->Qzone.'" target="_blank" rel="nofollow" class="social-qzone"><img src="'.theurl.'images/qzone.png"/></a></li>';
+							}
+							//Github
+							if ($this->options->Github){
+								echo '<li><a href="'.$this->options->Github.'" target="_blank" rel="nofollow" class="social-github"><img src="'.theurl.'images/github.png"/></a></li>';
+							}
+							//Bilibili
+							if ($this->options->Bilibili){
+								echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
+							}
+						?>
+					</div>
+				</div>
+			</div>
+			<!-- 首页大图结束 -->
 		</div>
-</div>
-<!-- 聚焦内容 -->
-<div class="top-feature">
-	<h1 class="fes-title">聚焦</h1>
-		<div class="feature-content">
-		<?php
-		    $featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
-		    for($i=0;$i<3;$i++){
-		        $this->widget('Widget_Archive@lunbo'.$i, 'pageSize=1&type=single', 'cid='.$featureCid[$i])->to($ji);
-		        $featureNum = $i + 1;
-		        if($ji->permalink != ""){
-		            if ($ji->fields->thumbnail){
-						$featureImg = $ji->fields->thumbnail;
-					} else {
-						if(img_postthumb($ji->content)){
-							$featureImg = img_postthumb($ji->content);
+	<div class=""></div>
+	<div id="content" class="site-content">
+	<!-- 顶部公告内容 -->
+	<div class="notice">
+		<i class="iconfont">&#xe607;</i>
+			<div class="notice-content">
+			<?php $this->options->NOTICE();?>
+			</div>
+	</div>
+	<!-- 聚焦内容 -->
+	<div class="top-feature">
+		<h1 class="fes-title">聚焦</h1>
+			<div class="feature-content">
+			<?php
+				$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
+				for($i=0;$i<3;$i++){
+					$this->widget('Widget_Archive@lunbo'.$i, 'pageSize=1&type=single', 'cid='.$featureCid[$i])->to($ji);
+					$featureNum = $i + 1;
+					if($ji->permalink != ""){
+						if ($ji->fields->thumbnail){
+							$featureImg = $ji->fields->thumbnail;
 						} else {
-							$featureImg = theurl.'images/postbg/'.$featureNum.'.jpg';
+							if(img_postthumb($ji->content)){
+								$featureImg = img_postthumb($ji->content);
+							} else {
+								$featureImg = theurl.'images/postbg/'.$featureNum.'.jpg';
+							}
 						}
+						echo '<li class="feature-'.$featureNum.'"><a href="'.$ji->permalink.'"><div class="feature-title"><span class="foverlay">'.$ji->title.'</span></div><img src="'.$featureImg.'"></a></li>';
+					} else {
+						$defaultUrl = ['https://zhebk.cn/Web/Akina.html','https://zhebk.cn/Web/userAkina.html','https://zhebk.cn/archives.html'];
+						$defaultTitle = ['Akina','使用说明','文章归档'];
+						echo '<li class="feature-'.$featureNum.'"><a href="'.$defaultUrl[$i].'"><div class="feature-title"><span class="foverlay">'.$defaultTitle[$i].'</span></div><img src="'.theurl.'/images/feature/feature'.$featureNum.'.jpg"></a></li>';
 					}
-					echo '<li class="feature-'.$featureNum.'"><a href="'.$ji->permalink.'"><div class="feature-title"><span class="foverlay">'.$ji->title.'</span></div><img src="'.$featureImg.'"></a></li>';
-		        } else {
-		            $defaultUrl = ['https://zhebk.cn/Web/Akina.html','https://zhebk.cn/Web/userAkina.html','https://zhebk.cn/archives.html'];
-		            $defaultTitle = ['Akina','使用说明','文章归档'];
-		            echo '<li class="feature-'.$featureNum.'"><a href="'.$defaultUrl[$i].'"><div class="feature-title"><span class="foverlay">'.$defaultTitle[$i].'</span></div><img src="'.theurl.'/images/feature/feature'.$featureNum.'.jpg"></a></li>';
-		        }
-			}
-		?>
-		</div>
-</div>
-<!-- 主页内容 -->
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-	<h1 class="main-title">近况</h1>
+				}
+			?>
+			</div>
+	</div>
+	<!-- 主页内容 -->
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+		<h1 class="main-title">近况</h1>
 <!-- 结束搜索判断 -->
 <?php endif; ?>
 		<!-- 开始文章循环输出 -->
