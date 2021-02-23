@@ -54,32 +54,24 @@ if($this->options->sticky){
 				<!-- 判断搜索是否有结果-是 -->	
 				<?php if ($this->have()): ?>
 					<header class="page-header">
-					<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
-					<span><?php echo '找到'.$this->getTotal().'篇';?></span>
+						<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
+						<span><?php echo '找到'.$this->getTotal().'篇';?></span>
 					</header>
 				<!-- 判断搜索是否有结果-否 -->	
 				<?php else: ?>
-					<div class="search-box">
-						<form class="s-search">
-							<i class="iconfont">&#xe6f0;</i>
-							<input class="text-input" type="search" name="s" placeholder="搜索...">	
-						</form>
-					</div>
-					<section class="no-results not-found">
-						<header class="page-header">
-							<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下暂无文章'),'search'=>_t('暂无包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下暂无文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
-						</header>
-						<div class="page-content">
-							<div class="sorry">
-								<p>抱歉, 没有找到你想要的文章. 看看其他文章吧.</p>
-								<div class="sorry-inner">
-									<ul class="search-no-reasults">
-										<?php getRandomPosts('5');?>
-									</ul>
-								</div>
+					<header class="page-header">
+						<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下暂无文章'),'search'=>_t('暂无包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下暂无文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
+					</header>
+					<div class="page-content">
+						<div class="sorry">
+							<p>抱歉, 没有找到你想要的文章. 看看其他文章吧.</p>
+							<div class="sorry-inner">
+								<ul class="search-no-reasults">
+									<?php getRandomPosts('5');?>
+								</ul>
 							</div>
 						</div>
-					</section>
+					</div>
 				<?php endif; ?>
 <!-- 不是搜索显示主页 -->
 <?php else: ?>
