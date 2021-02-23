@@ -55,6 +55,7 @@ if($this->options->sticky){
 				<?php if ($this->have()): ?>
 					<header class="page-header">
 					<h1 class="page-title">搜索结果: <span><?php $this->archiveTitle(array('category'=>_t('分类“%s”下的文章'),'search'=>_t('包含关键字“%s”的文章'),'tag' =>_t('标签“%s”下的文章'),'author'=>_t('%s 的主页')), '', ''); ?></span></h1>
+					<span><?php echo '找到'.$this->getTotal().'篇';?></span>
 					</header>
 				<!-- 判断搜索是否有结果-否 -->	
 				<?php else: ?>
