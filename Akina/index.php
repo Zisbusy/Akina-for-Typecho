@@ -65,11 +65,7 @@ if($this->options->sticky){
 					<div class="page-content">
 						<div class="sorry">
 							<p>抱歉, 没有找到你想要的文章. 看看其他文章吧.</p>
-							<div class="sorry-inner">
-								<ul class="search-no-reasults">
-									<?php getRandomPosts('5');?>
-								</ul>
-							</div>
+							<ul class="search-no-reasults"><?php getRandomPosts('5');?></ul>
 						</div>
 					</div>
 				<?php endif; ?>
