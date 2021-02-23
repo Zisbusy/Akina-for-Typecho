@@ -2135,7 +2135,7 @@ display: inline;
 
 .page-content,
 .entry-summary {
-margin: 1.5em 0 0;
+margin: 8em 30px 0;
 }
 
 .page-links {
@@ -2811,12 +2811,12 @@ a.comment-reply-login {
 }
 
 .graybar {
-	display:none
+    display:none
 }
 
 .comments #error {
-	font-family:microsoft yahei;
-	margin-bottom:20px
+    font-family:microsoft yahei;
+    margin-bottom:20px
 }
 .notification-hidden {
     display: none;
@@ -3133,7 +3133,6 @@ width:32px }
 .comment-list li ol li .comment_body {
     padding-left: 35px;
 }
-	
 
 .comment-respond {
 width: 100%;
@@ -3696,16 +3695,11 @@ color: #8C8C8C;
 margin-bottom: 80px;
 }
 .sorry li{
-padding:10px 0;
+padding:6px 0;
 }
 .sorry li a:hover{
 color: #A0DAD0;
 }
-.sorry-inner {
-padding: 20px;
-border: 1px solid #ddd;
-}
-
 
 /*
 * 404
@@ -4629,19 +4623,6 @@ width: auto;
 .wrapper section{
 max-width: 860px;
 margin: 0 auto;
-}
-.wrapper section h1 {
-font-weight: 300;
-font-size: 30px;
-margin-bottom: 10px;
-}
-.wrapper section h2 {
-font-weight: 300;
-font-size: 20px;
-margin-bottom: 40px;
-}
-.wrapper section p {
-margin-bottom: 40px;
 }
 .openNav {
 transition-duration: 0.5s;
