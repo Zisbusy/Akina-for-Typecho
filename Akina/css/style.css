@@ -3255,7 +3255,9 @@ color: #6F6F6F;
 font-family: microsoft yahei;
 width: 160px;
 margin: 0 auto;
-border: 1px solid #C7C7C7;  }
+border: 1px solid #C7C7C7;
+border-radius: 3px;
+}
 
 .comment-respond .logged-in-as {
 margin-bottom:20px
