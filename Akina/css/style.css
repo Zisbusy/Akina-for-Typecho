@@ -5109,3 +5109,32 @@ pre[class*="language-"] {
 .fytx_alert_background .fytx_alert_btn:hover{
     background-color: #DDE6EA;
 }
+/*标签云*/
+.tags-list{
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.tags-list li{
+    border: none !important;
+    float: left;
+    list-style-type: none;
+    font-size: 12px;
+    margin: 14px 14px 14px 0;
+    padding: 0 !important;
+}
+.tags-list li a{
+    text-decoration: none;
+    color: #636363;
+    border: 1px dashed #969696;
+    padding: 6px;
+    border-radius: 5px;
+}
+ .size-20, .size-30{
+    color: #ff6d6d !important;
+    border: 1px dashed #ff6d6d !important;
+}
+.tags-list li a:hover{
+    color: #ff6d6d !important;
+    border: 1px dashed #ff6d6d !important;
+}
