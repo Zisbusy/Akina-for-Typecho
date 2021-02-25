@@ -42,9 +42,10 @@ Akina 提供了一个独特的首页页面
 在管理-独立页面-新增页面中  
 友链建议为`links.html`结尾。  
 关于建议为`about.html`结尾。  
+标签云建议为`tags.html`结尾。  
 留言建议为`message.html`结尾。  
 归档建议为`archives.html`结尾。  
-自定义模板选择名字相同模板（如多没有选择page），建议请提前[配置好伪静态](https://www.typechodev.com/theme/478.html)。
+自定义模板选择名字相同模板（如果没有选择page），建议请提前[配置好伪静态](https://www.typechodev.com/theme/478.html)。
 
 ### 友链写法
 安装links插件后不需要写html了
