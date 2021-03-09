@@ -98,7 +98,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		<!-- 分类 -->
 		<div class="lower">
 			<nav>
-				<ul id="nav_menu" class="menu"><li class="current-menu-item"><a href="/">首页</a></li>
+				<ul id="nav_menu" class="menu"><li class="current-menu-item"><a href="<?php $this->options ->siteUrl(); ?>">首页</a></li>
 				<li><a href="#">分类</a>
 				<ul class="sub-menu">
 					<?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
