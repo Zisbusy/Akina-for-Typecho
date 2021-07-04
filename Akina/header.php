@@ -56,7 +56,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		</div>
 			<!-- logo则显示 -->
 			<div class="site-branding">
-			 <div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php echo theurl; ?>images/akina.png"></a></div>		  
+			 <div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php echo authorProfile($this->options->logo,theurl);?>"></a></div>		  
 			</div>
 			<!-- logo 结束 -->
 	 </div>	
@@ -66,7 +66,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<div class="site-top">
 		<!-- logo则显示 -->
 		<div class="site-branding">
-		<div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php echo theurl; ?>images/akina.png"></a></div>		  
+		<div class="site-title"><a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php echo authorProfile($this->options->logo,theurl);?>"></a></div>		  
 		</div>
 		<!-- logo 结束 -->
 		<div id="login-reg">
