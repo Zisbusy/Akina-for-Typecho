@@ -23,7 +23,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Cache-Control" content="no-transform" />
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
-	<title itemprop="name"><?php $this->options->title(); ?><?php if($this->options->sub){echo '-'.$this->options->sub;} ?></title>
+	<title itemprop="name"><?php $this->options->title(); ?><?php if($this->options->sub){echo ' - '.$this->options->sub;} ?></title>
 	<link rel="canonical" href="<?php $this->options ->siteUrl(); ?>" />
 	<link rel="shortcut icon" href="<?php echo theurl; ?>images/favicon.ico">
 	<link rel="stylesheet" href="<?php echo theurl; ?>css/style.css" type="text/css" />
@@ -37,7 +37,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 				<a href="<?php $this->options ->siteUrl(); ?>" ><img src="<?php echo theurl; ?>images/akina.png"></a>
 			</div>
 			<div class="wesite-des">		
-				<p><?php $this->options->title(); ?><?php if($this->options->sub){echo '-'.$this->options->sub;} ?></p>
+				<p><?php $this->options->title(); ?><?php if($this->options->sub){echo ' - '.$this->options->sub;} ?></p>
 			</div>
 		</div>	
 		<div class="admin-login">
