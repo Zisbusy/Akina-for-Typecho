@@ -39,6 +39,9 @@ echo '<style>
 </style>';
 echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 //博客信息
+    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL,'images/akina.png', _t('网站logo地址'), _t('默认值images/akina.png，图片位置/usr/themes/Akina/images/akina.png'));
+    $form->addInput($logo);
+	
     $profile = new Typecho_Widget_Helper_Form_Element_Text('profile', NULL,'images/akinadeaava.jpg', _t('博主头像地址'), _t('默认值images/akinadeaava.jpg，图片位置/usr/themes/Akina/images/akinadeaava.jpg'));
     $form->addInput($profile);
 	
