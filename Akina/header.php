@@ -17,7 +17,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<meta http-equiv="Cache-Control" content="no-transform" />
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
-	<title itemprop="name"><?php $this->archiveTitle(array('category'=>_t('分类 %s 下的文章'),'search'=>_t('包含关键字 %s 的文章'),'tag' =>_t('标签 %s 下的文章'),'author'=>_t('%s 的主页')), '', ' - '); ?><?php $this->options->title(); ?><?php if($this->is('index')): ?>-<?php $this->options->sub() ?><?php endif; ?></title>
+	<title itemprop="name"><?php $this->archiveTitle(array('category'=>_t('分类 %s 下的文章'),'search'=>_t('包含关键字 %s 的文章'),'tag' =>_t('标签 %s 下的文章'),'author'=>_t('%s 的主页')), '', ' - '); ?><?php $this->options->title(); ?><?php if($this->is('index')): ?><?php if($this->options->sub){echo ' - '.$this->options->sub;} ?><?php endif; ?></title>
 	<?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw='); ?>
 	<link rel='dns-prefetch' href="<?php $this->options->DNS();?>" />
 	<?php echo '
