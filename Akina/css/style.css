@@ -2644,9 +2644,9 @@ background-image: url(../images/bg_top_menu.png);
 .we-footer {
 max-width: 1080px;
 margin: auto;
-padding-top: 30px;
+padding: 25px;
 padding-bottom:20px;
-font-size: 15px;
+font-size: 12px;
 }
 
 .we-info {
@@ -4483,10 +4483,6 @@ font-size:12px
 display:none
 }
 
-.site-footer {
-padding:30px
-}
-
 .lower {
 display:none !important
 }
@@ -4569,7 +4565,7 @@ display:none
 }
 
 .site-footer {
-padding:30px
+padding:25px
 }
 
 .we-title:before {
