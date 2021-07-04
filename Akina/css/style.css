@@ -263,6 +263,7 @@ position: relative;
 word-wrap: break-word;
 word-break: break-all;
 overflow: hidden;
+border-radius: 5px;
 }
 
 blockquote:before {
@@ -1187,7 +1188,7 @@ margin: 0 14% 0 2%;
 padding: 15px 30px;
 line-height: 30px;
 background: #FBFBFB;
-border-radius: 3px;
+border-radius: 5px;
 }
 .s-content:after {
 	content: "";
@@ -1351,7 +1352,7 @@ color: #9c9c9c;
     border-left: 5px solid #C4E2EA;
     font-weight: normal;
     font-size: 16px;
-    border-radius: 3px;
+    border-radius: 5px;
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
@@ -1362,7 +1363,7 @@ color: #9c9c9c;
     background: #FFF6B5;
     color: #737373;
     font-weight: normal;
-    border-radius: 3px;
+    border-radius: 5px;
     position:relative;
     padding-left:60px;
     box-shadow: 0 2px 3px rgba(0,0,0,.06);
@@ -2210,7 +2211,7 @@ background: #F5F5F5;
 margin-bottom: 20px;
 display: block;
 letter-spacing: 1px;
-
+border-radius: 5px;
 }
 
 .ar-time i {
@@ -2241,6 +2242,7 @@ margin-top: 10px;
 border-left: 20px solid transparent;
 border-bottom: 20px solid #F5F5F5;
 margin-left: 11px;
+border-radius: 0 0 0 5px;
 }
 
 span.ar-circle {
@@ -2311,6 +2313,7 @@ position: relative;
 overflow: hidden;
 -webkit-transition: all .3s;
 transition: all .3s;
+border-radius: 5px;
 }
 
 
@@ -3189,7 +3192,9 @@ width: 100%;
 height: 180px;
 margin-bottom: 40px;
 color: #535a63;
-border: 2px solid #DDE6EA; }
+border: 2px solid #DDE6EA;
+border-radius: 5px;
+}
 
 @media (max-width: 625px) {
 .comment-respond textarea {
@@ -3215,7 +3220,7 @@ border-right: 0;
 transition: background 0.15s ease-out;
 box-shadow: none;
 border: 0;
-border-radius: 2px;
+border-radius: 5px;
 text-shadow:none
 }
 
@@ -3359,7 +3364,7 @@ position: relative;
 margin-top: 60px;
 margin-bottom: 60px;
 background: #FBFBFB;
-border-radius: 3px;
+border-radius: 5px;
 }
 
 .notice:before{
@@ -3452,6 +3457,7 @@ margin-top: 30px;
 font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
 letter-spacing: 1px;
 line-height: 30px;
+border-radius: 5px;
 }
 
 .header-info p {
@@ -4726,7 +4732,7 @@ font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans
     border: 0;
     padding: 5px;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 5px;
     outline: none;
     font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
 }
