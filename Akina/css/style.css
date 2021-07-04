@@ -1706,22 +1706,22 @@ li.wedonate:after , li.alidonate:after {
     position: relative;
     font-size: 13px;
     margin-left: -4px;
-	color: #8A8A8A;
+    color: #8A8A8A;
 }
 li.alidonate:after {
-	content:"支付宝";
+    content:"支付宝";
 }
 .open-message {
-	margin: 50px 0;
+    margin: 50px 0;
     position: relative;
-	background: #2B2B2B;
+    background: #2B2B2B;
     padding: 10px 30px;
-    border-radius: 3px;
-	font-size: 14px;
+    border-radius: 5px;
+    font-size: 14px;
     color: #fff;
 }
 .open-message:before {
-	font-family: fantasy;
+    font-family: fantasy;
     content: "!";
     position: absolute;
     top: 26px;
@@ -3256,7 +3256,7 @@ font-family: microsoft yahei;
 width: 160px;
 margin: 0 auto;
 border: 1px solid #C7C7C7;
-border-radius: 3px;
+border-radius: 5px;
 }
 
 .comment-respond .logged-in-as {
