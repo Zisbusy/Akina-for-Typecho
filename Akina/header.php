@@ -108,7 +108,6 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 				<ul class="sub-menu">
 					<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
 					<?php while($pages->next()): ?>
-						<?php if ($pages->fields->navbar == "hide") continue; ?>
 						<li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
 					<?php endwhile; ?>
 				</ul>
