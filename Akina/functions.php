@@ -92,10 +92,10 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $form->addInput($Bilibili);
 	
 //文章推荐
-    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('<br><span class="themeConfig"><h3>文章推荐</h3></span>文章置顶'), _t('置顶的文章cid，按照排序输入, 请以半角逗号,或空格分隔'));
+    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('<br><span class="themeConfig"><h3>文章推荐</h3></span>文章置顶'), _t('填写文章cid，按照输入顺序显示（请以半角逗号,或空格分隔）'));
     $form->addInput($sticky);
 	
-    $featureCids = new Typecho_Widget_Helper_Form_Element_Text('featureCids', NULL,NULL, _t('聚焦内容'), _t('请以半角逗号,或空格分隔'));
+    $featureCids = new Typecho_Widget_Helper_Form_Element_Text('featureCids', NULL,NULL, _t('聚焦内容'), _t('填写文章cid，按照输入顺序只显示前三个（请以半角逗号,或空格分隔）'));
     $form->addInput($featureCids);
 	
 //加速设置
