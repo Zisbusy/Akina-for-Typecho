@@ -211,7 +211,7 @@ if($this->options->sticky){
 							<span><i class="iconfont">&#xe610;</i><a href="<?php $this->permalink() ?>"><?php $this->commentsNum(_t('NOTHING'), _t('1条评论'), _t('%d条评论')); ?></a></span>
 						</div>
 						<div class="views">
-							<span><i class="iconfont">&#xe614;</i> <?php echo Postviews($this); ?> 热度</span>
+							<span><i class="iconfont">&#xe614;</i><?php echo Postviews($this)>=10000 ? round(Postviews($this)/10000,1) .'万' : Postviews($this);?> 热度</span>
 						</div>
 					</div>
 				</footer>
