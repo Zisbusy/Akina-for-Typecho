@@ -58,7 +58,7 @@
 			<div class="post-like">
 				<a href="javascript:;" data-action="ding" data-id="58" class="specsZan ">
 					<i class="iconfont">&#xe612;</i>
-					<span class="count"><?php echo Postviews($this); ?></span>
+					<span class="count"><?php echo Postviews($this)>=10000 ? round(Postviews($this)/10000,1) .'万' : Postviews($this);?></span>
 				</a>
 			</div>
 			<!-- 分享按钮 -->
