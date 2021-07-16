@@ -2832,32 +2832,22 @@ form#commentform {
 	color:#909090
 }
 /*评论翻页*/
-nav#comments-navi {
-margin: 0 auto;
-max-width: 860px;
-width: 100%;
-color: #9A9A9A;
-margin-bottom: 20px;
+#comments-navi {
+    margin: 0 auto;
+    color: #5f5f5f;
+    max-width: 300px;
+    padding: 15px 10px;
+    border-bottom: 1px dashed #ddd;
 }
-.lists-navigator {
-	margin:-30px 0 35px;
+#comments-navi ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-evenly;
 }
-.lists-navigator ol {
-	margin:0;
-	padding:0 10px;
-	list-style:none;
-	text-align:center
-}
-.lists-navigator ol li {
-	display:inline-block;
-	color:#5f5f5f;
-}
-.lists-navigator ol li a {
-	font-size:14px;
-	padding:0 20px;
-	/* color:#5f5f5f;*/
-}
-#comments .lists-navigator ol li.current a {
+#comments ol .current a {
 	color:#A0DAD0
 }
 #comments a {
@@ -4572,7 +4562,7 @@ padding:25px
 display:none
 }
 
-h3#comments-list-title , nav#comments-navi {
+h3#comments-list-title {
 width: 100%;
 padding: 0 6.39%;
 max-width: 1245px;
