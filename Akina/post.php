@@ -52,6 +52,14 @@
 		    echo preg_replace($pattern, $replacement, $this->content);
 		?>
 		</div>
+		<!-- 广告展示 -->
+		<?php
+			if ($this->options->adPostImg){
+				echo '<a href="'.$this->options->adPostkLink.'" target="_blank" rel="nofollow noopener noreferrer">
+						<img style=" width: 100%; border-radius: 5px; " src="'.$this->options->adPostImg.'">
+					  </a>';
+			}
+		?>
 		<!-- 文章底部 -->
 		<footer class="post-footer">
 			<!-- 阅读次数 -->
