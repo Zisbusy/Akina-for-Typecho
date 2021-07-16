@@ -75,15 +75,12 @@
 	<?php if ($comments->have()): ?>
 		<!-- 评论翻页 -->
 		<nav id="comments-navi">
-		    <div class="lists-navigator clearfix">
-				<?php $comments->pageNav('←','→','2','...'); ?>
-			</div>
+			<?php $comments->pageNav('←','→','1','...'); ?>
 		</nav>
 	<?php endif; ?>
 		<!--评论框-->
 		<!-- 判断设置是否允许对当前文章进行评论 -->
 		<?php if($this->allow('comment')): ?>
-		<nav id="comments-navi"></nav>
 		<div id="respond_box">
 			<div id="<?php $this->respondId(); ?>" class="comment-respond">
 				<div class="cancel-comment-reply">
