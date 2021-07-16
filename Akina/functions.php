@@ -98,6 +98,12 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $featureCids = new Typecho_Widget_Helper_Form_Element_Text('featureCids', NULL,NULL, _t('聚焦内容'), _t('填写文章cid，按照输入顺序只显示前三个（请以半角逗号,或空格分隔）'));
     $form->addInput($featureCids);
 	
+//广告设置
+    $adPostImg = new Typecho_Widget_Helper_Form_Element_Text('adPostImg', NULL,'', _t('<br><span class="themeConfig"><h3>广告设置</h3></span><div class="info">不填写相关信息时可以隐藏该广告展示</div>文章页广告'), _t('填写广告图片链接'));
+    $form->addInput($adPostImg);
+    $adPostkLink = new Typecho_Widget_Helper_Form_Element_Text('adPostkLink', NULL,'', _t(' '), _t('填写文章页广告超链接'));
+    $form->addInput($adPostkLink);
+	
 //加速设置
     $DNS = new Typecho_Widget_Helper_Form_Element_Text('DNS', NULL,'https://cdn.zhebk.cn', _t('<br><span class="themeConfig"><h3>加速设置</h3></span><div class="info">劣质CDN甚至会拖慢网站的速度，图标异常请自行解决跨域问题。CDN付费用户注意，该操作会让你的钱包遭受不可逆的降维打击。</div>DNS预解析加速'), _t('比如填写引用图片的域名（请规范填写，需https://，http://或者//）'));
     $form->addInput($DNS);
