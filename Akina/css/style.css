@@ -1592,6 +1592,10 @@ position: relative;
 transition:opacity .4s ease-out
 }
 
+.sharehidden img {
+    width: 32px;
+}
+
 .post-share li {
 float:left;
 margin-right: 20px;
