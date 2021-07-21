@@ -4295,6 +4295,7 @@ background-repeat:no-repeat;
 color: #555; 
 border:none;
 cursor: no-drop;
+background-size: contain;
 }
 #pagination .loading:hover {
 border:none
