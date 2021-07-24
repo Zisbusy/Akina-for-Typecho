@@ -1,4 +1,4 @@
-﻿@charset"utf-8";
+@charset"utf-8";
 html {
 font-family: sans-serif;
 -webkit-text-size-adjust: 100%;
@@ -4556,7 +4556,7 @@ padding:0 20px
 .focusinfo {
     top: 55%;
 }
-
+}
 @media (max-width: 1080px) {
 .info-meta {
 display:none
