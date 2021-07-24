@@ -4550,9 +4550,13 @@ padding:0 20px
 }
 
 .slant-left , .slant-right {display:none}
-#centerbg {    background-attachment: inherit;}
-} 
-
+#centerbg {    
+    background-attachment: inherit;
+    height: 400px;
+}
+.focusinfo {
+    top: 55%;
+}
 
 @media (max-width: 1080px) {
 .info-meta {
