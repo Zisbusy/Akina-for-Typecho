@@ -31,7 +31,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		.site-top .show-nav { display:none !important; }
 	<?php endif; ?>
 	<?php if (!empty($this->options->menu) && in_array('indexbg', $this->options->menu)): ?>
-		@media (max-width:1080px) {#centerbg {display:block;height: 500px;} }
+		@media (max-width:1080px) {#centerbg {display:block;} }
 	<?php else: ?>
 		@media (max-width:1080px) {#centerbg {display:none} }
 	<?php endif; ?>
