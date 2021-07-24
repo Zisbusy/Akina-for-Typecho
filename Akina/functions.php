@@ -123,6 +123,7 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     array(
 	'show' => _t('一直显示菜单'),
 	'indexbg' => _t('一直显示首页大图'),
+	'feature' => _t('一直显示聚焦内容'),
 	'page' => _t('使用ajax加载文章'),
 	'xl' => _t('下拉自动加载文章'),
 	),
