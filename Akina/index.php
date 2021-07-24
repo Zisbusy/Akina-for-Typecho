@@ -189,7 +189,7 @@ if($this->options->sticky){
 			<div class="s-content">
 				<a href="<?php $this->permalink() ?>">
 				<p><?php $this->excerpt(70, '...'); ?></p>
-				<div class="s-time"><i class="iconfont">&#xe604;</i><?php $this->date('Y-n-j'); ?><?php if(Postviews($this)>=1000) echo"<i class='iconfont hotpost' style='margin-left: 5px;'>&#xe618;</i>" ?>
+				<div class="s-time"><i class="iconfont">&#xe604;</i><?php $this->date('Y-n-j'); ?><?php if(Postviews($this)>=2000) echo"<i class='iconfont hotpost' style='margin-left: 5px;'>&#xe618;</i>" ?>
 </div>
 				</a>
 			</div>
