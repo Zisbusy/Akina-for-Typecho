@@ -35,6 +35,10 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<?php else: ?>
 		@media (max-width:1080px) {#centerbg {display:none} }
 	<?php endif; ?>
+	<?php if (!empty($this->options->menu) && in_array('feature', $this->options->menu)): ?>
+		#content .top-feature { display:block; }
+		.feature-content { display:flex; }
+	<?php endif; ?>
 	<?php if (!empty($this->options->menu) && in_array('page', $this->options->menu)): ?>
 	<?php else: ?>
 		.navigator { display:block !important }
