@@ -123,6 +123,10 @@ if($this->options->sticky){
 							if ($this->options->Bilibili){
 								echo '<li><a href="'.$this->options->Bilibili.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/bilibili.png"/></a></li>';
 							}
+							//网易云音乐
+							if ($this->options->Music){
+								echo '<li><a href="https://music.163.com/#/user/home?id='.$this->options->Music.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/music.png"/></a></li>';
+							}
 						?>
 					</div>
 				</div>
