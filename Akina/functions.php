@@ -91,6 +91,10 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $Bilibili = new Typecho_Widget_Helper_Form_Element_Text('Bilibili', NULL,'https://www.bilibili.com/', _t('Bilibili地址'), _t('Bilibili主页地址（请规范填写，需https://，http://或者//）'));
     $form->addInput($Bilibili);
 	
+    //网易云音乐
+    $Music = new Typecho_Widget_Helper_Form_Element_Text('Music', NULL,'https://music.163.com/', _t('网易云音乐用户ID'), _t('登陆网页版网易云音乐，点击个人主页。https://music.163.com/#/user/home?id=这里是ID'));
+    $form->addInput($Music);
+	
 //文章推荐
     $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL,NULL, _t('<br><span class="themeConfig"><h3>文章推荐</h3></span>文章置顶'), _t('填写文章cid，按照输入顺序显示（请以半角逗号,或空格分隔）'));
     $form->addInput($sticky);
