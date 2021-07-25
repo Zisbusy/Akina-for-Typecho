@@ -47,6 +47,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		.wedonate img { margin-right:10px }
 		.cd-top { background:url(<?php echo theurl; ?>images/gotop.png) no-repeat center 50%}
 	</style>
+	<?php $this->options->cssCode();?>
 </head>
 <body class="home blog hfeed">
 <!-- 加载动画 -->
