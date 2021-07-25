@@ -2039,7 +2039,8 @@ text-align: center;
 line-height: 45px;
 background-image: url("../images/postload.gif");
 background-position:center;
-background-repeat:no-repeat; 
+background-repeat:no-repeat;
+ background-size: contain;
 }
 
 h3#comments-list-title {
