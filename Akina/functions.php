@@ -129,6 +129,12 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 	),
     array('page'), _t('其他设置'));
     $form->addInput($menu->multiMode());
+	
+    $cssCode = new Typecho_Widget_Helper_Form_Element_Textarea('cssCode', null, null, _t('自定义 CSS'), _t('可以方便的自定义博客样式，避免修改源码影响主题模板迭代。(请编写完整的style标签)'));
+    $form->addInput($cssCode);
+    
+    $jsCode = new Typecho_Widget_Helper_Form_Element_Textarea('jsCode', null, null, _t('自定义 JS'), _t('可以方便的添加js代码，统计代码可以填写到这里。(请编写完整的script标签)'));
+    $form->addInput($jsCode);
 }
 //判断本地、cdn和自定义资源加载逻辑
 function authorProfile($src,$theurl){
