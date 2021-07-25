@@ -3391,6 +3391,17 @@ background-attachment:fixed;
 background-size: cover;
 z-index:-1;
 } 
+#centerbg::before {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: inherit;
+filter: blur(2px);
+z-index: 0;
+}
 
 .slant-left {
 background: #fff;
