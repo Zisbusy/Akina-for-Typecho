@@ -1298,33 +1298,18 @@ color: #9c9c9c;
     font-size: 14px;
     color: #D2D2D2;
 }
-.entry-content ul {
-    list-style: disc;
-    padding: 5px 10px 5px 50px;
-    color: #828282;
-    margin-left: 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.entry-content ol {
-    list-style: decimal;
-    padding: 5px 10px 5px 50px;
-    color: #828282;
-    margin-left: 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.entry-content ul, .entry-content ol {
+    color: #6c6c6c;
+    margin: 10px 0;
 }
 
 .entry-content ol li , .entry-content ul li {
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
+    padding: 5px 0;
 } 
 
-.entry-content ol li:first-child , .entry-content ul li:first-child {
-    border-top: none;
+ul ::marker {
+    color: #f77a7a;
 }
-
 .entry-content {
     position: relative;
 }
