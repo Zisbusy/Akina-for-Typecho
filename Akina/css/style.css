@@ -1302,13 +1302,27 @@ color: #9c9c9c;
     color: #6c6c6c;
     margin: 10px 0;
 }
-
 .entry-content ol li , .entry-content ul li {
     padding: 5px 0;
 } 
-
 ul ::marker {
     color: #f77a7a;
+}
+.entry-content table {
+    border: 1px solid #eaeaea;
+    margin: 10px 0;
+    color: #575757;
+    text-align: center;
+    border-radius: 5px;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.entry-content table thead {
+    background-color: #f1f1f1;
+}
+.entry-content table td, .entry-content table th {
+    padding: 5px 8px;
+    border-radius: 5px;
 }
 .entry-content {
     position: relative;
