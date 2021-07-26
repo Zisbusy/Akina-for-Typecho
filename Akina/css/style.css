@@ -1427,6 +1427,7 @@ font-weight: 400;
 
 .entry-content p{
 line-height:30px
+margin: 10px 0;
 }
 
 .entry-header hr {
