@@ -48,7 +48,7 @@
 		<div class="entry-content">
 		<?php
 		    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
-		    $replacement = '<br><a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a>';
+		    $replacement = '<a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a>';
 		    echo preg_replace($pattern, $replacement, $this->content);
 		?>
 		</div>
