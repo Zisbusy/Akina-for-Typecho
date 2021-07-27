@@ -2383,14 +2383,17 @@ color: #fff;
 border-top: 1px dashed #fff;
 }
 
-span.linkss-title {
+.linkss-title {
 font-size: 25px;
-/* margin: 0 auto; */
 text-align: center;
 display: block;
 margin: 50px 0 30px;
 font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
 letter-spacing: 5px;
+font-weight: 400;
+color: #676767;
+padding-bottom: 15px;
+border-bottom: 1px dashed #F1F1F1;
 }
 
 /*--------------------------------------------------------------
