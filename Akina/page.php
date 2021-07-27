@@ -13,6 +13,7 @@
 		<div class="pattern-attachment-img" style="background-image: url(<?php $this->fields->thumbnail(); ?>)"></div>
 		<header class="pattern-header"><h1 class="entry-title"><?php $this->title() ?></h1></header>
 	</div>
+	<style> @media (max-width: 860px){.site-main {padding-top: 30px;}} </style>
 <?php endif; ?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
