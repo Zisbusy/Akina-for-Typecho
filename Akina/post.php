@@ -15,22 +15,27 @@
 		</div>
 <?php else: ?>
 <!-- 不是加密文章 -->
-<div class="pattern-center">
-    <div class="pattern-attachment-img" style="background-image: url(
-	<?php 
-		if (array_key_exists('thumbnail',unserialize($this->___fields())) & $this->fields->thumbnail != null){
-			$this->fields->thumbnail(); 
-		} else {
-			if(img_postthumb($this->content)){
-				echo img_postthumb($this->content);
-			}else {
-				echo theurl.'images/postbg/'.mt_rand(1,3).'.jpg';
-			} 
-		}
-	?>
-	)"></div>
-    <header class="pattern-header"><h1 class="entry-title"><?php $this->title() ?></h1></header>
-</div>
+<?php 
+    if ( $this->fields->radioPostImg != 'none' && $this->fields->radioPostImg != null ) {
+        $bgImgUrl = '';
+        switch ( $this->fields->radioPostImg ) {
+        case 'custom':
+            $bgImgUrl = $this->fields->thumbnail;
+            break;
+        case 'random':
+            $bgImgUrl = theurl.'images/postbg/'.mt_rand(1,3).'.jpg';
+            break;
+        }
+        echo('
+            <div class="pattern-center">
+                <div class="pattern-attachment-img" style="background-image: url('.$bgImgUrl.')"></div>
+                    <header class="pattern-header">
+                <h1 class="entry-title">'.$this->title.'</h1>
+            </header>
+            </div>
+        ');
+    }
+?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
