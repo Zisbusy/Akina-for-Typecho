@@ -183,6 +183,12 @@ function img_postthumb($content) {
 }
 // 缩略图设置
 function themeFields($layout){
+    $radioPostImg = new Typecho_Widget_Helper_Form_Element_Radio('radioPostImg', array(
+        'custom' => _t('自定义'),
+        'random' => _t('随机图'),
+        'none' => _t('不显示')
+        ), 'none', _t('开启文章/页面缩略图'));
+    $layout->addItem($radioPostImg);
     $thumbnail = new Typecho_Widget_Helper_Form_Element_Text('thumbnail', null, null, _t('文章/页面缩略图Url'), _t('需要带上http(s)://'));
     $icon = new Typecho_Widget_Helper_Form_Element_Text('icon', null, null, _t('文章/页面首页图标Url'), _t('需要带上http(s)://'));
     $dtMode = new Typecho_Widget_Helper_Form_Element_Radio('dtMode', array(true => _t('开启'), false => _t('关闭')), false, _t('文章动态模式'), _t('该文章在列表展示方式为动态模式'));
