@@ -34,6 +34,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		@media (max-width:1080px) {#centerbg {display:block;} }
 	<?php else: ?>
 		@media (max-width:1080px) {#centerbg {display:none} }
+		@media (max-width: 860px){.notice {margin-top: 100px;} }
 	<?php endif; ?>
 	<?php if (!empty($this->options->menu) && in_array('feature', $this->options->menu)): ?>
 		#content .top-feature { display:block; }
