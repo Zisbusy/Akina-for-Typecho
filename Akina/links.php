@@ -9,14 +9,29 @@
 <!-- 友链部分 -->
 <div class="blank"></div>
 <div class="headertop"></div>
-<?php if (array_key_exists('thumbnail',unserialize($this->___fields())) & $this->fields->thumbnail != null): ?>
-	<div class="pattern-center">
-		<div class="pattern-attachment-img" style="background-image: url(<?php $this->fields->thumbnail(); ?>)"></div>
-		<header class="pattern-header"><h1 class="entry-title"><?php $this->title() ?></h1></header>
-	</div>
-<?php else: ?>
-	<style> @media (max-width: 860px){#content {margin-top: 30px;}} </style>
-<?php endif; ?>
+<?php 
+    if ( $this->fields->radioPostImg != 'none' && $this->fields->radioPostImg != null ) {
+        $bgImgUrl = '';
+        switch ( $this->fields->radioPostImg ) {
+        case 'custom':
+            $bgImgUrl = $this->fields->thumbnail;
+            break;
+        case 'random':
+            $bgImgUrl = theurl.'images/postbg/'.mt_rand(1,3).'.jpg';
+            break;
+        }
+        echo('
+            <div class="pattern-center">
+                <div class="pattern-attachment-img" style="background-image: url('.$bgImgUrl.')"></div>
+                    <header class="pattern-header">
+                <h1 class="entry-title">'.$this->title.'</h1>
+            </header>
+            </div>
+        ');
+    } else {
+        echo('<style> @media (max-width: 860px){#content {margin-top: 30px;}} </style>');
+    }
+?>
 <div id="content" class="site-content">
 	<span class="linkss-title"><?php $this->title() ?></span>
 	<article class="hentry">
