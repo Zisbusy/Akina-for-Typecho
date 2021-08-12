@@ -35,36 +35,40 @@
 <div id="content" class="site-content">
 	<span class="linkss-title"><?php $this->title() ?></span>
 	<article class="hentry">
-	    <?php
-	        if( !$this->content && !class_exists('Links_Plugin')) {
-	            echo'
-            		<div class="nodata">
-            		    <img src="https://blog.zixu.site/usr/themes/Akina/images/warn.png">
-            		    <div class="nodataText">
-                		    <p>没有相关的数据！</p>
-                		    <p>请在后台编写友链html或者安装<a href="https://github.com/Zisbusy/Akina-for-Typecho/tree/master/%E5%8F%AF%E9%80%89%E6%8F%92%E4%BB%B6" target="_blank" rel="nofollow noopener noreferrer">插件</a>
-                		    </p>
-            		    </div>
-            		</div>
-	            ';
-	        } else {
-	            $this->content();
-		    	if(class_exists('Links_Plugin')){
-		    	    $rules ='<br/>
-                            <div class="links">
-                                <ul class="link-items fontSmooth">
-                                    <li class="link-item">
-                                        <a class="link-item-inner effect-apollo" href="{url}" title="{name}" target="_blank" >
-                                            <span class="sitename">{name}</span>
-                                            <div class="linkdes">{title}</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>';
-			         Links_Plugin::output($pattern=$rules, $links_num=0, $sort=NULL);
-		    	};
-	        }
-	    ?>
+		<div class="entry-content">
+		    <?php
+			if( !$this->content && !class_exists('Links_Plugin')) {
+			    echo'
+				<div class="nodata">
+				    <img src="https://blog.zixu.site/usr/themes/Akina/images/warn.png">
+				    <div class="nodataText">
+					    <p>没有相关的数据！</p>
+					    <p>请在后台编写友链html或者安装<a href="https://github.com/Zisbusy/Akina-for-Typecho/tree/master/%E5%8F%AF%E9%80%89%E6%8F%92%E4%BB%B6" target="_blank" rel="nofollow noopener noreferrer">插件</a>
+					    </p>
+				    </div>
+				</div>
+			    ';
+			} else {
+				$pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+				$replacement = '<a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a></div>';
+				echo preg_replace($pattern, $replacement, $this->content);
+				if(class_exists('Links_Plugin')){
+				    $rules ='<br/>
+				    <div class="links">
+					<ul class="link-items fontSmooth">
+					    <li class="link-item">
+						<a class="link-item-inner effect-apollo" href="{url}" title="{name}" target="_blank" >
+						    <span class="sitename">{name}</span>
+						    <div class="linkdes">{title}</div>
+						</a>
+					    </li>
+					</ul>
+				    </div>';
+					 Links_Plugin::output($pattern=$rules, $links_num=0, $sort=NULL);
+				};
+			}
+		    ?>
+		</div>
 	</article>
 </div>
 </div>
