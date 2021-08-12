@@ -155,11 +155,7 @@ if($this->options->sticky){
 						if ($ji->fields->thumbnail){
 							$featureImg = $ji->fields->thumbnail;
 						} else {
-							if(img_postthumb($ji->content)){
-								$featureImg = img_postthumb($ji->content);
-							} else {
-								$featureImg = theurl.'images/postbg/'.$featureNum.'.jpg';
-							}
+							$featureImg = theurl.'images/postbg/'.$featureNum.'.jpg';
 						}
 						echo '<li class="feature-'.$featureNum.'"><a href="'.$ji->permalink.'"><div class="feature-title"><span class="foverlay">'.$ji->title.'</span></div><img src="'.$featureImg.'"></a></li>';
 					} else {
