@@ -424,5 +424,16 @@ $(document).ready(function() {
         $(".fytx_alert_background").hide();
     });
 });
+//优化文章中的表格显示效果
+let tables = document.getElementsByTagName("table");
+if (tables.length != 0) {
+        for ( i = 0; i < 2; i++ ) {
+            // 创建一个div、添加class
+            var tableFather = document.createElement('div');
+            tableFather.className = 'table-box';
+            // 操作Dom
+            tableFather.appendChild(tables[i].parentNode.replaceChild(tableFather, tables[i]));
+        }
+}
 //版本显示
 console.log("%cAkina for Typecho 3.4.5","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
