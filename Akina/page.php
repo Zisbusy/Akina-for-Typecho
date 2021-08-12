@@ -38,7 +38,11 @@
 					<h1 class="entry-title"><?php $this->title() ?></h1>
 				</header>
 				<div class="entry-content">
-					<?php $this->content(); ?>
+					<?php
+						$pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+						$replacement = '<a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a>';
+						echo preg_replace($pattern, $replacement, $this->content);
+					?>
 				</div>
 			</article>
 		</main>
