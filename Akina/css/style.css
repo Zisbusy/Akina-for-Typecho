@@ -1313,6 +1313,13 @@ color: #9c9c9c;
 ul ::marker {
     color: #f77a7a;
 }
+.table-box {
+    overflow: auto;
+}
+.table-box::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f1f2f0;
+}
 .entry-content table {
     border: 1px dashed #eaeaea;
     margin: 10px 0;
@@ -1321,6 +1328,7 @@ ul ::marker {
     border-radius: 5px;
     border-collapse: separate;
     border-spacing: 5px;
+    word-break: keep-all;
 }
 .entry-content table thead {
     background-color: #f1f1f1;
