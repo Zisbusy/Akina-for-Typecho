@@ -38,8 +38,12 @@
 					<h1 class="entry-title"><?php $this->title() ?></h1>
 				</header>
 				<div class="entry-content">
-				    <!--编辑器内容-->
-					<?php $this->content(); ?>
+					<!--编辑器内容-->
+					<?php
+						$pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+						$replacement = '<a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a>';
+						echo preg_replace($pattern, $replacement, $this->content);
+					?>
 	                <!--标签云输出-->
                     <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=0')->to($tags); ?>
                     <?php if($tags->have()): ?>
