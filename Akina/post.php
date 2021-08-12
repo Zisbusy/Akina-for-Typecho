@@ -61,7 +61,7 @@
 		<?php
 			if ($this->options->adPostImg){
 				echo '<a href="'.$this->options->adPostkLink.'" target="_blank" rel="nofollow noopener noreferrer">
-						<img style=" width: 100%; border-radius: 5px; " src="'.$this->options->adPostImg.'">
+						<img style=" width: 100%; border-radius: 5px; margin: 10px 0;" src="'.$this->options->adPostImg.'">
 					  </a>';
 			}
 		?>
