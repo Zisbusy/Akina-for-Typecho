@@ -427,7 +427,7 @@ $(document).ready(function() {
 //优化文章中的表格显示效果
 let tables = document.getElementsByTagName("table");
 if (tables.length != 0) {
-        for ( i = 0; i < 2; i++ ) {
+        for ( i = 0; i < tables.length; i++ ) {
             // 创建一个div、添加class
             var tableFather = document.createElement('div');
             tableFather.className = 'table-box';
