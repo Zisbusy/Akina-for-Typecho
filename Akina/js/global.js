@@ -276,12 +276,12 @@ $("#toggle-comment-info").click(function click_comment_info(){
 	});
 
 //lightbox
- baguetteBox.run('.entry-content', {
-        captions: function(element) {
-            // `this` == Array of current gallery items
-            return element.getElementsByTagName('img')[0].alt;
-        }
-    });
+baguetteBox.run('.entry-content', {
+    captions: function(element) {
+        return element.getElementsByTagName('img')[0].alt;
+    },
+    noScrollbars: true,
+});
 	
 //搜索盒子
 function removeBox(){
