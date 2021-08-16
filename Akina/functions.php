@@ -130,6 +130,13 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     array('page'), _t('其他设置'));
     $form->addInput($menu->multiMode());
 	
+    $postDoc = new Typecho_Widget_Helper_Form_Element_Radio('postDoc', array(
+        'leftDoc' => _t('左侧显示'),
+        'rightDoc' => _t('右侧显示'),
+        'none' => _t('不显示')
+        ), 'none', _t('开启文章目录'));
+    $form->addInput($postDoc);
+	
     $cssCode = new Typecho_Widget_Helper_Form_Element_Textarea('cssCode', null, null, _t('自定义 CSS'), _t('可以方便的自定义博客样式，避免修改源码影响主题模板迭代。(请编写完整的style标签)'));
     $form->addInput($cssCode);
     
@@ -266,6 +273,10 @@ function themeInit($archive){
 	Helper::options()->commentsPageDisplay = 'first';	             //在列出时将第一页作为默认显示
 	Helper::options()->commentsOrder = 'DESC';                       //将较新的的评论显示在前面
 	Helper::options()->commentsHTMLTagAllowed = '<img src="">';      //评论允许img标签
+	//文章目录
+	if ($archive->is('single')) {
+        $archive->content = createCatalog($archive->content);
+    }
 }
 //评论添加回复@标记
 function get_commentReply_at($coid)
@@ -296,6 +307,44 @@ function gonganbeian($str){
     }else{
         return $result;
     }
+}
+//文章目录
+//来源 https://www.offodd.com/76.html
+function getCatalog() {    //输出文章目录容器
+    global $catalog;
+    $index = '';
+    if ($catalog) {
+        $index = '<ul>'."\n";
+        $prev_depth = '';
+        $to_depth = 0;
+        foreach($catalog as $catalog_item) {
+            $catalog_depth = $catalog_item['depth'];
+            if ($prev_depth) {
+                if ($catalog_depth == $prev_depth) {
+                    $index .= '</li>'."\n";
+                } elseif ($catalog_depth > $prev_depth) {
+                    $to_depth++;
+                    $index .= '<ul>'."\n";
+                } else {
+                    $to_depth2 = ($to_depth > ($prev_depth - $catalog_depth)) ? ($prev_depth - $catalog_depth) : $to_depth;
+                    if ($to_depth2) {
+                        for ($i=0; $i<$to_depth2; $i++) {
+                            $index .= '</li>'."\n".'</ul>'."\n";
+                            $to_depth--;
+                        }
+                    }
+                    $index .= '</li>';
+                }
+            }
+            $index .= '<li><a href="#cl-'.$catalog_item['count'].'">'.$catalog_item['text'].'</a>';
+            $prev_depth = $catalog_item['depth'];
+        }
+        for ($i=0; $i<=$to_depth; $i++) {
+            $index .= '</li>'."\n".'</ul>'."\n";
+        }
+    $index = '<div id="toc-container">'."\n".'<div id="toc">'."\n".'<strong>文章目录</strong>'."\n".$index.'</div>'."\n".'</div>'."\n";
+    }
+    echo $index;
 }
 //随机文章
 function getRandomPosts($limit = 10){
