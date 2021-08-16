@@ -37,6 +37,17 @@
     }
 ?>
 <div id="content" class="site-content">
+<?php
+    //文章目录展示以及切换
+    if ( $this->options->postDoc != 'none' && $this->options->postDoc != null ) {
+        getCatalog();
+        if ($this->options->postDoc == 'rightDoc') {
+            echo('<style>#toc-container {right: -260px;}</style>');
+        } else {
+            echo('<style>#toc-container {left: -260px;}</style>');
+        }
+    }
+?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<article class="hentry">
