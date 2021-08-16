@@ -460,4 +460,4 @@ if (doc != null) {
     }
 }
 //版本显示
-console.log("%cAkina for Typecho 3.4.5","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
+console.log("%cAkina for Typecho Beta 4.0","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
