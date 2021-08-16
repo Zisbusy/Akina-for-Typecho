@@ -310,7 +310,23 @@ function gonganbeian($str){
 }
 //文章目录
 //来源 https://www.offodd.com/76.html
-function getCatalog() {    //输出文章目录容器
+//为文章标题添加锚点
+function createCatalog($obj) {    
+    global $catalog;
+    global $catalog_count;
+    $catalog = array();
+    $catalog_count = 0;
+    $obj = preg_replace_callback('/<h([1-6])(.*?)>(.*?)<\/h\1>/i', function($obj) {
+        global $catalog;
+        global $catalog_count;
+        $catalog_count ++;
+        $catalog[] = array('text' => trim(strip_tags($obj[3])), 'depth' => $obj[1], 'count' => $catalog_count);
+        return '<h'.$obj[1].$obj[2].'><a name="cl-'.$catalog_count.'"></a>'.$obj[3].'</h'.$obj[1].'>';
+    }, $obj);
+    return $obj;
+}
+//输出文章目录容器
+function getCatalog() {
     global $catalog;
     $index = '';
     if ($catalog) {
