@@ -5123,3 +5123,46 @@ pre[class*="language-"] {
         padding: 0;
     }
 }
+/*文章目录*/
+#content {
+    position: relative;
+}
+#toc-container {
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    /*left: -260px;*/
+    border: 1px dashed #ddd;
+    padding: 10px 15px;
+}
+@media(max-width: 1380px){
+    #toc-container {
+        display: none;
+    }
+}
+#toc strong:before {
+    content: "#";
+    margin-right: 6px;
+    color: #ff6d6d;
+    font-size: 16px;
+    font-weight: 600;
+}
+#toc-container ul {
+    margin: 10px 0;
+    padding-left: 24px;
+    list-style-position: inside;
+}
+#toc > ul {
+    padding-left: 5px;
+}
+#toc-container li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#toc-container a {
+    color: rgb(28 28 28 / 90%);
+}
+#toc-container a:hover {
+    color: #72C5A6;
+}
