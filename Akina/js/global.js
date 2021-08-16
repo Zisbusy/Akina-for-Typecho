@@ -435,5 +435,29 @@ if (tables.length != 0) {
             tableFather.appendChild(tables[i].parentNode.replaceChild(tableFather, tables[i]));
         }
 }
+// 文章目录滚动
+// 获取目录主体
+let doc = document.getElementById('toc-container');
+if (doc != null) {
+    // 检测有无文章头图
+    let postbgBox = document.getElementsByClassName('pattern-center');
+    // 默认值
+    let uptoTop = 660;
+    let fixtoTop = 460;
+    if ( postbgBox.length == 0 ) {
+        uptoTop = 160;
+        fixtoTop = -40;
+    }
+    window.onscroll = function () {
+        // 获取距离页面顶部的距离
+        let toTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if ( toTop > uptoTop ) {
+            let boxtoTop = toTop - fixtoTop;
+            doc.style.cssText = 'top: '+ boxtoTop +'px;';
+        } else {
+            doc.style.cssText = '';
+        }
+    }
+}
 //版本显示
 console.log("%cAkina for Typecho 3.4.5","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
