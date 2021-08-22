@@ -61,7 +61,7 @@
 	border: 1px solid #ddd;
 	z-index: 1;
 	top: -1px;
-	right: 1px;
+	right: 4px;
 	border-radius:4px 0 4px 4px
 }
 .OwO .OwO-body .OwO-items {
@@ -107,6 +107,7 @@
 }
 .OwO .OwO-body .OwO-items-show {
 	display:block
+	overflow-x: hidden;
 }
 .OwO .OwO-body .OwO-bar {
 	width:100%;
