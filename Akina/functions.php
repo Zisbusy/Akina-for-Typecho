@@ -45,10 +45,10 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
     $profile = new Typecho_Widget_Helper_Form_Element_Text('profile', NULL,'images/akinadeaava.jpg', _t('博主头像地址'), _t('默认值images/akinadeaava.jpg，图片位置/usr/themes/Akina/images/akinadeaava.jpg'));
     $form->addInput($profile);
 	
-    $wedo = new Typecho_Widget_Helper_Form_Element_Text('wedo', NULL,'images/donate/wedo.jpg', _t('微信收款码'), _t('默认值images/donate/wedo.jpg，图片位置/usr/themes/Akina/images/donate/wedo.jpg'));
+    $wedo = new Typecho_Widget_Helper_Form_Element_Text('wedo', NULL,'images/donate/wedo.png', _t('微信收款码'), _t('默认值images/donate/wedo.png，图片位置/usr/themes/Akina/images/donate/wedo.png'));
     $form->addInput($wedo);
     
-    $alido = new Typecho_Widget_Helper_Form_Element_Text('alido', NULL,'images/donate/alido.jpg', _t('支付宝收款码'), _t('默认值images/donate/alido.jpg，图片位置/usr/themes/Akina/images/donate/alido.jpg'));
+    $alido = new Typecho_Widget_Helper_Form_Element_Text('alido', NULL,'images/donate/alido.png', _t('支付宝收款码'), _t('默认值images/donate/alido.png，图片位置/usr/themes/Akina/images/donate/alido.png'));
     $form->addInput($alido);
 	
     $sub = new Typecho_Widget_Helper_Form_Element_Text('sub', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
