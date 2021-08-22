@@ -4236,7 +4236,7 @@ text-align: center;
 margin: 10% 0;
 font-family:miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif
 }
-#pagination a {
+#pagination a, .nextStop{
 padding: 13px 35px;
 border: 1px solid #D6D6D6;
 border-radius: 50px;
