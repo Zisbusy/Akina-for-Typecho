@@ -106,8 +106,8 @@
 	max-width:100%
 }
 .OwO .OwO-body .OwO-items-show {
-	display:block
-	overflow-x: hidden;
+	display:block;
+	overflow-x:hidden;
 }
 .OwO .OwO-body .OwO-bar {
 	width:100%;
