@@ -197,7 +197,7 @@ var loadSingle = function(){
 	                $("#pagination a").attr("href", nextHref);
 	            } else {
 	            // If there is no link, that is the last page, then remove the navigation
-	                $("#pagination").remove();
+	                $("#pagination")[0].innerHTML = '<span class="nextStop">没有了</span>';
 	            }
 	        }
 	    });
