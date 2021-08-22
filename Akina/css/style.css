@@ -1749,6 +1749,7 @@ li.alidonate:after {
     width: 27px;
     text-align: center;
     background: #FFFFFF;
+    line-height: 34px;
 }
 .open-message p {
     margin:5px 0;
