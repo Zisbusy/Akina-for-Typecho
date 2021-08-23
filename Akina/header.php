@@ -23,8 +23,11 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<?php echo '
 	<link rel="shortcut icon" href="'.theurl.'images/favicon.ico">
 	<link rel="stylesheet" href="'.theurl.'css/style.css" type="text/css" />
-	<link rel="stylesheet" href="'.theurl.'css/OwO.css" type="text/css" />
-	';?>
+	<link rel="stylesheet" href="'.theurl.'css/OwO.css" type="text/css" />';
+	if (!empty($this->options->menu) && in_array('dark', $this->options->menu)) {
+		echo '<link rel="stylesheet" href="'.theurl.'css/dark.css" type="text/css" />';
+	}
+	?>
 	<style type="text/css">
 	<?php if (!empty($this->options->menu) && in_array('show', $this->options->menu)): ?>
 		.site-top ul { opacity: 1 !important;}
