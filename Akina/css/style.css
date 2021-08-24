@@ -4840,7 +4840,7 @@ p.word:after {
     position: relative;
     top: 2px;
 }
-/* 加密提示剧中 */
+/* 加密提示居中 */
 p.word{
     font-size: 21px!important;
     display:table;
@@ -4861,17 +4861,28 @@ p.word{
 	width: 189px;
 	height: 42px;
 	float: left;
-	border-radius: 2px 0 0 2px;
+	border-radius: 5px 0 0 5px;
 	padding: 0 0 0 10px;
 	border-color: #A0DAD0;
 	outline: none;
 }
-.protected p:nth-child(2)>input:nth-child(2){
-	width: 94px;
+.protected .submit{
+	width: 70px;
 	height: 42px;
 	color: #fff;
 	background: #A0DAD0;
-	border-radius: 0 2px 2px 0;
+	border-radius: 0 5px 5px 0;
+	box-shadow: none;
+	border: 0;
+	text-shadow: none;
+	outline: none;
+}
+.protected p:nth-child(2)>input:nth-child(2){
+	width: 70px;
+	height: 42px;
+	color: #fff;
+	background: #A0DAD0;
+	border-radius: 0 5px 5px 0;
 	box-shadow: none;
 	border: 0;
 	text-shadow: none;
