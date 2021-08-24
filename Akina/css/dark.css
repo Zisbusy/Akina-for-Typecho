@@ -1,0 +1,200 @@
+/*
+
+背景色 #000000
+强调色 #171717
+
+主色下标题颜色 #c1c1c1
+主色下副标题颜色 
+强调色下文字颜色 #afafaf
+线条颜色 #131313
+图片装饰线条 #3c3c3c
+正文文字颜色
+
+*/
+
+/*全局变量*/
+:root {
+    --main-bg-color: #000000;
+    --main-info-color: #171717;
+    /*--main-text-color: #b7b7b7;*/
+    --main-text-color: #c1c1c1;
+    
+    --br-color: #131313;
+    --img-br: #3c3c3c;
+}
+
+
+/* 黑暗模式 */ 
+@media ( prefers-color-scheme: dark ) {
+    ::-webkit-scrollbar-track {
+        background: var(--main-bg-color);
+    }
+    .site-header, .slant-left, .slant-right, body, .site-footer, .comments, #preloader, .search-form--modal, #content, #mo-nav, #mo-nav .m-search input {
+        background: var(--main-bg-color);
+    }
+    #centerbg{
+        /*background-image: url(https://cdn.jsdelivr.net/gh/Zisbusy/Jsdelivr-CDN@master/img/email1.jpg) !important;*/
+        background-color: rgb(0 0 0 / 25%);
+
+    }
+    .s-content, #mo-nav .m-search form {
+        background: var(--main-info-color);
+    }
+    
+    .notice {
+        background: var(--main-info-color);
+        color: #afafaf;
+        
+    }
+    .notice:before {
+        border-bottom: 10px solid var(--main-info-color);
+    }
+    .s-content:after {
+        border-left: 10px solid var(--main-info-color);
+    }
+    /* 桌面导航栏 */ 
+    .show-nav {
+        color: #ffffff;
+    }
+    .lower li ul, .user_inner ul, .fytx_alert_background .fytx_alert_box {
+        background: var(--main-info-color);
+        box-shadow: 0px 0px 4px rgb(0 0 0 / 36%);
+    }
+    .site-top ul li a, .entry-title a, #mo-nav ul li a, .fytx_alert_background .fytx_alert_box {
+        color: var(--main-text-color);
+    }
+    h1.fes-title, h1.main-title {
+        color: #afafaf;
+        border-bottom: 1px dashed var(--br-color);
+    }
+    .post-list hr {
+        background: var(--br-color);
+    }
+    .site-footer {
+        border-top: 1px solid var(--br-color);
+    }
+    
+    .feature img, .postava img, #pagination a, .nextStop, .author-profile .pf-tou img {
+        
+        border: 1px solid var(--img-br);
+    }
+    .s-time, .p-time {
+         color: #676767;
+    }
+    .cd-top {
+        background: url(https://blog.zixu.site/usr/themes/Akina/images/gotop-dark.png) no-repeat center 50% !important;
+    }
+    .micromb-search {
+        color: #d8d8d8;
+    }
+
+/*文章页*/
+#toc-container {
+    border: 1px dashed var(--img-br);
+}
+.entry-content p, #toc strong, #toc-container a, h1.entry-title, .entry-content h2 {
+    color: var(--main-text-color);
+}
+.entry-header hr {
+    background: var(--img-br);
+}
+.breadcrumbs {
+    color: #676767;
+}
+.entry-content code, .entry-content table thead, blockquote, .table-box::-webkit-scrollbar-track {
+    background-color: var(--main-info-color);
+}
+.entry-content table {
+    border: 1px dashed var(--img-br);
+    color: var(--main-text-color);
+}
+.open-message, .comment-respond #cancel-comment-reply-link {
+    background-color: var(--main-info-color);
+    color: var(--main-text-color);
+}
+.open-message:after {
+    border-bottom: 10px solid var(--main-info-color);
+}
+.donate a, .post-share, .show-share{
+    color: var(--main-text-color);
+}
+.donate {
+    border: 1px solid var(--main-text-color);
+}
+.donate_inner {
+    background: var(--main-info-color);
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 36%);
+    border: 1px solid var(--main-info-color);
+}
+.donate_inner:after, .donate_inner:before {
+    border-right: 8px solid var(--main-info-color);
+}
+.comment .commeta, #comments-navi {
+    border-bottom: 1px dashed var(--img-br);
+}
+.comment .body p, #comments a, #comments p, h3#comments-list-title, .author-profile p, .author-profile .meta h3 a, .author-updown{
+    color: var(--main-text-color);
+}
+.comment .info {
+    color: #676767;
+}
+.author-profile p {
+    border-top: 1px solid var(--img-br);
+    border-bottom: 1px solid var(--img-br);
+    color: var(--main-text-color);
+}
+.notification {
+    background: var(--main-info-color);
+    color: var(--main-text-color);
+    border: 1px solid var(--img-br);
+}
+.comment-respond textarea, .comment-respond input {
+    background: var(--main-info-color);
+    border: 2px solid var(--img-br);
+    color: var(--main-text-color);
+}
+.OwO .OwO-logo, .OwO .OwO-body, .OwO .OwO-body .OwO-bar {
+    color: var(--main-text-color);
+    background: var(--main-info-color);
+    border: 1px solid var(--img-br);
+}
+.OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active {
+    background: var(--img-br);
+}
+.OwO-items::-webkit-scrollbar-track {
+    background: var(--main-info-color);
+}
+.OwO .OwO-body .OwO-items .OwO-item {
+    background: var(--img-br);
+}
+.tags-list li a, h1.page-title  {
+    color: var(--main-text-color);
+    border: 1px dashed var(--img-br);
+}
+.linkss-title {
+    color: var(--main-text-color);
+    border-bottom: 1px dashed var(--img-br);
+}
+blockquote p, blockquote {
+    color: var(--main-text-color);
+}
+.links ul li {
+    border: 1px solid var(--br-color);
+}
+.linkdes {
+    border-top: 1px dashed var(--img-br);
+}
+.entry-content ul, .entry-content ol {
+    color: var(--main-text-color);
+}
+.nodata {
+    background-color: var(--main-info-color);
+    color: var(--main-text-color);
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
+    color: var(--main-text-color);
+}
+    
+    
+
+}
