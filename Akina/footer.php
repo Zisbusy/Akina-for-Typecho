@@ -13,6 +13,7 @@
 			    ';
 			}?>
 		</div>
+		<?php $this->options->jsCode();?>
 	</div>
 </footer>
 <div id="mo-nav">
@@ -70,7 +71,6 @@
 <script type="text/javascript" src="'.theurl.'js/prism.js"></script>
 <script type="text/javascript" src="'.theurl.'js/SmoothScroll.js"></script>
 ';?>
-<?php $this->options->jsCode();?>
 <?php $this->footer(); ?>
 </body>
 </html>
