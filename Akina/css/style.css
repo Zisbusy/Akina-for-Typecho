@@ -2335,6 +2335,9 @@ transition: all .3s;
 border-radius: 5px;
 }
 
+.link-item a {
+    text-decoration: none;
+}
 
 span.sitename {
 color: #A0DAD0;
