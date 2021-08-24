@@ -117,6 +117,11 @@
 					</div>
 				</form>
 			<?php else: ?>
+				<style>
+					.comment-reply-link {
+					    display: none !important;
+					}
+				</style>
 				<section class="author-profile">
 					<p><i class="iconfont">&#xe61a;</i>该文章已经关闭评论</p>
 				</section>
