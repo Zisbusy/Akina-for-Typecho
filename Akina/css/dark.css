@@ -29,8 +29,8 @@
     ::-webkit-scrollbar-track {
         background: var(--main-bg-color);
     }
-    .site-header, .slant-left, .slant-right, body, .site-footer, .comments, #preloader, .search-form--modal, #content, #mo-nav, #mo-nav .m-search input {
-        background: var(--main-bg-color);
+    .site-header, .slant-left, .slant-right, body, .site-footer, .comments, #preloader, .search-form--modal, #content, #mo-nav, #mo-nav .m-search input, .wrapper {
+        background-color: var(--main-bg-color);
     }
     #centerbg{
         /*background-image: url(https://cdn.jsdelivr.net/gh/Zisbusy/Jsdelivr-CDN@master/img/email1.jpg) !important;*/
