@@ -1670,6 +1670,7 @@ opacity:1;
 
 .donate img {
 	width: 100px;
+	border-radius: 5px;
 }
 
 .donate_inner {
