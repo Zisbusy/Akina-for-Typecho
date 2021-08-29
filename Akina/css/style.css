@@ -859,7 +859,7 @@ left:0;
 width:160px;
 padding: 10px 0;
 text-align:left;
-border-radius: 3px;
+border-radius: 5px;
 box-shadow:0px 0px 4px rgba(84, 84, 84, 0.36);
 z-index: 9999;
 -webkit-animation:fadeInUp .2s .1s ease both;-moz-animation:fadeInUp .2s .1s ease both}
@@ -1679,26 +1679,26 @@ opacity:1;
 	list-style:none;
 	position: absolute;
 	left: 80px;
-    top: -40px;
+	top: -40px;
 	background: #FFF;
-    padding: 10px 10px 30px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0,0,0,.08);
-    border-radius: 3px;
+	padding: 10px 10px 30px;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 6px rgba(0,0,0,.08);
+	border-radius: 5px;
 }
 .donate_inner:after , .donate_inner:before {
 	content: "";
-    position: absolute;
-    left: 0;
-    bottom: 45%;
-    margin-left: -8px;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid #fff;
+	position: absolute;
+	left: 0;
+	bottom: 45%;
+	margin-left: -8px;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 8px solid #fff;
 }
 .donate_inner:before {
 	left: -1px;
-    border-right: 8px solid #ddd;
+	border-right: 8px solid #ddd;
 }
 .donate_inner li {
 	float:left;
@@ -1710,14 +1710,14 @@ opacity:1;
 	
 }
 .donate-box {
-    float: left;
+	float: left;
 	position:relative
 }
 .donate_inner img {
 	width: 100px;
 }
 li.wedonate:after , li.alidonate:after {
-	content:"微信";
+    content:"微信";
     text-align: center;
     display: block;
     bottom: 16px;
