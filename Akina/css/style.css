@@ -5149,6 +5149,7 @@ pre[class*="language-"] {
     /*left: -260px;*/
     border: 1px dashed #ddd;
     padding: 10px 15px;
+    border-radius: 5px;
 }
 @media(max-width: 1380px){
     #toc-container {
