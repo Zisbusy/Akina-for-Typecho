@@ -317,7 +317,7 @@ function createCatalog($obj) {
     global $catalog_count;
     $catalog = array();
     $catalog_count = 0;
-    $obj = preg_replace_callback('/<h([1-6])(.*?)>(.*?)<\/h\1>/i', function($obj) {
+    $obj = preg_replace_callback('/<h([1-3])(.*?)>(.*?)<\/h\1>/i', function($obj) {
         global $catalog;
         global $catalog_count;
         $catalog_count ++;
