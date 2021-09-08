@@ -5150,6 +5150,12 @@ pre[class*="language-"] {
     border: 1px dashed #ddd;
     padding: 10px 15px;
     border-radius: 5px;
+    max-height: 500px;
+    overflow: scroll;
+}
+#toc-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ffffff00;
 }
 @media(max-width: 1380px){
     #toc-container {
