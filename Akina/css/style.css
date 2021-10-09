@@ -5188,3 +5188,6 @@ pre[class*="language-"] {
 #toc-container a:hover {
     color: #72C5A6;
 }
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
