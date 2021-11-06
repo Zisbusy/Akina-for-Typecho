@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 define("THEME_URL", $this->options->themeUrl);
 	if(!empty(Helper::options()->CDNURL)){
-		$theurl = Helper::options()->CDNURL.'/usr/themes/Akina/';
+        $theurl = rtrim(Helper::options()->CDNURL,"/")."/";
 	}else{
 		$theurl = THEME_URL.'/';
 	}
