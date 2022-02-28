@@ -1484,8 +1484,8 @@ font-family:din,'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif
 }
 
 .post-tags a {
-color: #B3B3B3;
-margin-right:5px
+  color: #B3B3B3;
+  margin-right: 3px;
 }
 
 .post-tags a:hover {

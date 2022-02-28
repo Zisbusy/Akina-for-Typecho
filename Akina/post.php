@@ -38,7 +38,7 @@
 ?>
 <div id="content" class="site-content">
 <?php
-    //文章目录展示以及切换
+    // 文章目录展示以及切换
     if ( $this->options->postDoc != 'none' && $this->options->postDoc != null ) {
         getCatalog();
         if ($this->options->postDoc == 'rightDoc') {
@@ -107,9 +107,9 @@
 			<div class="post-tags">
 				<i class="iconfont">&#xe602;</i>
 				<?php if(  count($this->tags) == 0 ): ?>
-					<?php $this->category('', true, 'none'); ?>
+					<?php $this->category('、', true, 'none'); ?>
 				<?php else: ?>
-					<?php $this->tags('', true, ' none'); ?>
+					<?php $this->tags('、', true, 'none'); ?>
 				<?php endif; ?>
 			</div>
 		</footer>
