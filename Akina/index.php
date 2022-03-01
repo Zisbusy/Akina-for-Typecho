@@ -102,7 +102,7 @@ if($this->options->sticky){
 					<p><?php $this->options->headerinfo() ?></p>
 					</div>
 					<!-- 社交信息 -->
-					<div class="top-social">
+					<ul class="top-social">
 						<?php
 							//微博
 							if ($this->options->SINA){
@@ -141,7 +141,7 @@ if($this->options->sticky){
 								echo '<li><a href="https://music.163.com/#/user/home?id='.$this->options->Music.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/music.png"/></a></li>';
 							}
 						?>
-					</div>
+					<ul>
 				</div>
 			</div>
 			<!-- 首页大图结束 -->
@@ -158,7 +158,7 @@ if($this->options->sticky){
 	<!-- 聚焦内容 -->
 	<div class="top-feature">
 		<h1 class="fes-title">聚焦</h1>
-			<div class="feature-content">
+			<ul class="feature-content">
 			<?php
 			    // 默认数据
 				$defaultUrl = ['https://zhebk.cn/Web/Akina.html','https://zhebk.cn/Web/userAkina.html','https://zhebk.cn/archives.html'];
@@ -184,7 +184,7 @@ if($this->options->sticky){
 					echo '<li class="feature-'.$addNum.'"><a href="'.$defaultUrl[$i].'"><div class="feature-title"><span class="foverlay">'.$defaultTitle[$i].'</span></div><img src="'.theurl.'/images/feature/feature'.$addNum.'.jpg"></a></li>';
 				}
 			?>
-			</div>
+			</ul>
 	</div>
 	<!-- 主页内容 -->
 	<div id="primary" class="content-area">
