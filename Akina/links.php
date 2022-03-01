@@ -32,6 +32,8 @@
         echo('<style> @media (max-width: 860px){#content {margin-top: 30px;}} </style>');
     }
 ?>
+<!-- 透明导航栏后调整间距 -->
+<?php $this->need('sitetop.php'); ?>
 <div id="content" class="site-content">
 	<span class="linkss-title"><?php $this->title() ?></span>
 	<article class="hentry">
