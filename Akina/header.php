@@ -28,29 +28,9 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		echo '<link rel="stylesheet" href="'.theurl.'css/dark.css" type="text/css" />';
 	}
 	?>
-	<style type="text/css">
-	<?php if (!empty($this->options->menu) && in_array('show', $this->options->menu)): ?>
-		.site-top ul { opacity: 1 !important;}
-		.site-top .show-nav { display:none !important; }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('indexbg', $this->options->menu)): ?>
-		@media (max-width:1080px) {#centerbg {display:block;} }
-	<?php else: ?>
-		@media (max-width:1080px) {#centerbg {display:none} }
-		@media (max-width: 860px){.notice {margin-top: 100px;} }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('feature', $this->options->menu)): ?>
-		#content .top-feature { display:block; }
-		.feature-content { display:flex; }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('page', $this->options->menu)): ?>
-	<?php else: ?>
-		.navigator { display:block !important }
-		#pagination { display:none !important }
-	<?php endif; ?>
-		.wedonate img { margin-right:10px }
-		.cd-top { background:url(<?php echo theurl; ?>images/gotop.png) no-repeat center 50%}
-	</style>
+  <!-- 个性化选项 CSS 代码 -->
+  <?php $this->need('style.php'); ?>
+  <!-- 自定义 CSS 代码 -->
 	<?php $this->options->cssCode();?>
 </head>
 <body class="home blog hfeed">
