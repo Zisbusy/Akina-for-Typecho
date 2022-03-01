@@ -46,7 +46,18 @@ if($this->options->sticky){
 <!-- 判断是否搜索 -->
 <?php if(!$this->is('index') && !$this->is('front')): ?>
   <!-- 透明导航栏后调整间距 -->
-  <?php $this->need('sitetop.php'); ?>
+  <?php if (!empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
+  <style>
+    .site-main {
+      padding: 160px 0 0;
+    }
+    @media (max-width: 860px){
+      .site-main {
+      padding: 80px 0 0;
+    }
+    }
+  </style>
+  <?php endif ?>
 	<div class="blank"></div>
 	<div class="headertop"></div>
 	<div class=""></div>

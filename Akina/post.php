@@ -37,7 +37,19 @@
     }
 ?>
 <!-- 透明导航栏后调整间距 -->
-<?php $this->need('sitetop.php'); ?>
+<!-- 透明导航栏后调整间距 -->
+<?php if (strlen($bgImgUrl) <= 4 && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
+<style>
+  .site-main {
+    padding: 160px 0 0;
+  }
+  @media (max-width: 860px){
+    .site-main {
+    padding: 80px 0 0;
+  }
+  }
+</style>
+<?php endif ?>
 <div id="content" class="site-content">
 <?php
     // 文章目录展示以及切换
