@@ -460,4 +460,4 @@ if (doc != null) {
     }
 }
 //版本显示
-console.log("%cAkina for Typecho 4.0.1","background:#ff6d6d;color:#fff;margin:10px;padding:6px;","https://zhebk.cn");
+console.log("%cAkina for Typecho 4.0.1","background:#A0DAD0;color:#fff;margin:10px;padding:6px;border-radius:3px;","https://zhebk.cn");
