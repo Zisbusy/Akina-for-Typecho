@@ -67,6 +67,9 @@
       #centerbg {
         height: 630px;
       }
+      #archives-temp {
+        margin-top: 130px;
+      }
       ';
     }
   ?>

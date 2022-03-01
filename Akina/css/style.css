@@ -556,7 +556,7 @@ outline: none;
   position:fixed;
   left:0;
   top:0;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255) !important;
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
 }
 .gizle{
