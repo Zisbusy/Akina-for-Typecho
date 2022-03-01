@@ -30,6 +30,8 @@
         ');
     }
 ?>
+<!-- 透明导航栏后调整间距 -->
+<?php $this->need('sitetop.php'); ?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

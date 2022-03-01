@@ -61,9 +61,6 @@
           margin-top: 150px;
         }
       }
-      .site-main {
-        padding: 160px 0 0;
-      }
       #centerbg {
         height: 630px;
       }

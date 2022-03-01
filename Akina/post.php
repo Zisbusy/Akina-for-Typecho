@@ -36,13 +36,8 @@
         ');
     }
 ?>
-<?php if ( $this->fields->radioPostImg != 'none' && $this->fields->radioPostImg != null && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
-<style>
-  .site-main {
-    padding: 80px 0 0;
-  }
-</style>
-<?php endif ?>
+<!-- 透明导航栏后调整间距 -->
+<?php $this->need('sitetop.php'); ?>
 <div id="content" class="site-content">
 <?php
     // 文章目录展示以及切换
