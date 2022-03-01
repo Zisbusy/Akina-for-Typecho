@@ -44,6 +44,31 @@
       }
       ';
     }
+    // 导航栏透明
+    if (!empty($this->options->menu) && in_array('transparent', $this->options->menu)) {
+      echo '
+      .site-header {
+        background: #fff0;
+      }
+      .headertop {
+        margin-top: 0px;
+      }
+      .focusinfo {
+        top: 47%;
+      }
+      @media (min-width: 860px) and (max-width: 1080px){
+        .notice {
+          margin-top: 150px;
+        }
+      }
+      .site-main {
+        padding: 160px 0 0;
+      }
+      #centerbg {
+        height: 630px;
+      }
+      ';
+    }
   ?>
   /* 到顶部按钮 */
   .wedonate img { 

@@ -121,13 +121,14 @@ echo '<span class="themeConfig"><h3>博客信息</h3></span>';
 	
     $menu = new Typecho_Widget_Helper_Form_Element_Checkbox('menu', 
     array(
-	'show' => _t('一直显示菜单'),
-	'indexbg' => _t('一直显示首页大图'),
-	'feature' => _t('一直显示聚焦内容'),
-	'page' => _t('使用ajax加载文章'),
-	'xl' => _t('下拉自动加载文章'),
-	'dark' => _t('开启夜间模式(跟随系统)'),
-	),
+    'show' => _t('一直显示菜单'),
+    'transparent' => _t('导航栏透明'),
+    'indexbg' => _t('一直显示首页大图'),
+    'feature' => _t('一直显示聚焦内容'),
+    'page' => _t('使用ajax加载文章'),
+    'xl' => _t('下拉自动加载文章'),
+    'dark' => _t('开启夜间模式(跟随系统)'),
+    ),
     array('page'), _t('其他设置'));
     $form->addInput($menu->multiMode());
 	
