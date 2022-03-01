@@ -3446,7 +3446,13 @@ font-size:27px;
 top: 2px;
 position: relative;
 }	
-
+i.iconfont.show-nav {
+  color: #7e7e7e;
+  cursor: pointer;
+  font-size:27px;
+  top: 2px;
+  position: relative;
+}
 
 .search-form--modal {
 -webkit-transition: visibility 0.25s ease, opacity 0.25s ease;
