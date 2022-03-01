@@ -31,7 +31,6 @@
     }
 ?>
 <!-- 透明导航栏后调整间距 -->
-<!-- 透明导航栏后调整间距 -->
 <?php if (strlen($bgImgUrl) <= 4 && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
 <style>
   .site-main {

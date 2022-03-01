@@ -9,8 +9,9 @@ define("theurl",$theurl);
 define("theprofile", authorProfile($this->options->profile,theurl));
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-CN">
 <head>
+  <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
@@ -21,7 +22,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw='); ?>
 	<link rel='dns-prefetch' href="<?php $this->options->DNS();?>" />
 	<?php echo '
-	<link rel="shortcut icon" href="'.theurl.'images/favicon.ico">
+	<link rel="shortcut icon" href="'.theurl.'images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="'.theurl.'css/style.css" type="text/css" />
 	<link rel="stylesheet" href="'.theurl.'css/OwO.css" type="text/css" />';
 	if (!empty($this->options->menu) && in_array('dark', $this->options->menu)) {

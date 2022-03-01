@@ -439,25 +439,41 @@ if (tables.length != 0) {
 // 获取目录主体
 let doc = document.getElementById('toc-container');
 if (doc != null) {
-    // 检测有无文章头图
-    let postbgBox = document.getElementsByClassName('pattern-center');
-    // 默认值
-    let uptoTop = 660;
-    let fixtoTop = 460;
+  let postbgBox = document.getElementsByClassName('pattern-center');
+  // 默认数据
+  let uptoTop = 0;
+  let fixtoTop = 0;
+  // 判断导航栏有没有透明
+  if (transparent == 1) {
+    // 透明-判断有无文章头图
     if ( postbgBox.length == 0 ) {
-        uptoTop = 160;
-        fixtoTop = -40;
+      uptoTop = 100;
+      fixtoTop = -100;
+    } else {
+      uptoTop = 600;
+      fixtoTop = 400;
     }
-    window.onscroll = function () {
-        // 获取距离页面顶部的距离
-        let toTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if ( toTop > uptoTop ) {
-            let boxtoTop = toTop - fixtoTop;
-            doc.style.cssText = 'top: '+ boxtoTop +'px;';
-        } else {
-            doc.style.cssText = '';
-        }
+  } else {
+    // 不透明-判断有无文章头图
+    if ( postbgBox.length == 0 ) {
+      uptoTop = 160;
+      fixtoTop = -40;
+    } else {
+      // 默认数据
+      uptoTop = 660;
+      fixtoTop = 460;
     }
+   }
+  window.onscroll = function () {
+    // 获取距离页面顶部的距离
+    let toTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if ( toTop > uptoTop ) {
+      let boxtoTop = toTop - fixtoTop;
+      doc.style.cssText = 'top: '+ boxtoTop +'px;';
+    } else {
+      doc.style.cssText = '';
+    }
+  }
 }
 //版本显示
 console.log("%cAkina for Typecho 4.1.0","background:#A0DAD0;color:#fff;margin:10px;padding:6px;border-radius:3px;","https://zhebk.cn");
