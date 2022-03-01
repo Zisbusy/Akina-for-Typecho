@@ -46,8 +46,9 @@
 <?php endif ?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main" role="main" style="margin-bottom:50px;">
 			<article  class="hentry">
+      <?php echo '<embed style="max-width: 300px;margin: 0 auto 83px;display: block;" src="'.theurl.'images/tags.svg">';?>
 				<header class="entry-header">
 					<h1 class="entry-title"><?php $this->title() ?></h1>
 				</header>

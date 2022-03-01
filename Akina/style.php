@@ -56,13 +56,15 @@
       .focusinfo {
         top: 47%;
       }
-      @media (min-width: 860px) and (max-width: 1080px){
-        .notice {
-          margin-top: 150px;
+      @media (min-width: 860px) {
+        #centerbg {
+          height: 630px;
         }
       }
-      #centerbg {
-        height: 630px;
+      @media (max-width: 860px) {
+        #centerbg {
+          height: 450px;
+        }
       }
       #archives-temp {
         margin-top: 130px;
