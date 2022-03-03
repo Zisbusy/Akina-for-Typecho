@@ -1,83 +1,107 @@
 @charset"utf-8";
-/*
-
-背景色 #000000
-强调色 #171717
-主色下标题颜色 #c1c1c1
-强调色下文字颜色 #afafaf
-线条颜色 #131313
-图片装饰线条 #3c3c3c
-
-*/
 
 /*全局变量*/
 :root {
-    --main-bg-color: #000000;
-    --main-info-color: #171717;
-    --main-text-color: #c1c1c1;
-    --br-color: #131313;
-    --img-br: #3c3c3c;
+    --main-bg-color: #171717;
+    --main-text-color: #E5E5E5;
+    --main-text2-color: #afafaf;
+    --main-info-color: #202020;
+    --img-br: #525252;
+    --br-color: #2c2c2c;
+    
+    --text-color: #777777;
 }
 
 /* 夜间模式 */ 
 @media ( prefers-color-scheme: dark ) {
-    ::-webkit-scrollbar-track {
-        background: var(--main-bg-color);
-    }
-    .site-header, .slant-left, .slant-right, body, .site-footer, .comments, #preloader, .search-form--modal, #content, #mo-nav, #mo-nav .m-search input, .wrapper {
-        background-color: var(--main-bg-color);
-    }
-    #centerbg::before{
-        background-color: rgb(0 0 0 / 25%);
-    }
-    .s-content, #mo-nav .m-search form {
-        background: var(--main-info-color);
-    }
-    .notice {
-        background: var(--main-info-color);
-        color: #afafaf;
-    }
-    .notice:before {
-        border-bottom: 10px solid var(--main-info-color);
-    }
-    .s-content:after {
-        border-left: 10px solid var(--main-info-color);
-    }
-    .show-nav {
-        color: #ffffff;
-    }
-    .lower li ul, .user_inner ul, .fytx_alert_background .fytx_alert_box {
-        background: var(--main-info-color);
-        box-shadow: 0px 0px 4px rgb(0 0 0 / 36%);
-    }
-    .site-top ul li a, .entry-title a, #mo-nav ul li a, .fytx_alert_background .fytx_alert_box {
-        color: var(--main-text-color);
-    }
-    .entry-content p, #toc strong, #toc-container a, h1.entry-title, .entry-content h2 {
-        color: var(--main-text-color);
-    }
-    h1.fes-title, h1.main-title {
-        color: #afafaf;
-        border-bottom: 1px dashed var(--br-color);
-    }
-    .post-list hr {
-        background: var(--br-color);
-    }
-    .site-footer {
-        border-top: 1px solid var(--br-color);
-    }
-    .feature img, .postava img, #pagination a, .nextStop, .author-profile .pf-tou img {
-        border: 1px solid var(--img-br);
-    }
+  .yya {
+    background: var(--main-info-color) !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff0;
+  }
+  .notice, .brick a {
+    background: var(--main-info-color);
+    color: var(--main-text-color);
+  }
+  .notice:before {
+    border-bottom: 10px solid var(--main-info-color);
+  }
+  .arrow-left-ar {
+    border-bottom: 20px solid var(--main-info-color);
+  }
+  .site-header, .slant-left, .slant-right, body, .site-footer, .comments, #preloader, .search-form--modal, #content, #mo-nav, #mo-nav .m-search input, .wrapper {
+      background-color: var(--main-bg-color);
+  }
+  #centerbg::before{
+    background-color: rgb(0 0 0 / 25%);
+  }
+  .feature img, .postava img, #pagination a, .nextStop, .author-profile .pf-tou img {
+    border: 1px solid var(--img-br);
+  }
+  h1.fes-title, h1.main-title, #archives-temp h2 {
+    color: var(--main-text-color);
+    border-bottom: 1px dashed var(--br-color);
+  }
+  .post-list p {
+    color: var(--main-text2-color);
+  }
+  #archives-content {
+    border-left: 1px dashed var(--br-color);
+  }
+  .s-content, #mo-nav .m-search form {
+    background: var(--main-info-color);
+  }
+  .s-content:after {
+      border-left: 10px solid var(--main-info-color);
+  }
+  #mo-nav li ul li a {
+    color: var(--main-text-color);
+  }
+  .comment .commeta, #comments-navi {
+    border-bottom: 1px dashed var(--br-color);
+  }
+  .entry-content table {
+    border: 1px dashed var(--br-color);
+    color: var(--main-text-color);
+  }
+  #toc-container {
+    border: 1px dashed var(--br-color);
+  }
+  .author-profile p {
+    border-top: 1px solid var(--br-color);
+    border-bottom: 1px solid var(--br-color);
+    color: var(--main-text-color);
+  }
+  .show-nav {
+    color: #ffffff;
+  }
+  .lower li ul, .user_inner ul, .fytx_alert_background .fytx_alert_box {
+    background: var(--main-info-color);
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 36%);
+  }
+  .site-top ul li a, .entry-title a, #mo-nav ul li a, .fytx_alert_background .fytx_alert_box {
+      color: var(--main-text-color);
+  }
+  .entry-content p, #toc strong, #toc-container a, h1.entry-title, .entry-content h2 {
+      color: var(--main-text-color);
+  }
+  .post-list hr {
+      background: var(--br-color);
+  }
+  .site-footer {
+      border-top: 1px solid var(--br-color);
+  }
+  .feature img, .postava img, #pagination a, .nextStop, .author-profile .pf-tou img {
+      border: 1px solid var(--img-br);
+  }
     .s-time, .p-time, .breadcrumbs, .comment .info {
          color: #676767;
     }
     .micromb-search {
         color: #d8d8d8;
     }
-    #toc-container {
-        border: 1px dashed var(--img-br);
-    }
+
     .entry-content p, #toc strong, #toc-container a, h1.entry-title, .entry-content h2, .donate a, .post-share, .show-share {
         color: var(--main-text-color);
     }
@@ -87,10 +111,7 @@
     .entry-content code, .entry-content table thead, blockquote, .table-box::-webkit-scrollbar-track {
         background-color: var(--main-info-color);
     }
-    .entry-content table {
-        border: 1px dashed var(--img-br);
-        color: var(--main-text-color);
-    }
+
     .open-message, .comment-respond #cancel-comment-reply-link, .entry-content h3 {
         background-color: var(--main-info-color);
         color: var(--main-text-color);
@@ -112,17 +133,11 @@
     .donate_inner:after, .donate_inner:before {
         border-right: 8px solid var(--main-info-color);
     }
-    .comment .commeta, #comments-navi {
-        border-bottom: 1px dashed var(--img-br);
-    }
+
     .comment .body p, #comments a, #comments p, h3#comments-list-title, .author-profile p, .author-profile .meta h3 a, .author-updown, .entry-content ul, .entry-content ol{
         color: var(--main-text-color);
     }
-    .author-profile p {
-        border-top: 1px solid var(--img-br);
-        border-bottom: 1px solid var(--img-br);
-        color: var(--main-text-color);
-    }
+
     .notification {
         background: var(--main-info-color);
         color: var(--main-text-color);
