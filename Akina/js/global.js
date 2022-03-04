@@ -182,7 +182,7 @@ var mNav_hide = function(){
  * AJAX Single
 */
 var loadSingle = function(){
-	$("#pagination a").live("click", function(){
+	$("#pagination a").on("click", function(){
 	    $(this).addClass("loading").text("");
 	    $.ajax({
 		type: "POST",
@@ -208,7 +208,7 @@ var loadSingle = function(){
 // 评论分页
 $body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
 // 点击分页导航链接时触发分页
-$('#comments-navi a').live('click', function(e){
+$('#comments-navi a').on('click', function(e){
     e.preventDefault();
     $.ajax({
         type: "POST",
