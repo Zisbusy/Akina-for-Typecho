@@ -31,7 +31,7 @@ if($this->options->sticky){
       $select2->where('table.contents.cid != ?', $cid); //避免重复
     }
     if ($order) $select1->order('', "(case cid$order end)"); //置顶文章的顺序 按 $sticky 中 文章ID顺序
-    if (($this->_currentPage || $this->currentPage) == 1) foreach($db->fetchAll($select1) as $sticky_post){ //首页第一页才显示
+    if ($this->_currentPage == 1) foreach($db->fetchAll($select1) as $sticky_post){ //首页第一页才显示
       $sticky_post['sticky'] = $sticky_html;
       $this->push($sticky_post); //压入列队
     }
