@@ -9,9 +9,9 @@ define("theurl",$theurl);
 define("theprofile", authorProfile($this->options->profile,theurl));
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-CN">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-transform" />
@@ -21,36 +21,16 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 	<?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw='); ?>
 	<link rel='dns-prefetch' href="<?php $this->options->DNS();?>" />
 	<?php echo '
-	<link rel="shortcut icon" href="'.theurl.'images/favicon.ico">
+	<link rel="shortcut icon" href="'.theurl.'images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="'.theurl.'css/style.css" type="text/css" />
 	<link rel="stylesheet" href="'.theurl.'css/OwO.css" type="text/css" />';
 	if (!empty($this->options->menu) && in_array('dark', $this->options->menu)) {
 		echo '<link rel="stylesheet" href="'.theurl.'css/dark.css" type="text/css" />';
 	}
 	?>
-	<style type="text/css">
-	<?php if (!empty($this->options->menu) && in_array('show', $this->options->menu)): ?>
-		.site-top ul { opacity: 1 !important;}
-		.site-top .show-nav { display:none !important; }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('indexbg', $this->options->menu)): ?>
-		@media (max-width:1080px) {#centerbg {display:block;} }
-	<?php else: ?>
-		@media (max-width:1080px) {#centerbg {display:none} }
-		@media (max-width: 860px){.notice {margin-top: 100px;} }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('feature', $this->options->menu)): ?>
-		#content .top-feature { display:block; }
-		.feature-content { display:flex; }
-	<?php endif; ?>
-	<?php if (!empty($this->options->menu) && in_array('page', $this->options->menu)): ?>
-	<?php else: ?>
-		.navigator { display:block !important }
-		#pagination { display:none !important }
-	<?php endif; ?>
-		.wedonate img { margin-right:10px }
-		.cd-top { background:url(<?php echo theurl; ?>images/gotop.png) no-repeat center 50%}
-	</style>
+  <!-- 个性化选项 CSS 代码 -->
+  <?php $this->need('style.php'); ?>
+  <!-- 自定义 CSS 代码 -->
 	<?php $this->options->cssCode();?>
 </head>
 <body class="home blog hfeed">
@@ -107,7 +87,7 @@ define("theprofile", authorProfile($this->options->profile,theurl));
 		<!-- 分类 -->
 		<div class="lower">
 			<nav>
-				<ul id="nav_menu" class="menu"><li class="current-menu-item"><a href="<?php $this->options ->siteUrl(); ?>">首页</a></li>
+				<ul class="menu"><li class="current-menu-item"><a href="<?php $this->options ->siteUrl(); ?>">首页</a></li>
 				<li><a href="#">分类</a>
 				<ul class="sub-menu">
 					<?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>

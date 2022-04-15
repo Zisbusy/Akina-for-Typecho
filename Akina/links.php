@@ -32,13 +32,26 @@
         echo('<style> @media (max-width: 860px){#content {margin-top: 30px;}} </style>');
     }
 ?>
+<!-- 透明导航栏后调整间距 -->
+<!-- 透明导航栏后调整间距 -->
+<?php if (strlen($bgImgUrl) <= 4 && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
+<style>
+  .site-content {
+    padding: 80px 0 0;
+  }
+  @media (max-width: 860px){
+    .site-content {
+    padding: 50px 0 0;
+  }
+  }
+</style>
+<?php endif ?>
 <div id="content" class="site-content">
 	<span class="linkss-title"><?php $this->title() ?></span>
 	<article class="hentry">
 		<div class="entry-content">
-		    <?php
-			if( !$this->content && !class_exists('Links_Plugin')) {
-			    echo'
+		  <?php if( !$this->content && !class_exists('Links_Plugin')) {
+			  echo'
 				<div class="nodata">
 				    <img src="https://blog.zixu.site/usr/themes/Akina/images/warn.png">
 				    <div class="nodataText">
@@ -47,27 +60,31 @@
 					    </p>
 				    </div>
 				</div>
-			    ';
+			  ';
 			} else {
 				$pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
 				$replacement = '<a href="$1" alt="'.$this->title.'" title="点击放大图片"><img class="aligncenter" src="$1" title="'.$this->title.'"></a></div>';
 				echo preg_replace($pattern, $replacement, $this->content);
 				if(class_exists('Links_Plugin')){
-				    $rules ='<br/>
-				    <div class="links">
-					<ul class="link-items fontSmooth">
-					    <li class="link-item">
-						<a class="link-item-inner effect-apollo" href="{url}" title="{name}" target="_blank" >
-						    <span class="sitename">{name}</span>
-						    <div class="linkdes">{title}</div>
-						</a>
-					    </li>
-					</ul>
-				    </div>';
+            echo '
+            <br>
+            <div class="links">
+              <ul class="link-items fontSmooth">
+            ';
+				    $rules ='
+            <li class="link-item">
+              <a class="link-item-inner effect-apollo" href="{url}" title="{name}" target="_blank" >
+                <span class="sitename">{name}</span>
+                <div class="linkdes">{title}</div>
+              </a>
+            </li>';
 					 Links_Plugin::output($pattern=$rules, $links_num=0, $sort=NULL);
+           echo '
+           </div>
+            </ul>
+           ';
 				};
-			}
-		    ?>
+			}?>
 		</div>
 	</article>
 </div>

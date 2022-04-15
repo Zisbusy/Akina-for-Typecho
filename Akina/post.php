@@ -36,9 +36,23 @@
         ');
     }
 ?>
+<!-- 透明导航栏后调整间距 -->
+<!-- 透明导航栏后调整间距 -->
+<?php if (strlen($bgImgUrl) <= 4 && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
+<style>
+  .site-main {
+    padding: 160px 0 0;
+  }
+  @media (max-width: 860px){
+    .site-main {
+    padding: 80px 0 0;
+  }
+  }
+</style>
+<?php endif ?>
 <div id="content" class="site-content">
 <?php
-    //文章目录展示以及切换
+    // 文章目录展示以及切换
     if ( $this->options->postDoc != 'none' && $this->options->postDoc != null ) {
         getCatalog();
         if ($this->options->postDoc == 'rightDoc') {
@@ -91,7 +105,6 @@
 					<li><a href="https://api.pwmqr.com/qrcode/create/?url=<?php $this->permalink(); ?>" onclick="window.open(this.href, 'renren-share', 'width=490,height=700');return false;" class="s-weixin"><img src="<?php echo theurl; ?>images/wechat.png"/></a></li>
 					<li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'weibo-share', 'width=730,height=500');return false;" class="s-qq"><img src="<?php echo theurl; ?>images/qzone.png"/></a></li>
 					<li><a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'weibo-share', 'width=550,height=235');return false;" class="s-sina"><img src="<?php echo theurl; ?>images/sina.png"/></a></li>
-					<li><a href="http://shuo.douban.com/!service/share?<?php $this->permalink(); ?>&title=<?php $this->title() ?>" onclick="window.open(this.href, 'renren-share', 'width=490,height=600');return false;" class="s-douban"><img src="<?php echo theurl; ?>images/douban.png"/></a></li>
 				</ul>
 				<i class="iconfont show-share">&#xe60c;</i>
 			</div>
@@ -107,9 +120,9 @@
 			<div class="post-tags">
 				<i class="iconfont">&#xe602;</i>
 				<?php if(  count($this->tags) == 0 ): ?>
-					<?php $this->category('', true, 'none'); ?>
+					<?php $this->category('、', true, 'none'); ?>
 				<?php else: ?>
-					<?php $this->tags('', true, ' none'); ?>
+					<?php $this->tags('、', true, 'none'); ?>
 				<?php endif; ?>
 			</div>
 		</footer>

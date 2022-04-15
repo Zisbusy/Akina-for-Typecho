@@ -59,8 +59,14 @@
 	if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 	  alert('请抛弃万恶的IE系列浏览器吧。');
 	}
-	//判断下拉加载
-	<?php if (!empty($this->options->menu) && in_array('xl', $this->options->menu)): ?>var xl = "1";<?php else: ?> var xl = "0";<?php endif; ?>
+	<?php
+    //判断下拉加载
+    if (!empty($this->options->menu) && in_array('xl', $this->options->menu)) {$xl = 1;} else {$xl = 0;}
+    // 判断导航栏是否透明
+    if (!empty($this->options->menu) && in_array('transparent', $this->options->menu)) {$transparent = 1;} else {$transparent = 0;}
+  ?>
+  var xl = <?php echo $xl ?>;
+  var transparent = <?php echo $transparent ?>;
 </script>
 <?php echo '
 <script type="text/javascript" src="'.theurl.'js/jquery.min.js"></script>

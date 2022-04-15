@@ -4,47 +4,60 @@
  * 
  * @package Akina For Typecho
  * @author 子虚之人
- * @version 4.0.1
+ * @version 4.1.0
  * @link https://zhebk.cn/
  */
  if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
- /** 文章置顶 */
+// 文章置顶
 if($this->options->sticky){
 	$sticky = $this->options->sticky; //置顶的文章cid，按照排序输入, 请以半角逗号或空格分隔
 	if($sticky && $this->is('index') || $this->is('front')){
-	    $sticky_cids = explode(',', strtr($sticky, ' ', ','));//分割文本 
-	    $sticky_html = "<span style='color:#ff6d6d;font-weight:600'>[置顶] </span>"; //置顶标题的 html css
-	    $db = Typecho_Db::get();
-	    $pageSize = $this->options->pageSize;
-	    $select1 = $this->select()->where('type = ?', 'post');
-	    $select2 = $this->select()->where('type = ? AND status = ? AND created < ?', 'post','publish',time());
-	    //清空原有文章的列队
-	    $this->row = [];
-	    $this->stack = [];
-	    $this->length = 0;
-	    $order = '';
-	    foreach($sticky_cids as $i => $cid) {
-		if($i == 0) $select1->where('cid = ?', $cid);
-		else $select1->orWhere('cid = ?', $cid);
-		$order .= " when $cid then $i";
-		$select2->where('table.contents.cid != ?', $cid); //避免重复
-	    }
-	    if ($order) $select1->order(null,"(case cid$order end)"); //置顶文章的顺序 按 $sticky 中 文章ID顺序
-	    if ($this->_currentPage == 1) foreach($db->fetchAll($select1) as $sticky_post){ //首页第一页才显示
-		$sticky_post['sticky'] = $sticky_html;
-		$this->push($sticky_post); //压入列队
-	    }
-		$uid = $this->user->uid; //登录时，显示用户各自的私密文章
-	    if($uid) $select2->orWhere('authorId = ? AND status = ?',$uid,'private');
-	    $sticky_posts = $db->fetchAll($select2->order('table.contents.created', Typecho_Db::SORT_DESC)->page($this->_currentPage, $this->parameter->pageSize));
-	    foreach($sticky_posts as $sticky_post) $this->push($sticky_post); //压入列队
-	    $this->setTotal($this->getTotal()-count($sticky_cids)); //置顶文章不计算在所有文章内
+    $sticky_cids = explode(',', strtr($sticky, ' ', ','));//分割文本 
+    $sticky_html = "<span style='color:#ff6d6d;font-weight:600'>[置顶] </span>"; //置顶标题的 html css
+    $db = Typecho_Db::get();
+    $pageSize = $this->options->pageSize;
+    $select1 = $this->select()->where('type = ?', 'post');
+    $select2 = $this->select()->where('type = ? AND status = ? AND created < ?', 'post','publish',time());
+    //清空原有文章的列队
+    $this->row = [];
+    $this->stack = [];
+    $this->length = 0;
+    $order = '';
+    foreach($sticky_cids as $i => $cid) {
+      if($i == 0) $select1->where('cid = ?', $cid);
+      else $select1->orWhere('cid = ?', $cid);
+      $order .= " when $cid then $i";
+      $select2->where('table.contents.cid != ?', $cid); //避免重复
+    }
+    if ($order) $select1->order('', "(case cid$order end)"); //置顶文章的顺序 按 $sticky 中 文章ID顺序
+    if ($this->_currentPage == 1) foreach($db->fetchAll($select1) as $sticky_post){ //首页第一页才显示
+      $sticky_post['sticky'] = $sticky_html;
+      $this->push($sticky_post); //压入列队
+    }
+    $uid = $this->user->uid; //登录时，显示用户各自的私密文章
+    if($uid) $select2->orWhere('authorId = ? AND status = ?',$uid,'private');
+    $sticky_posts = $db->fetchAll($select2->order('table.contents.created', Typecho_Db::SORT_DESC)->page($this->_currentPage, $this->parameter->pageSize));
+    foreach($sticky_posts as $sticky_post) $this->push($sticky_post); //压入列队
+    $this->setTotal($this->getTotal()-count($sticky_cids)); //置顶文章不计算在所有文章内
 	}
 }
 ?>
 <!-- 判断是否搜索 -->
 <?php if(!$this->is('index') && !$this->is('front')): ?>
+  <!-- 透明导航栏后调整间距 -->
+  <?php if (!empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
+  <style>
+    .site-main {
+      padding: 160px 0 0;
+    }
+    @media (max-width: 860px){
+      .site-main {
+      padding: 80px 0 0;
+    }
+    }
+  </style>
+  <?php endif ?>
 	<div class="blank"></div>
 	<div class="headertop"></div>
 	<div class=""></div>
@@ -89,7 +102,7 @@ if($this->options->sticky){
 					<p><?php $this->options->headerinfo() ?></p>
 					</div>
 					<!-- 社交信息 -->
-					<div class="top-social">
+					<ul class="top-social">
 						<?php
 							//微博
 							if ($this->options->SINA){
@@ -128,7 +141,7 @@ if($this->options->sticky){
 								echo '<li><a href="https://music.163.com/#/user/home?id='.$this->options->Music.'" target="_blank" rel="nofollow" class="social-bilibili"><img src="'.theurl.'images/music.png"/></a></li>';
 							}
 						?>
-					</div>
+					<ul>
 				</div>
 			</div>
 			<!-- 首页大图结束 -->
@@ -145,7 +158,7 @@ if($this->options->sticky){
 	<!-- 聚焦内容 -->
 	<div class="top-feature">
 		<h1 class="fes-title">聚焦</h1>
-			<div class="feature-content">
+			<ul class="feature-content">
 			<?php
 			    // 默认数据
 				$defaultUrl = ['https://zhebk.cn/Web/Akina.html','https://zhebk.cn/Web/userAkina.html','https://zhebk.cn/archives.html'];
@@ -171,7 +184,7 @@ if($this->options->sticky){
 					echo '<li class="feature-'.$addNum.'"><a href="'.$defaultUrl[$i].'"><div class="feature-title"><span class="foverlay">'.$defaultTitle[$i].'</span></div><img src="'.theurl.'/images/feature/feature'.$addNum.'.jpg"></a></li>';
 				}
 			?>
-			</div>
+			</ul>
 	</div>
 	<!-- 主页内容 -->
 	<div id="primary" class="content-area">
@@ -180,6 +193,7 @@ if($this->options->sticky){
 <!-- 结束搜索判断 -->
 <?php endif; ?>
 		<!-- 开始文章循环输出 -->
+    <?php $deuIndex = 1; ?>
 		<?php while($this->next()): ?>
 		<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<!-- 判断文章输出样式 -->
@@ -199,7 +213,16 @@ if($this->options->sticky){
 		<?php else: ?>
 			<div class="post-entry">
 				<div class="feature">
-					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div><img src="<?php if(array_key_exists('icon',unserialize($this->___fields())) & $this->fields->icon != null){$this->fields->icon();}else{echo theurl.'images/random/deu'.mt_rand(1,7).'.jpg';}?>"></a>
+					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div>
+            <img src="<?php 
+              if(array_key_exists('icon',unserialize($this->___fields())) & $this->fields->icon != null) {
+                $this->fields->icon();
+                } else {
+                  if ($deuIndex > 7) {$deuIndex = 1;}
+                  echo theurl.'images/random/deu'.$deuIndex++.'.jpg';
+                }
+            ?>">
+          </a>
 				</div>
 				<h1 class="entry-title"><a href="<?php $this->permalink() ?>"><?php $this->sticky(); $this->title() ?></a></h1>
 				<div class="p-time">
