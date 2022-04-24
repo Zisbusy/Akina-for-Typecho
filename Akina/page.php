@@ -9,8 +9,8 @@
 <div class="blank"></div>
 <div class="headertop"></div>
 <?php 
+    $bgImgUrl = '';
     if ( $this->fields->radioPostImg != 'none' && $this->fields->radioPostImg != null ) {
-        $bgImgUrl = '';
         switch ( $this->fields->radioPostImg ) {
         case 'custom':
             $bgImgUrl = $this->fields->thumbnail;
