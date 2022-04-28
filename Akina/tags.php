@@ -9,8 +9,8 @@
 <div class="blank"></div>
 <div class="headertop"></div>
 <?php 
+    $bgImgUrl = '';
     if ( $this->fields->radioPostImg != 'none' && $this->fields->radioPostImg != null ) {
-        $bgImgUrl = '';
         switch ( $this->fields->radioPostImg ) {
         case 'custom':
             $bgImgUrl = $this->fields->thumbnail;
@@ -30,7 +30,6 @@
         ');
     }
 ?>
-<!-- 透明导航栏后调整间距 -->
 <!-- 透明导航栏后调整间距 -->
 <?php if (strlen($bgImgUrl) <= 4 && !empty($this->options->menu) && in_array('transparent', $this->options->menu) ): ?>
 <style>
