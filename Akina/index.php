@@ -4,7 +4,7 @@
  * 
  * @package Akina For Typecho
  * @author 子虚之人
- * @version 4.1.2
+ * @version 4.1.3
  * @link https://zhebk.cn/
  */
  if (!defined('__TYPECHO_ROOT_DIR__')) exit;
