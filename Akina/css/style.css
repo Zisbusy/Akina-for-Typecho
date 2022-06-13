@@ -1225,7 +1225,7 @@ ul ::marker {
 .entry-content h4 , .entry-content h5 {
     padding: 20px 35px;
     background: #FFF6B5;
-    color: #737373;
+    color: #545454;
     font-weight: normal;
     border-radius: 5px;
     position:relative;
@@ -1242,7 +1242,7 @@ ul ::marker {
     font-family: 'iconfont';
     font-size: 25px;
     content: "\e60b";
-    color: #C7BF83;
+    color: #545454;
     margin-right: 10px;
     position: absolute;
     left: 20px;
