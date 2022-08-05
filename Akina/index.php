@@ -196,8 +196,8 @@ if($this->options->sticky){
     <?php $deuIndex = 1; ?>
 		<?php while($this->next()): ?>
 		<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-		<!-- 判断文章输出样式 -->
-		<?php if ($this->fields->dtMode): ?>
+		<!-- 判断文章输出样式, 同时兼容南博动态插件 -->
+		<?php if ($this->fields->dtMode || $this->type == 'dynamic'): ?>
 		<div class="post-status">
 			<div class="postava">
 				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php echo theprofile ?>" srcset="<?php echo theprofile ?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
