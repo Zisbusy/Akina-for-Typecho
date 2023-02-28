@@ -323,7 +323,7 @@ function createCatalog($obj) {
         global $catalog_count;
         $catalog_count ++;
         $catalog[] = array('text' => trim(strip_tags($obj[3])), 'depth' => $obj[1], 'count' => $catalog_count);
-        return '<h'.$obj[1].$obj[2].'><a name="cl-'.$catalog_count.'"></a>'.$obj[3].'</h'.$obj[1].'>';
+        return '<h'.$obj[1].$obj[2].'><a id="cl-'.$catalog_count.'"></a>'.$obj[3].'</h'.$obj[1].'>';
     }, $obj);
     return $obj;
 }
