@@ -1,5 +1,5 @@
 # Akina-for-Typecho
-Akina for Typecho 主题模板
+Akina for Typecho 主题模板（项目已不再维护）
 
 ![image](https://github.com/Zisbusy/Akina-for-Typecho/blob/master/Akina-img/Akina.jpg)
 
