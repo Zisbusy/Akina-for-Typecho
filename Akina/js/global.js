@@ -202,28 +202,35 @@ var loadSingle = function(){
 
 // 评论分页
 $body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
-// 点击分页导航链接时触发分页
-$('#comments-navi a').on('click', function(e){
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: $(this).attr('href'),
-        beforeSend: function(){
-            $('#comments-navi').remove();
-            $('#comments-ajax').remove();
-            $('#loading-comments').slideDown();
-            $body.animate({scrollTop: $('#comments-list-title').offset().top - 65}, 800 );
-        },
-        dataType: "html",
-        success: function(out){
-            result = $(out).find('#comments-ajax');
-            nextlink = $(out).find('#comments-navi');
-            $('#loading-comments').slideUp('fast');
-            $('#loading-comments').after(result.fadeIn(500));
-            $('#comments-ajax').after(nextlink);
-        }
+// ajax 翻页执行函数
+ajaxNav()
+// ajax 翻页函数
+function ajaxNav() {
+    $('#comments-navi a').on('click', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: $(this).attr('href'),
+            beforeSend: function(){
+                $('#comments-navi').remove();
+                $('#comments-ajax').remove();
+                $('#loading-comments').slideDown();
+                $body.animate({scrollTop: $('#comments-list-title').offset().top - 65}, 800 );
+            },
+            dataType: "html",
+            success: function(out){
+                result = $(out).find('#comments-ajax');
+                nextlink = $(out).find('#comments-navi');
+                $('#loading-comments').slideUp('fast');
+                $('#loading-comments').after(result.fadeIn(500));
+                $('#comments-ajax').after(nextlink);
+                // 再次执行 绑定一下事件
+                ajaxNav()
+            }
+        });
     });
-});
+}
+
 
 // 顶部加载条
 var loading = function(){
